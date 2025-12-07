@@ -2,161 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Refund Policy – AI Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MPPBPXHVH7');
+    gtag("js", new Date());
+    gtag("config", "G-MPPBPXHVH7");
   </script>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
-      <div class="logo-text">
-        <span class="logo-title">AI Market</span>
-        <span class="logo-tagline">World's Smart AI Platform</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="AI Market logo" />
+        <div class="logo-text">
+          <span class="logo-title">AI Market</span>
+          <span class="logo-tagline">World’s Smart AI Platform</span>
+        </div>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="donate.html">Donate</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
+        <a href="login.html" class="btn-outline small">Login</a>
       </div>
-    </a>
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Home</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle">🌙</button>
-      <a href="login.html" class="login-link">Login</a>
-      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="page-wrapper">
-  <section class="hero-small">
+  <main class="section legal">
     <div class="container">
-      <h1>Refund &amp; Cancellation Policy</h1>
-      <p class="subtitle">
-        Please read this policy carefully before purchasing a plan or service
-        from AI Market.
+      <h1 class="page-title">Refund Policy</h1>
+      <p class="small">Last updated: 2025</p>
+
+      <h2>General Policy</h2>
+      <p>
+        AI Market tools and plans are digital services. Once a plan is activated and used,
+        it may not be fully refundable. However, we try to be reasonable in genuine cases.
+      </p>
+
+      <h2>Payment Failures &amp; Duplicates</h2>
+      <p>
+        If money was debited from your bank or UPI but Razorpay shows payment as failed or
+        pending, please wait for automatic reversal from your bank. In case of duplicate
+        charges, contact us with your Razorpay payment ID and we will verify the status.
+      </p>
+
+      <h2>Eligibility for Refund</h2>
+      <ul class="feature-list">
+        <li>Incorrect amount charged due to technical error.</li>
+        <li>Duplicate payment for the same plan or period.</li>
+        <li>Plan not activated after successful payment (and you no longer wish to use it).</li>
+      </ul>
+
+      <h2>Non-Refundable Situations</h2>
+      <ul class="feature-list">
+        <li>Plan has been used fully or significantly.</li>
+        <li>Misuse of tools, violation of Terms &amp; Conditions or suspicious activity.</li>
+        <li>Change of mind after using the service.</li>
+      </ul>
+
+      <h2>How to Request a Refund</h2>
+      <p>
+        Please contact us via <a href="contact.html">Contact</a> page or WhatsApp with:
+      </p>
+      <ul class="feature-list">
+        <li>Your name and contact number</li>
+        <li>Plan name (Basic / Pro / Premium / Donation)</li>
+        <li>Razorpay payment ID and payment date</li>
+      </ul>
+
+      <p>
+        After reviewing the request, we will inform you about the eligibility and
+        next steps as per this policy.
       </p>
     </div>
-  </section>
+  </main>
 
-  <section class="section">
-    <div class="container">
-      <div class="legal-card">
-        <h2>1. Digital Services</h2>
-        <p class="small">
-          AI Market provides access to digital tools and services. In most cases,
-          access is granted immediately or shortly after payment. Because of this,
-          we generally do not offer refunds once a plan is activated.
-        </p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 AI Market · World’s Smart AI Platform</p>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
 
-        <h2>2. When Refunds May Be Considered</h2>
-        <p class="small">
-          A refund may be considered in special cases, such as:
-        </p>
-        <ul class="small">
-          <li>Duplicate payment for the same plan.</li>
-          <li>Technical issues that completely prevent usage and cannot be resolved.</li>
-          <li>Accidental payment for a wrong plan, if reported immediately.</li>
-        </ul>
-
-        <h2>3. How to Request a Refund</h2>
-        <p class="small">
-          To request a refund, contact us via WhatsApp or email with the
-          following details:
-        </p>
-        <ul class="small">
-          <li>Full name and contact number</li>
-          <li>Date and time of payment</li>
-          <li>Razorpay payment reference ID</li>
-          <li>Reason for refund request</li>
-        </ul>
-
-        <h2>4. Processing Time</h2>
-        <p class="small">
-          If approved, refunds will be processed through the original payment
-          method within 7–10 working days, depending on bank or gateway.
-        </p>
-
-        <h2>5. No Guarantee of Refund</h2>
-        <p class="small">
-          Submitting a refund request does not guarantee approval. AI Market
-          reserves the right to decide whether a refund is appropriate based on
-          usage history, time and reason.
-        </p>
-
-        <h2>6. Plan Changes</h2>
-        <p class="small">
-          Instead of refunds, in some cases we may offer plan extensions,
-          credits or upgrades. Our goal is always to help you get the best value.
-        </p>
-
-        <h2>7. Contact</h2>
-        <p class="small">
-          For questions about this policy, please contact us via the
-          <a href="contact.html">Contact page</a>.
-        </p>
+  <div id="chatbotWidget" class="chatbot-widget">
+    <div class="chatbot-header">
+      <span>AI Market Assistant</span>
+      <button id="chatbotClose" type="button">✕</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="bot-msg">
+        Have a doubt about refunds or payment issues? Tell me what happened and I’ll guide you.
       </div>
     </div>
-  </section>
-</div>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>© 2025 AI Market – World’s Smart AI Platform.</div>
-    <div class="footer-links">
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="cookies.html">Cookies</a>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbotInput" placeholder="Describe your payment issue..." />
+      <button id="chatbotSend" type="button">➤</button>
     </div>
   </div>
-</footer>
 
-<div class="chatbot-panel" id="chatbotPanel">
-  <div class="chatbot-header">
-    <div>
-      <span class="chatbot-title">AI Market Help</span>
-      <small>Refund questions</small>
-    </div>
-    <button class="chatbot-close" type="button">✕</button>
-  </div>
-  <div class="chatbot-messages"></div>
-  <div class="chatbot-quick">
-    <button type="button"
-      data-bot-question="Can I get a refund?"
-      data-bot-answer="Because we provide digital access, refunds are limited. Duplicate payments or serious technical issues may be considered after review.">
-      Can I get refund?
-    </button>
-    <button type="button"
-      data-bot-question="How to request a refund?"
-      data-bot-answer="Contact us on WhatsApp or email with your payment reference ID, plan and reason. We will review your request.">
-      How to request?
-    </button>
-  </div>
-</div>
+  <button id="chatbotFAB" class="chatbot-fab" type="button">💬</button>
 
-<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
-  💬
-</button>
+  <a
+    href="https://wa.me/919676142165"
+    class="whatsapp-fab"
+    target="_blank"
+    rel="noopener"
+    title="Chat on WhatsApp"
+  >
+    ⟟
+  </a>
 
-<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
-  ⟟
-</a>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
