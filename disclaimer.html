@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Disclaimer - AI Market</title>
+  <title>Disclaimer – AI Market</title>
 
-  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,33 +12,27 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
   </script>
-  <!-- End Google Tag Manager -->
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header>
+<header class="site-header">
   <div class="header-inner">
-      <div class="logo-wrap">
-          <img src="logo.png" class="logo" alt="AI Market logo" />
-          <div class="logo-text">
-              <span class="site-name">AI Market</span>
-              <span class="tagline">World’s Smart AI Platform</span>
-          </div>
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="site-name">AI Market</span>
+        <span class="site-tagline">World’s Smart AI Platform</span>
       </div>
-      <div class="header-right">
-          <button class="theme-toggle" id="themeToggle">🌙</button>
-          <button class="menu-toggle" id="menuToggle">☰</button>
-      </div>
-  </div>
-
-  <nav id="mainNav">
+    </a>
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
       <a href="pricing.html">Pricing</a>
@@ -48,84 +41,82 @@
       <a href="faq.html">FAQ</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-  </nav>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
 </header>
 
-<section class="page legal-page">
-  <h1 class="section-title">Disclaimer</h1>
-  <p class="section-subtitle">
-      Information and services on this website are provided by AI Market on an “as is” and “as available” basis.
-  </p>
+<main>
+  <section class="section legal-page">
+    <h1 class="section-title">Disclaimer</h1>
+    <p class="section-subtitle">
+      Information and services provided by AI Market are offered on an “as is” and “as available” basis.
+    </p>
 
-  <h2>1. No Professional Advice</h2>
-  <p>
-      Content on this website is for general information and marketing purposes only.
-      It should not be considered legal, financial or professional advice. You are responsible
-      for how you use any content we deliver.
-  </p>
+    <h2>1. No Professional Advice</h2>
+    <p>
+      Content created or shared through AI Market, including AI-generated videos, images and music,
+      is for creative and informational purposes only. It should not be treated as legal, financial,
+      medical or any other professional advice.
+    </p>
 
-  <h2>2. Third-Party Rights</h2>
-  <p>
-      When you provide material (songs, images, videos, logos, text), you confirm that you
-      have the necessary rights and permissions. AI Market is not responsible for copyright
-      or policy issues caused by content supplied by you.
-  </p>
+    <h2>2. Third-Party Rights &amp; Platforms</h2>
+    <p>
+      You are responsible for ensuring that any material you provide (songs, logos, photos, footage,
+      text, etc.) has appropriate rights for use. AI Market is not responsible for copyright or policy
+      violations arising from user-supplied content or third-party platform rules (e.g. YouTube, Instagram).
+    </p>
 
-  <h2>3. Platform Policies</h2>
-  <p>
-      Social media platforms (such as YouTube, Instagram, Facebook, etc.) have their own
-      rules and policies. We cannot guarantee approval, reach, monetization or non-removal
-      of your posts on those platforms.
-  </p>
+    <h2>3. Platform Results</h2>
+    <p>
+      We cannot guarantee any specific results on social media platforms, including reach, views,
+      engagement, monetization or approval of your posts. Platform algorithms and policies are
+      outside our control.
+    </p>
 
-  <h2>4. Limitation</h2>
-  <p>
-      AI Market and its owner(s) will not be liable for any indirect, incidental or
-      consequential damages arising from the use of our services or this website.
-  </p>
+    <h2>4. Limitation of Liability</h2>
+    <p>
+      AI Market and its owners will not be liable for any direct or indirect damages, including loss
+      of business, income or data, arising from the use of this website or services.
+    </p>
 
-  <h2>5. Changes</h2>
-  <p>
-      This Disclaimer may be updated from time to time. Please review it periodically.
-  </p>
-</section>
+    <h2>5. Updates</h2>
+    <p>
+      This Disclaimer may be updated from time to time. The latest version will always be available
+      on this page.
+    </p>
+  </section>
+</main>
 
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question%20about%20the%20Disclaimer."
-   class="whatsapp-float" target="_blank">💬</a>
-
-<footer>
-  © 2025 AI Market · World’s Smart AI Platform<br />
-  <a href="terms.html">Terms</a> ·
-  <a href="privacy.html">Privacy</a> ·
-  <a href="refund.html">Refund Policy</a> ·
-  <a href="disclaimer.html">Disclaimer</a> ·
-  <a href="cookies.html">Cookies</a>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <p class="footer-links">
+      <a href="terms.html">Terms</a><span>·</span>
+      <a href="privacy.html">Privacy</a><span>·</span>
+      <a href="refund.html">Refund Policy</a><span>·</span>
+      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
 </footer>
 
 <script>
 (function () {
-  const body = document.body;
-  const themeToggle = document.getElementById("themeToggle");
-  const menuToggle  = document.getElementById("menuToggle");
-  const nav         = document.getElementById("mainNav");
-
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-      body.classList.add("light-theme");
-      themeToggle.textContent = "☀";
-  }
-
-  themeToggle.addEventListener("click", () => {
-      body.classList.toggle("light-theme");
-      const light = body.classList.contains("light-theme");
-      themeToggle.textContent = light ? "☀" : "🌙";
-      localStorage.setItem("theme", light ? "light" : "dark");
-  });
-
-  menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-  });
+  const body=document.body, themeBtn=document.getElementById("themeToggle"),
+        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
+        current=window.location.pathname.split("/").pop()||"disclaimer.html";
+  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
+<script type="module" src="auth.js"></script>
 </body>
 </html>
