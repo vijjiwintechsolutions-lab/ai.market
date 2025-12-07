@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unlock Pro Plan – AI Market</title>
   <link rel="stylesheet" href="style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
 <body>
 
@@ -17,6 +24,7 @@
         <span class="logo-tagline">World's Smart AI Platform</span>
       </div>
     </a>
+
     <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
@@ -26,6 +34,7 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
+
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
       <a href="login.html" class="login-link">Login</a>
@@ -60,7 +69,11 @@
           transaction ID for activation.
         </p>
 
-        <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary" target="_blank" rel="noopener">
+        <a href="https://rzp.io/rzp/mMXyAH0p"
+           class="btn-primary"
+           target="_blank"
+           rel="noopener"
+           data-ga-event="unlock_pro_pay">
           Pay ₹299 & Unlock Pro
         </a>
 
@@ -70,7 +83,11 @@
           We will verify and activate Pro access quickly.
         </p>
 
-        <a href="https://wa.me/919676142165" class="btn-outline" target="_blank" rel="noopener">
+        <a href="https://wa.me/919676142165"
+           class="btn-outline"
+           target="_blank"
+           rel="noopener"
+           data-ga-event="unlock_pro_whatsapp">
           Send Payment Details on WhatsApp
         </a>
       </div>
@@ -90,6 +107,37 @@
     </div>
   </div>
 </footer>
+
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>Pro plan questions</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button type="button"
+      data-bot-question="Who should use Pro plan?"
+      data-bot-answer="Pro is suitable for regular content creators, freelancers and agencies handling moderate client work.">
+      Who is Pro for?
+    </button>
+    <button type="button"
+      data-bot-question="Does Pro include more tools?"
+      data-bot-answer="Yes, Pro increases limits and unlocks more advanced video & audio tools compared to Basic.">
+      More tools in Pro?
+    </button>
+  </div>
+</div>
+
+<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
+  💬
+</button>
+
+<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
+  ⟟
+</a>
 
 <script src="script.js"></script>
 </body>
