@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms & Conditions – AI Market</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
 <body>
 
@@ -17,6 +25,7 @@
         <span class="logo-tagline">World's Smart AI Platform</span>
       </div>
     </a>
+
     <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
@@ -26,6 +35,7 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
+
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
       <a href="login.html" class="login-link">Login</a>
@@ -128,6 +138,49 @@
     </div>
   </div>
 </footer>
+
+<!-- Chatbot & WhatsApp -->
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>Legal & terms info</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button type="button"
+      data-bot-question="What are AI Market Terms?"
+      data-bot-answer="Our Terms describe how you can use the platform, what is allowed, and limitations of our responsibility. Please read this page fully before using paid services.">
+      About these Terms
+    </button>
+    <button type="button"
+      data-bot-question="Where can I ask a doubt about Terms?"
+      data-bot-answer="If something is not clear, you can contact us on WhatsApp at +91 9676142165 and mention your question about Terms & Conditions.">
+      Ask doubt?
+    </button>
+  </div>
+</div>
+
+<button
+  id="chatbotToggle"
+  class="chatbot-toggle"
+  type="button"
+  title="Chat with helper bot"
+  data-ga-event="chatbot_click">
+  💬
+</button>
+
+<a
+  href="https://wa.me/919676142165"
+  class="whatsapp-fab"
+  target="_blank"
+  rel="noopener"
+  title="Chat on WhatsApp"
+  data-ga-event="whatsapp_click">
+  ⟟
+</a>
 
 <script src="script.js"></script>
 </body>
