@@ -15,8 +15,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
@@ -43,7 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
-      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <a href="login.html" class="login-link">Login</a>
       <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
@@ -51,34 +49,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main>
   <section class="section">
-    <h1 class="section-title">Portfolio</h1>
-    <p class="section-subtitle">Sample preview of what AI Market can create.</p>
-
-    <h2 class="section-subtitle">Sample Videos</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-card">Video Reel – Emotional Status (sample)</div>
-      <div class="portfolio-card">Devotional Reel – Temple / Bhajan (sample)</div>
-      <div class="portfolio-card">Cartoon Story Clip (sample)</div>
-    </div>
-
-    <h2 class="section-subtitle" style="margin-top:32px;">Sample Images</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-card">Cartoon Portrait (sample)</div>
-      <div class="portfolio-card">Product Poster (sample)</div>
-      <div class="portfolio-card">YouTube Thumbnail (sample)</div>
-    </div>
-
-    <h2 class="section-subtitle" style="margin-top:32px;">Sample Music / BGM</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-card">Cinematic BGM (sample)</div>
-      <div class="portfolio-card">Devotional BGM (sample)</div>
-      <div class="portfolio-card">Happy Vlog Music (sample)</div>
-    </div>
-
-    <p class="center" style="margin-top:24px;">
-      Real portfolio items will be added as client work grows.  
-      For now, you can order a test reel or image using the tools page.
+    <h1 class="section-title">Sample Works & Portfolio</h1>
+    <p class="section-subtitle">
+      A quick look at the type of content we can create using AI Market tools.
     </p>
+
+    <p style="margin-bottom:10px;">
+      We are continuously adding examples of client projects and demo outputs. For privacy reasons, some videos
+      may be blurred or shortened.
+    </p>
+
+    <ul style="font-size:0.9rem;color:#9ca3af;">
+      <li>Reels & Shorts made from regional songs and dialogues.</li>
+      <li>Cartoon versions of real photos for profile pictures and posters.</li>
+      <li>Festival greetings and business promotions using templates.</li>
+      <li>Background music and BGM tracks for YouTube and podcasts.</li>
+    </ul>
+
+    <p class="small" style="margin-top:16px;">
+      To see latest samples, message us on WhatsApp and ask for <strong>“demo videos”</strong> or
+      <strong>“sample thumbnails”</strong>.
+    </p>
+
+    <div style="margin-top:14px;">
+      <a href="https://wa.me/919676142165?text=Send%20me%20some%20AI%20Market%20demo%20works."
+         target="_blank" class="btn-primary">
+        Get Samples on WhatsApp
+      </a>
+    </div>
   </section>
 </main>
 
@@ -97,16 +95,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body, themeBtn=document.getElementById("themeToggle"),
-        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
-        current=window.location.pathname.split("/").pop()||"portfolio.html";
-  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const body=document.body;
+  const themeBtn=document.getElementById("themeToggle");
+  const menuBtn=document.getElementById("menuToggle");
+  const nav=document.getElementById("mainNav");
+
+  const current="portfolio.html";
+  nav.querySelectorAll("a").forEach(a=>{
+    if(a.getAttribute("href")===current) a.classList.add("active");
+  });
+
   const saved=localStorage.getItem("aimarket-theme");
   if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-theme");
+    const light=body.classList.contains("light-theme");
+    themeBtn.textContent=light?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",light?"light":"dark");
+  });
+
   menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
-<script type="module" src="auth.js"></script>
 </body>
 </html>
