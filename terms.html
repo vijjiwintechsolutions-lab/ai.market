@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms &amp; Conditions – AI Market</title>
+  <title>Terms & Conditions – AI Market</title>
 
-  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -16,9 +15,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
@@ -45,80 +41,72 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
-      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <a href="login.html" class="login-link">Login</a>
       <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
 </header>
 
 <main>
-  <section class="section legal-page">
+  <section class="section">
     <h1 class="section-title">Terms &amp; Conditions</h1>
     <p class="section-subtitle">
-      These Terms &amp; Conditions apply to your use of AI Market and any services purchased through this website.
+      Please read these terms carefully before using AI Market. By using this site you agree to these terms.
     </p>
 
-    <h2>1. Use of Services</h2>
-    <p>
-      By creating an account, logging in or purchasing any plan, you agree to follow these Terms &amp; Conditions.
-      You must be legally allowed to enter into this agreement and use our services only for lawful purposes.
+    <h3>1. Service Nature</h3>
+    <p class="small">
+      AI Market provides digital content creation services using artificial intelligence and manual editing.
+      All outputs are delivered in digital form only (no physical products).
     </p>
 
-    <h2>2. Account Responsibility</h2>
-    <p>
-      You are responsible for keeping your login details safe. Any activity under your account will be treated
-      as your own, so do not share your password or login tokens with others.
+    <h3>2. Eligibility</h3>
+    <p class="small">
+      You must be at least 18 years old, or using this site with permission of a parent/guardian,
+      to place paid orders or donations.
     </p>
 
-    <h2>3. Payments</h2>
-    <p>
-      All prices are shown in Indian Rupees (INR) unless mentioned otherwise. Payments are processed through
-      third-party gateways like Razorpay. Plans are usually one-time purchases (not subscriptions) unless
-      clearly mentioned. Work or access may only begin after payment confirmation.
+    <h3>3. Your Content</h3>
+    <p class="small">
+      When you send songs, photos, text or any other material, you confirm that you have the necessary
+      rights or permission to use that content. You are fully responsible for any copyright or legal issues
+      related to your content.
     </p>
 
-    <h2>4. Delivery &amp; Access</h2>
-    <p>
-      After successful payment you may be redirected to an unlock page, get access to specific tools, or
-      receive content via download link. Actual features provided depend on the plan you selected.
+    <h3>4. Use of Outputs</h3>
+    <p class="small">
+      Unless stated otherwise, you may use the delivered outputs for personal or business promotion
+      (social media, ads, etc.). However, we may reuse low-resolution versions for our own portfolio or
+      marketing, unless you explicitly request us not to do so.
     </p>
 
-    <h2>5. Revisions &amp; Changes</h2>
-    <p>
-      Some services may include a limited number of revisions. Small fixes (spelling, timing, minor color
-      tweaks) are usually included; complete concept changes or major reworks may be treated as a new order.
+    <h3>5. Payments</h3>
+    <p class="small">
+      All prices are shown in INR and payments are processed via Razorpay or other payment partners.
+      Orders are usually started only after successful payment confirmation.
     </p>
 
-    <h2>6. Intellectual Property</h2>
-    <p>
-      You remain the owner of the original content (photos, videos, audio, text) you provide. By sending
-      content to AI Market, you confirm that you have the rights to use it. AI Market may use templates,
-      AI models and internal assets as part of the creation process.
+    <h3>6. No Guarantee of Reach or Results</h3>
+    <p class="small">
+      We only create content. We do not guarantee views, followers, engagement, business results or income.
+      Platform algorithms and audience behaviour are outside our control.
     </p>
 
-    <h2>7. Prohibited Use</h2>
-    <p>
-      You must not use AI Market to request or distribute content that is illegal, hateful, abusive, violent,
-      sexually explicit or violates any third-party rights or platform policies.
+    <h3>7. Changes to Service</h3>
+    <p class="small">
+      Tools, features and pricing may be updated or discontinued at any time without prior notice.
     </p>
 
-    <h2>8. Limitation of Liability</h2>
-    <p>
-      AI Market is provided on an “as is” and “as available” basis. We do not guarantee any particular level
-      of reach, monetization or approval from social media platforms. We are not liable for any indirect,
-      incidental or consequential damages arising from the use of this site or services.
+    <h3>8. Limitation of Liability</h3>
+    <p class="small">
+      To the maximum extent permitted by law, AI Market and its owners are not liable for any indirect,
+      incidental or consequential damages arising from use of this site or our services.
     </p>
 
-    <h2>9. Changes to Terms</h2>
-    <p>
-      These Terms &amp; Conditions may be updated from time to time. The latest version will always be
-      available on this page. Continued use of the service means you accept the updated Terms.
-    </p>
-
-    <h2>10. Contact</h2>
-    <p>
-      For any questions about these Terms, please contact support using the details on the
-      <a href="contact.html">Contact</a> page.
+    <h3>9. Updates to Terms</h3>
+    <p class="small">
+      We may modify these terms occasionally. The latest version will always be available on this page.
+      Continued use of the site means you accept the updated terms.
     </p>
   </section>
 </main>
@@ -138,16 +126,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body, themeBtn=document.getElementById("themeToggle"),
-        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
-        current=window.location.pathname.split("/").pop()||"terms.html";
-  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const body=document.body;
+  const themeBtn=document.getElementById("themeToggle");
+  const menuBtn=document.getElementById("menuToggle");
+  const nav=document.getElementById("mainNav");
+
+  const current="terms.html";
+  nav.querySelectorAll("a").forEach(a=>{
+    if(a.getAttribute("href")===current) a.classList.add("active");
+  });
+
   const saved=localStorage.getItem("aimarket-theme");
   if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-theme");
+    const light=body.classList.contains("light-theme");
+    themeBtn.textContent=light?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",light?"light":"dark");
+  });
+
   menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
-<script type="module" src="auth.js"></script>
 </body>
 </html>
