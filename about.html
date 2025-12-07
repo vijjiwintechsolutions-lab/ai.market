@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About – AI Market</title>
   <link rel="stylesheet" href="style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo-link">
@@ -78,12 +84,6 @@
           features. Our focus is to support multiple Indian languages, high
           quality output and useful integrations for real-world use.
         </p>
-
-        <p class="small">
-          If you want to partner with us, resell AI services or request
-          custom tools, please contact us using the details on the
-          <a href="contact.html">Contact page</a>.
-        </p>
       </div>
     </div>
   </section>
@@ -101,6 +101,33 @@
     </div>
   </div>
 </footer>
+
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>About & mission</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button type="button" data-bot-question="What is the goal of AI Market?" data-bot-answer="Our goal is to bring powerful AI tools to creators in a simple and affordable way, with strong support for Indian languages.">
+      Your goal?
+    </button>
+    <button type="button" data-bot-question="Who is AI Market for?" data-bot-answer="It’s for YouTubers, short video creators, agencies, freelancers, small businesses and anyone who wants to use AI for content.">
+      Who is it for?
+    </button>
+  </div>
+</div>
+
+<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
+  💬
+</button>
+
+<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
+  ⟟
+</a>
 
 <script src="script.js"></script>
 </body>
