@@ -1,141 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pricing - AI Market</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing – AI Market</title>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
-    </script>
-    <!-- End Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
+  </script>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header>
+<header class="site-header">
   <div class="header-inner">
-      <div class="logo-wrap">
-          <img src="logo.png" class="logo" alt="AI Market logo" />
-          <div class="logo-text">
-              <span class="site-name">AI Market</span>
-              <span class="tagline">World’s Smart AI Platform</span>
-          </div>
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="site-name">AI Market</span>
+        <span class="site-tagline">World’s Smart AI Platform</span>
       </div>
-      <div class="header-right">
-          <button class="theme-toggle" id="themeToggle">🌙</button>
-          <button class="menu-toggle" id="menuToggle">☰</button>
-      </div>
-  </div>
-
-  <nav id="mainNav">
+    </a>
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
-      <a class="active" href="pricing.html">Pricing</a>
+      <a href="pricing.html">Pricing</a>
       <a href="donate.html">Donate</a>
       <a href="portfolio.html">Portfolio</a>
+      <a href="faq.html">FAQ</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-  </nav>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
 </header>
 
-<section class="page">
-    <h1 class="section-title">Pricing Plans</h1>
-    <p class="section-subtitle">
-        Choose a plan that matches your content needs. All payments are securely processed via Razorpay.
-    </p>
+<main>
+  <section class="section">
+    <h1 class="section-title">Pricing</h1>
+    <p class="section-subtitle">Simple one-time plans for creators.</p>
 
-    <div class="price-grid">
-        <div class="price-card">
-            <span class="badge">Starter</span>
-            <h2>Basic Reel</h2>
-            <div class="price-amount">₹99</div>
-            <p>Perfect for one simple reel or short status video.</p>
-            <ul>
-                <li>Up to 15 seconds</li>
-                <li>1 audio / song</li>
-                <li>Basic transitions &amp; effects</li>
-            </ul>
-            <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-primary" target="_blank">Pay ₹99</a>
-        </div>
+    <div class="pricing-grid">
+      <article class="price-card">
+        <h2>Basic</h2>
+        <p class="price">₹99</p>
+        <ul>
+          <li>AI Video Generator</li>
+          <li>AI Image / Thumb Maker</li>
+          <li>720p exports</li>
+        </ul>
+        <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-primary">Buy Basic</a>
+        <p class="small">Redirect to unlock-basic page after payment.</p>
+      </article>
 
-        <div class="price-card">
-            <span class="badge">Most Popular</span>
-            <h2>Pro Creator</h2>
-            <div class="price-amount">₹299</div>
-            <p>Ideal for regular creators and small businesses.</p>
-            <ul>
-                <li>Up to 30 seconds</li>
-                <li>Advanced effects &amp; motion</li>
-                <li>Custom text &amp; branding</li>
-                <li>1 free revision</li>
-            </ul>
-            <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary" target="_blank">Pay ₹299</a>
-        </div>
+      <article class="price-card price-card-popular">
+        <h2>Pro</h2>
+        <p class="price">₹299</p>
+        <ul>
+          <li>Everything in Basic</li>
+          <li>AI Cartoon Maker</li>
+          <li>Up to 1080p exports</li>
+        </ul>
+        <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary">Buy Pro</a>
+        <p class="small">Redirect to unlock-pro page after payment.</p>
+      </article>
 
-        <div class="price-card">
-            <span class="badge">Premium</span>
-            <h2>Brand Package</h2>
-            <div class="price-amount">₹999</div>
-            <p>For brands, agencies and heavy usage.</p>
-            <ul>
-                <li>Up to 60 seconds</li>
-                <li>Multiple scenes &amp; variations</li>
-                <li>Priority delivery</li>
-                <li>Advanced customization</li>
-            </ul>
-            <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary" target="_blank">Pay ₹999</a>
-        </div>
+      <article class="price-card">
+        <h2>Premium</h2>
+        <p class="price">₹999</p>
+        <ul>
+          <li>All AI tools unlocked</li>
+          <li>AI Music & BGM Studio</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary">Buy Premium</a>
+        <p class="small">Redirect to unlock-premium page after payment.</p>
+      </article>
     </div>
-</section>
+  </section>
+</main>
 
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question%20about%20pricing."
-   class="whatsapp-float" target="_blank">💬</a>
-
-<footer>
-  © 2025 AI Market · World’s Smart AI Platform<br />
-  <a href="terms.html">Terms</a> ·
-  <a href="privacy.html">Privacy</a> ·
-  <a href="refund.html">Refund Policy</a> ·
-  <a href="disclaimer.html">Disclaimer</a> ·
-  <a href="cookies.html">Cookies</a>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <p class="footer-links">
+      <a href="terms.html">Terms</a><span>·</span>
+      <a href="privacy.html">Privacy</a><span>·</span>
+      <a href="refund.html">Refund Policy</a><span>·</span>
+      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
 </footer>
 
 <script>
-(function () {
-  const body = document.body;
-  const themeToggle = document.getElementById("themeToggle");
-  const menuToggle  = document.getElementById("menuToggle");
-  const nav         = document.getElementById("mainNav");
-
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-      body.classList.add("light-theme");
-      themeToggle.textContent = "☀";
-  }
-
-  themeToggle.addEventListener("click", () => {
-      body.classList.toggle("light-theme");
-      const light = body.classList.contains("light-theme");
-      themeToggle.textContent = light ? "☀" : "🌙";
-      localStorage.setItem("theme", light ? "light" : "dark");
-  });
-
-  menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-  });
-})();
+  (function () {
+    const body=document.body, themeBtn=document.getElementById("themeToggle"),
+          menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
+          current=window.location.pathname.split("/").pop()||"pricing.html";
+    nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+    const saved=localStorage.getItem("aimarket-theme");
+    if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+    themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+    menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
+  })();
 </script>
+<script type="module" src="auth.js"></script>
 </body>
 </html>
