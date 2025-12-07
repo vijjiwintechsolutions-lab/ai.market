@@ -1,180 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - AI Market</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – AI Market</title>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
-    </script>
-    <!-- End Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
+  </script>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header>
+<header class="site-header">
   <div class="header-inner">
-      <div class="logo-wrap">
-          <img src="logo.png" class="logo" alt="AI Market logo" />
-          <div class="logo-text">
-              <span class="site-name">AI Market</span>
-              <span class="tagline">World’s Smart AI Platform</span>
-          </div>
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="site-name">AI Market</span>
+        <span class="site-tagline">World’s Smart AI Platform</span>
       </div>
-      <div class="header-right">
-          <button class="theme-toggle" id="themeToggle">🌙</button>
-          <button class="menu-toggle" id="menuToggle">☰</button>
-      </div>
-  </div>
-
-  <nav id="mainNav">
+    </a>
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
       <a href="pricing.html">Pricing</a>
       <a href="donate.html">Donate</a>
-      <a class="active" href="portfolio.html">Portfolio</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="faq.html">FAQ</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-  </nav>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
 </header>
 
-<section class="page">
-    <h1 class="section-title">Our Portfolio</h1>
-    <p class="section-subtitle">
-        Sample style previews. Replace these with your real videos, images and music once ready.
+<main>
+  <section class="section">
+    <h1 class="section-title">Portfolio</h1>
+    <p class="section-subtitle">Sample preview of what AI Market can create.</p>
+
+    <h2 class="section-subtitle">Sample Videos</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">Video Reel – Emotional Status (sample)</div>
+      <div class="portfolio-card">Devotional Reel – Temple / Bhajan (sample)</div>
+      <div class="portfolio-card">Cartoon Story Clip (sample)</div>
+    </div>
+
+    <h2 class="section-subtitle" style="margin-top:32px;">Sample Images</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">Cartoon Portrait (sample)</div>
+      <div class="portfolio-card">Product Poster (sample)</div>
+      <div class="portfolio-card">YouTube Thumbnail (sample)</div>
+    </div>
+
+    <h2 class="section-subtitle" style="margin-top:32px;">Sample Music / BGM</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">Cinematic BGM (sample)</div>
+      <div class="portfolio-card">Devotional BGM (sample)</div>
+      <div class="portfolio-card">Happy Vlog Music (sample)</div>
+    </div>
+
+    <p class="center" style="margin-top:24px;">
+      Real portfolio items will be added as client work grows.  
+      For now, you can order a test reel or image using the tools page.
     </p>
-</section>
+  </section>
+</main>
 
-<section class="page">
-    <h2 class="section-title">Sample AI Videos</h2>
-    <div class="portfolio-grid">
-        <div class="portfolio-card">
-            <video controls class="portfolio-video">
-                <source src="samples/video1.mp4" type="video/mp4" />
-            </video>
-            <p class="caption">AI Emotional Reel</p>
-        </div>
-        <div class="portfolio-card">
-            <video controls class="portfolio-video">
-                <source src="samples/video2.mp4" type="video/mp4" />
-            </video>
-            <p class="caption">Devotional Status</p>
-        </div>
-        <div class="portfolio-card">
-            <video controls class="portfolio-video">
-                <source src="samples/video3.mp4" type="video/mp4" />
-            </video>
-            <p class="caption">Cartoon Style Video</p>
-        </div>
-    </div>
-
-    <div style="text-align:center;margin-top:20px;">
-        <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20a%20video%20like%20your%20portfolio."
-           class="btn-primary" target="_blank">Order a Video</a>
-    </div>
-</section>
-
-<section class="page">
-    <h2 class="section-title">Sample AI Images</h2>
-    <div class="portfolio-grid">
-        <div class="portfolio-card">
-            <img src="samples/img1.jpg" class="portfolio-image" alt="Sample 1">
-            <p class="caption">AI Cartoon Photo</p>
-        </div>
-        <div class="portfolio-card">
-            <img src="samples/img2.jpg" class="portfolio-image" alt="Sample 2">
-            <p class="caption">Face Enhancement</p>
-        </div>
-        <div class="portfolio-card">
-            <img src="samples/img3.jpg" class="portfolio-image" alt="Sample 3">
-            <p class="caption">Background Change</p>
-        </div>
-    </div>
-
-    <div style="text-align:center;margin-top:20px;">
-        <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20an%20image%20edit."
-           class="btn-primary" target="_blank">Order an Image</a>
-    </div>
-</section>
-
-<section class="page">
-    <h2 class="section-title">Sample AI Music / BGM</h2>
-    <div class="portfolio-grid">
-        <div class="portfolio-card">
-            <audio controls class="portfolio-audio">
-                <source src="samples/bgm1.mp3" type="audio/mpeg" />
-            </audio>
-            <p class="caption">Cinematic BGM</p>
-        </div>
-        <div class="portfolio-card">
-            <audio controls class="portfolio-audio">
-                <source src="samples/bgm2.mp3" type="audio/mpeg" />
-            </audio>
-            <p class="caption">Devotional BGM</p>
-        </div>
-        <div class="portfolio-card">
-            <audio controls class="portfolio-audio">
-                <source src="samples/bgm3.mp3" type="audio/mpeg" />
-            </audio>
-            <p class="caption">Happy Upbeat BGM</p>
-        </div>
-    </div>
-
-    <div style="text-align:center;margin-top:20px;">
-        <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20AI%20BGM%20or%20music."
-           class="btn-primary" target="_blank">Order Music</a>
-    </div>
-</section>
-
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20liked%20your%20portfolio."
-   class="whatsapp-float" target="_blank">💬</a>
-
-<footer>
-    © 2025 AI Market · World’s Smart AI Platform<br />
-    <a href="terms.html">Terms</a> ·
-    <a href="privacy.html">Privacy</a> ·
-    <a href="refund.html">Refund Policy</a> ·
-    <a href="disclaimer.html">Disclaimer</a> ·
-    <a href="cookies.html">Cookies</a>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <p class="footer-links">
+      <a href="terms.html">Terms</a><span>·</span>
+      <a href="privacy.html">Privacy</a><span>·</span>
+      <a href="refund.html">Refund Policy</a><span>·</span>
+      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
 </footer>
 
 <script>
 (function () {
-  const body = document.body;
-  const themeToggle = document.getElementById("themeToggle");
-  const menuToggle  = document.getElementById("menuToggle");
-  const nav         = document.getElementById("mainNav");
-
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-      body.classList.add("light-theme");
-      themeToggle.textContent = "☀";
-  }
-
-  themeToggle.addEventListener("click", () => {
-      body.classList.toggle("light-theme");
-      const light = body.classList.contains("light-theme");
-      themeToggle.textContent = light ? "☀" : "🌙";
-      localStorage.setItem("theme", light ? "light" : "dark");
-  });
-
-  menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-  });
+  const body=document.body, themeBtn=document.getElementById("themeToggle"),
+        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
+        current=window.location.pathname.split("/").pop()||"portfolio.html";
+  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
+<script type="module" src="auth.js"></script>
 </body>
 </html>
