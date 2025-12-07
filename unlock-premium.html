@@ -2,145 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unlock Premium Plan – AI Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MPPBPXHVH7');
+    gtag("js", new Date());
+    gtag("config", "G-MPPBPXHVH7");
   </script>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
-      <div class="logo-text">
-        <span class="logo-title">AI Market</span>
-        <span class="logo-tagline">World's Smart AI Platform</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="AI Market logo" />
+        <div class="logo-text">
+          <span class="logo-title">AI Market</span>
+          <span class="logo-tagline">World’s Smart AI Platform</span>
+        </div>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="donate.html">Donate</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
+        <a href="login.html" class="btn-outline small">Login</a>
       </div>
-    </a>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Home</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle">🌙</button>
-      <a href="login.html" class="login-link">Login</a>
-      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="page-wrapper">
-  <section class="hero-small">
+  <main class="section">
     <div class="container">
-      <h1>Unlock Premium Plan</h1>
-      <p class="subtitle">
-        Premium is for studios, brands and resellers who want full power and
-        maximum flexibility.
+      <h1 class="page-title">Unlock Premium Plan</h1>
+      <p class="section-intro">
+        Premium is designed for agencies, studios and power users who need maximum limits
+        and priority support.
       </p>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="unlock-card">
+      <div class="card">
         <h2>Premium Plan – ₹999 / month</h2>
-        <ul class="small">
-          <li>Access to all current and upcoming AI tools.</li>
-          <li>Highest usage limits and priority processing.</li>
-          <li>Suitable for agencies, resellers and studios.</li>
-          <li>Priority support and onboarding assistance.</li>
+        <ul class="feature-list">
+          <li>Highest AI video, image and music limits</li>
+          <li>Access to all current and upcoming tools</li>
+          <li>Best template collections and priority features</li>
+          <li>Direct support via WhatsApp with faster response</li>
         </ul>
 
+        <p>
+          Click the button below to pay securely via Razorpay. For large teams or custom
+          yearly pricing, please contact us before paying.
+        </p>
+
+        <a
+          href="https://rzp.io/rzp/67BhfxGW"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener"
+          data-ga-event="unlock_premium_pay"
+        >
+          Pay ₹999 and Unlock Premium
+        </a>
+
         <p class="small">
-          Click the button below to pay securely via Razorpay. This plan is
-          best for those who handle regular client work or high-volume content.
+          By proceeding, you agree to the <a href="terms.html">Terms</a>,
+          <a href="privacy.html">Privacy</a> and <a href="refund.html">Refund Policy</a>.
         </p>
-
-        <a href="https://rzp.io/rzp/67BhfxGW"
-           class="btn-primary"
-           target="_blank"
-           rel="noopener"
-           data-ga-event="unlock_premium_pay">
-          Pay ₹999 & Unlock Premium
-        </a>
-
-        <p class="small section-note">
-          After payment, send your payment reference, business name (if any) and
-          email ID to us on WhatsApp (<strong>+91 9676142165</strong>). We will
-          verify and set up your Premium access, and share any onboarding
-          details.
-        </p>
-
-        <a href="https://wa.me/919676142165"
-           class="btn-outline"
-           target="_blank"
-           rel="noopener"
-           data-ga-event="unlock_premium_whatsapp">
-          Send Payment Details on WhatsApp
-        </a>
       </div>
     </div>
-  </section>
-</div>
+  </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>© 2025 AI Market – World’s Smart AI Platform.</div>
-    <div class="footer-links">
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="cookies.html">Cookies</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 AI Market · World’s Smart AI Platform</p>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="chatbotWidget" class="chatbot-widget">
+    <div class="chatbot-header">
+      <span>AI Market Assistant</span>
+      <button id="chatbotClose" type="button">✕</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="bot-msg">
+        Running an agency or studio? Tell me your workflow and I’ll confirm if Premium fits.
+      </div>
+    </div>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbotInput" placeholder="Describe your use case..." />
+      <button id="chatbotSend" type="button">➤</button>
     </div>
   </div>
-</footer>
 
-<div class="chatbot-panel" id="chatbotPanel">
-  <div class="chatbot-header">
-    <div>
-      <span class="chatbot-title">AI Market Help</span>
-      <small>Premium plan questions</small>
-    </div>
-    <button class="chatbot-close" type="button">✕</button>
-  </div>
-  <div class="chatbot-messages"></div>
-  <div class="chatbot-quick">
-    <button type="button"
-      data-bot-question="Who is Premium plan for?"
-      data-bot-answer="Premium is ideal for studios, agencies, and resellers who handle high volume content and need all tools unlocked.">
-      Who is Premium for?
-    </button>
-    <button type="button"
-      data-bot-question="Does Premium include future tools?"
-      data-bot-answer="Yes, Premium includes access to all current and upcoming tools we add to AI Market.">
-      Future tools?
-    </button>
-  </div>
-</div>
+  <button id="chatbotFAB" class="chatbot-fab" type="button">💬</button>
 
-<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
-  💬
-</button>
+  <a
+    href="https://wa.me/919676142165"
+    class="whatsapp-fab"
+    target="_blank"
+    rel="noopener"
+    title="Chat on WhatsApp"
+  >
+    ⟟
+  </a>
 
-<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
-  ⟟
-</a>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
