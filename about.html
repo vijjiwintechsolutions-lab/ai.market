@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About – AI Market</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learn about AI Market, our mission and who we serve.">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- GA4 -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About AI Market – Our Goal & Mission</title>
+  <meta name="description"
+        content="AI Market’s mission is to bring powerful AI tools to Indian creators in a simple and affordable way." />
+  <link rel="canonical" href="https://ai-market.pages.dev/about.html" />
+  <link rel="stylesheet" href="style.css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VM41JL03HD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-VM41JL03HD');
   </script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html" class="brand">
-      <img src="logo.png" class="brand-logo" alt="AI Market logo">
-      <div class="brand-text">
-        <span class="brand-name">AI Market</span>
-        <span class="brand-tagline">World’s Smart AI Platform</span>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="logo-title">AI Market</span>
+        <span class="logo-tagline">World’s Smart AI Platform</span>
       </div>
     </a>
     <button id="menuToggle" class="menu-toggle">☰</button>
-    <nav id="mainNav" class="main-nav">
+    <nav id="mainNav" class="nav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
       <a href="pricing.html">Pricing</a>
       <a href="donate.html">Donate</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
-      <a href="login.html" class="nav-login">Login</a>
+      <a href="login.html" class="btn btn-outline nav-login">Login</a>
+      <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
     </nav>
-    <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </header>
 
-<main class="page">
-  <section class="section">
-    <div class="container">
-      <h1>About AI Market</h1>
-      <p>AI Market is built to help creators, businesses and agencies use AI for daily content work without complex software.</p>
+<main class="section">
+  <div class="container narrow">
+    <h1 class="section-title">About AI Market</h1>
+    <p>
+      AI Market was created to make powerful AI tools simple and affordable for Indian creators.
+      We believe that YouTubers, short video creators, agencies and freelancers should be able to
+      use AI without needing a big team or technical background.
+    </p>
+    <p>
+      Our focus is on local language content – Telugu, Tamil, Hindi and more – with
+      ready-to-post outputs for Reels, Shorts, Stories and other platforms.
+    </p>
 
-      <h2>Our Mission</h2>
-      <p>Make AI creative tools accessible, fast and affordable for Indian and global users, covering multiple languages and formats.</p>
+    <h2>Our Goal</h2>
+    <p>
+      To become the <strong>World’s Smart AI Platform</strong> for everyday creators, not just big companies.
+    </p>
 
-      <h2>Who We Serve</h2>
-      <ul>
-        <li>YouTube & Shorts creators</li>
-        <li>Instagram Reels & social media managers</li>
-        <li>Small businesses & local brands</li>
-        <li>Agencies and freelancers</li>
-      </ul>
-    </div>
-  </section>
+    <h2>What’s Next</h2>
+    <ul class="bullet-list">
+      <li>More AI tools for music, voice and thumbnails.</li>
+      <li>Better automation for content workflows.</li>
+      <li>Simple dashboards for tracking credits and earnings.</li>
+    </ul>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -69,31 +76,14 @@
     <nav class="footer-nav">
       <a href="terms.html">Terms</a>
       <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
+      <a href="refund.html">Refund Policy</a>
       <a href="disclaimer.html">Disclaimer</a>
       <a href="cookies.html">Cookies</a>
     </nav>
   </div>
 </footer>
 
-<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank">💬</a>
-
-<div id="chatbot" class="chatbot">
-  <button id="chatbotToggle" class="chatbot-toggle">❓</button>
-  <div class="chatbot-window">
-    <div class="chatbot-header">
-      <span>AI Market Help</span>
-      <button id="chatbotClose" class="chatbot-close">×</button>
-    </div>
-    <div class="chatbot-body">
-      <p>Want to know if AI Market is right for you?</p>
-      <button class="bot-q" data-bot-answer="AI Market is ideal if you regularly need reels, thumbnails or BGMs and want a simple process via WhatsApp.">Is AI Market for me?</button>
-      <button class="bot-q" data-bot-answer="We focus on practical tools that save time for creators and businesses.">What is your focus?</button>
-      <div id="botAnswer" class="bot-answer"></div>
-    </div>
-  </div>
-</div>
-
-<script src="script.js"></script>
+<a href="https://wa.me/919676142165?text=Hi,%20I%20want%20to%20know%20more%20about%20AI%20Market."
+   id="whatsapp-btn" class="whatsapp-fab" target="_blank" rel="noopener">💬</a>
 </body>
 </html>
