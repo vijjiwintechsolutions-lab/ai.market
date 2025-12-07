@@ -15,8 +15,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
@@ -43,7 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
-      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <a href="login.html" class="login-link">Login</a>
       <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
@@ -51,38 +49,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main>
   <section class="section">
-    <h1 class="section-title">AI Tools</h1>
-    <p class="section-subtitle">Choose a tool to start creating content.</p>
+    <h1 class="section-title">AI Tools at AI Market</h1>
+    <p class="section-subtitle">
+      All tools are managed and run by our team. You just share your inputs on WhatsApp after you select a plan.
+    </p>
 
-    <div class="tools-grid">
-      <article id="video" class="tool-card">
-        <h2>AI Video Generator</h2>
-        <p>Create vertical reels and shorts from songs, prompts or images.</p>
-        <p class="badge">Included in all paid plans</p>
-        <a href="unlock-basic.html" class="btn-primary">Open Tool</a>
-      </article>
-
-      <article id="cartoon" class="tool-card">
-        <h2>AI Cartoon Maker</h2>
-        <p>Turn your photos into cinematic cartoon or anime-style scenes.</p>
-        <p class="badge">Pro & Premium</p>
-        <a href="unlock-pro.html" class="btn-primary">Open Tool</a>
-      </article>
-
-      <article id="image" class="tool-card">
-        <h2>AI Image / Thumb Maker</h2>
-        <p>Generate thumbnails, posters and marketing images for your brand.</p>
-        <p class="badge">All plans</p>
-        <a href="unlock-basic.html" class="btn-primary">Open Tool</a>
-      </article>
-
-      <article id="music" class="tool-card">
-        <h2>AI Music & BGM Studio</h2>
-        <p>Background music, vocal enhancer, mastering and sound design.</p>
-        <p class="badge">Premium only</p>
-        <a href="unlock-premium.html" class="btn-primary">Open Tool</a>
-      </article>
+    <div class="grid">
+      <div class="card">
+        <h3>AI Video Generator</h3>
+        <p>Create vertical reels & shorts using your song, lyrics, or script. Ideal for Instagram & YouTube.</p>
+      </div>
+      <div class="card">
+        <h3>AI Image / Thumbnail Maker</h3>
+        <p>Eye-catching thumbnails, posters, story covers and more – in multiple aspect ratios.</p>
+      </div>
+      <div class="card">
+        <h3>AI Cartoon Maker</h3>
+        <p>Convert photos of people or products into cartoon or anime-style visuals.</p>
+      </div>
+      <div class="card">
+        <h3>AI Music & BGM Studio</h3>
+        <p>Generate background music, intros, outros and loops for your videos, ads or podcasts.</p>
+      </div>
+      <div class="card">
+        <h3>Vocal Enhancer</h3>
+        <p>Clean up vocals, remove noise and polish speech for voice-overs and songs.</p>
+      </div>
+      <div class="card">
+        <h3>Template Packs</h3>
+        <p>Ready templates for love status, devotionals, festival wishes, promotions and more.</p>
+      </div>
     </div>
+
+    <p class="small" style="margin-top:16px;">
+      To use these tools, simply choose a plan from the <a href="pricing.html">Pricing</a> page, pay online or order on WhatsApp,
+      and send your content details. We will generate and deliver the final output for you.
+    </p>
   </section>
 </main>
 
@@ -100,17 +102,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
-  (function () {
-    const body=document.body, themeBtn=document.getElementById("themeToggle"),
-          menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
-          current=window.location.pathname.split("/").pop()||"ai-tools.html";
-    nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
-    const saved=localStorage.getItem("aimarket-theme");
-    if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-    themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
-    menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
-  })();
+(function () {
+  const body=document.body;
+  const themeBtn=document.getElementById("themeToggle");
+  const menuBtn=document.getElementById("menuToggle");
+  const nav=document.getElementById("mainNav");
+
+  const current="ai-tools.html";
+  nav.querySelectorAll("a").forEach(a=>{
+    if(a.getAttribute("href")===current) a.classList.add("active");
+  });
+
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+  themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-theme");
+    const light=body.classList.contains("light-theme");
+    themeBtn.textContent=light?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",light?"light":"dark");
+  });
+
+  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
+})();
 </script>
-<script type="module" src="auth.js"></script>
 </body>
 </html>
