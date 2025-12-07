@@ -1,68 +1,43 @@
-<script type="module">
-  // Import Firebase SDK from CDN (v10+ modular)
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-  import {
-    getAuth,
-    onAuthStateChanged,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    signOut,
-    GoogleAuthProvider,
-    GithubAuthProvider,
-    signInWithPopup
-  } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import { 
+  GoogleAuthProvider, GithubAuthProvider, 
+  signInWithPopup, signOut,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged
+} from "./firebase-config.js";
 
-  // TODO: REPLACE with your real config from Firebase console
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    appId: "YOUR_APP_ID"
-  };
+// GOOGLE LOGIN
+document.getElementById("googleLoginBtn")?.addEventListener("click", () => {
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(aiAuth.auth, provider)
+    .then(() => window.location.href = "index.html")
+    .catch(err => alert(err.message));
+});
 
-  const app  = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
+// GITHUB LOGIN
+document.getElementById("githubLoginBtn")?.addEventListener("click", () => {
+  const provider = new GithubAuthProvider();
+  signInWithPopup(aiAuth.auth, provider)
+    .then(() => window.location.href = "index.html")
+    .catch(err => alert(err.message));
+});
 
-  // Expose auth functions globally so other scripts / inline handlers can use them
-  window.aiAuth = {
-    auth,
-    signUpWithEmail,
-    loginWithEmail,
-    loginWithGoogle,
-    loginWithGithub,
-    logout
-  };
+// EMAIL SIGNUP
+document.getElementById("signupBtn")?.addEventListener("click", () => {
+  const email = signupEmail.value;
+  const pass = signupPassword.value;
 
-  // ----- Email signup -----
-  async function signUpWithEmail(email, password) {
-    return createUserWithEmailAndPassword(auth, email, password);
-  }
+  createUserWithEmailAndPassword(aiAuth.auth, email, pass)
+    .then(() => window.location.href = "index.html")
+    .catch(err => alert(err.message));
+});
 
-  // ----- Email login -----
-  async function loginWithEmail(email, password) {
-    return signInWithEmailAndPassword(auth, email, password);
-  }
+// EMAIL LOGIN
+document.getElementById("emailLoginBtn")?.addEventListener("click", () => {
+  const email = email.value;
+  const pass = password.value;
 
-  // ----- Google login -----
-  async function loginWithGoogle() {
-    const provider = new GoogleAuthProvider();
-    return signInWithPopup(auth, provider);
-  }
-
-  // ----- GitHub login -----
-  async function loginWithGithub() {
-    const provider = new GithubAuthProvider();
-    return signInWithPopup(auth, provider);
-  }
-
-  // ----- Logout -----
-  async function logout() {
-    return signOut(auth);
-  }
-
-  // ----- Auth guard support -----
-  // Pages can listen to user changes
-  window.aiAuthOnChange = function (callback) {
-    onAuthStateChanged(auth, callback);
-  };
-</script>
+  signInWithEmailAndPassword(aiAuth.auth, email, pass)
+    .then(() => window.location.href = "index.html")
+    .catch(err => alert(err.message));
+});
