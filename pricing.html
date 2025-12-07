@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pricing – AI Market</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
 <body>
 <header class="site-header">
@@ -57,7 +65,7 @@
             <li>Basic voiceover usage</li>
             <li>Email & WhatsApp support</li>
           </ul>
-          <a href="unlock-basic.html" class="btn-primary">Start Basic</a>
+          <a href="unlock-basic.html" class="btn-primary" data-ga-event="pricing_basic_select">Start Basic</a>
         </div>
 
         <div class="pricing-card">
@@ -70,7 +78,7 @@
             <li>Advanced video & audio features</li>
             <li>Priority WhatsApp support</li>
           </ul>
-          <a href="unlock-pro.html" class="btn-primary">Go Pro</a>
+          <a href="unlock-pro.html" class="btn-primary" data-ga-event="pricing_pro_select">Go Pro</a>
         </div>
 
         <div class="pricing-card">
@@ -83,7 +91,7 @@
             <li>White-label / reseller friendly</li>
             <li>Dedicated support & training</li>
           </ul>
-          <a href="unlock-premium.html" class="btn-primary">Go Premium</a>
+          <a href="unlock-premium.html" class="btn-primary" data-ga-event="pricing_premium_select">Go Premium</a>
         </div>
 
       </div>
@@ -108,6 +116,37 @@
     </div>
   </div>
 </footer>
+
+<!-- Chatbot & WhatsApp -->
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>Need help choosing a plan?</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button type="button" data-bot-question="Which plan is best for occasional use?" data-bot-answer="If you create content occasionally for yourself, the Basic plan for ₹99/month is usually enough.">
+      For personal use?
+    </button>
+    <button type="button" data-bot-question="I work with clients, which plan is best?" data-bot-answer="For client work, we recommend the Pro plan at ₹299/month. If you handle high volume or want reseller-style usage, go for Premium.">
+      For client work?
+    </button>
+    <button type="button" data-bot-question="Can I upgrade later?" data-bot-answer="Yes, you can always upgrade from Basic to Pro or Premium by using the unlock pages and contacting support.">
+      Can I upgrade later?
+    </button>
+  </div>
+</div>
+
+<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
+  💬
+</button>
+
+<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
+  ⟟
+</a>
 
 <script src="script.js"></script>
 </body>
