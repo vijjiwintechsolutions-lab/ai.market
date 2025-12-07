@@ -1,50 +1,177 @@
-(function () {
-  const html = document.documentElement;
-  const body = document.body;
-  const themeBtn = document.getElementById("themeToggle");
-  const menuBtn = document.getElementById("menuToggle");
-  const nav = document.getElementById("mainNav");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Market – World's Smart AI Tools Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  // --- THEME SETUP ---
+<body>
 
-  const savedTheme = localStorage.getItem("aimarket-theme");
-  if (savedTheme === "light") {
-    html.classList.add("light-theme"); // CSS listens on html/body
-  }
+<!-- ================= HEADER ================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
+      <div class="logo-text">
+        <span class="logo-title">AI Market</span>
+        <span class="logo-tagline">World's Smart AI Platform</span>
+      </div>
+    </a>
 
-  function updateThemeIcon() {
-    if (!themeBtn) return;
-    const isLight = html.classList.contains("light-theme");
-    themeBtn.textContent = isLight ? "☀️" : "🌙";
-  }
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="ai-tools.html">AI Tools</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-  updateThemeIcon();
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <a href="login.html" class="login-link">Login</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
+</header>
 
-  if (themeBtn) {
-    themeBtn.addEventListener("click", () => {
-      html.classList.toggle("light-theme");
-      const isLight = html.classList.contains("light-theme");
-      localStorage.setItem("aimarket-theme", isLight ? "light" : "dark");
-      updateThemeIcon();
-    });
-  }
+<!-- ================= HERO ================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <h1>
+        Create Anything with <span>AI Market</span>
+      </h1>
+      <p class="subtitle">
+        The most powerful AI tools in one place.  
+        Generate Videos, Voiceovers, Thumbnails, Music, Photos, Posters & More.
+      </p>
 
-  // --- MOBILE NAV ---
+      <div class="hero-actions">
+        <a href="ai-tools.html" class="btn-primary">Explore AI Tools 🚀</a>
+        <a href="pricing.html" class="btn-outline">See Pricing →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  if (menuBtn && nav) {
-    menuBtn.addEventListener("click", () => {
-      nav.classList.toggle("nav-open");
-    });
-  }
+<!-- ================= FEATURED TOOLS ================== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Popular AI Tools</h2>
+    <p class="section-subtitle">Everything you need to create world-class digital content.</p>
 
-  // --- ACTIVE NAV LINK HIGHLIGHT ---
+    <div class="tools-grid">
 
-  if (nav) {
-    const current = window.location.pathname.split("/").pop() || "index.html";
-    nav.querySelectorAll("a").forEach((a) => {
-      const href = a.getAttribute("href");
-      if (!href) return;
-      if (href === current) a.classList.add("active");
-    });
-  }
-})();
+      <div class="tool-card">
+        <h3>AI Video Generator</h3>
+        <p>Create cinematic ads, reels, and social media videos instantly.</p>
+      </div>
+
+      <div class="tool-card">
+        <h3>AI Face Editor</h3>
+        <p>Swap faces, enhance photos, and generate HD portraits.</p>
+      </div>
+
+      <div class="tool-card">
+        <h3>AI Voiceover Studio</h3>
+        <p>Premium male/female voices in 30+ languages with emotions.</p>
+      </div>
+
+      <div class="tool-card">
+        <h3>AI Thumbnail Maker</h3>
+        <p>YouTube-ready thumbnails that boost clicks & engagement.</p>
+      </div>
+
+      <div class="tool-card">
+        <h3>AI Music & BGM Generator</h3>
+        <p>Create copyright-free background music for your videos.</p>
+      </div>
+
+      <div class="tool-card">
+        <h3>AI Remove Watermark</h3>
+        <p>Remove watermarks, backgrounds & unwanted objects easily.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Why Choose AI Market?</h2>
+    <p class="section-subtitle">Designed for creators, businesses, freelancers & agencies.</p>
+
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <h3>⚡ All-in-One Platform</h3>
+        <p>More than 50+ AI tools under one subscription. No hidden charges.</p>
+      </div>
+
+      <div class="tool-card">
+        <h3>🌍 Multi-Language Support</h3>
+        <p>Use tools in English, Telugu, Hindi, Tamil, Kannada & global languages.</p>
+      </div>
+
+      <div class="tool-card">
+        <h3>💸 Affordable Plans</h3>
+        <p>Best pricing compared to any AI platform. Pay once, create unlimited.</p>
+      </div>
+
+      <div class="tool-card">
+        <h3>🎧 Premium Audio Studio</h3>
+        <p>Realistic voiceovers, music generation, vocal enhancement and more.</p>
+      </div>
+
+      <div class="tool-card">
+        <h3>🧠 Smart AI Updates</h3>
+        <p>New AI tools added regularly — always stay ahead of competitors.</p>
+      </div>
+
+      <div class="tool-card">
+        <h3>📞 Dedicated Support</h3>
+        <p>WhatsApp support anytime — instant response and guidance.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA SECTION ================== -->
+<section class="section">
+  <div class="container">
+    <div class="hero-inner">
+      <h2>Start Creating with AI Today</h2>
+      <p class="subtitle">Join thousands of creators and boost your business using AI Market.</p>
+
+      <div class="hero-actions">
+        <a href="pricing.html" class="btn-primary">Get Started →</a>
+        <a href="donate.html" class="btn-outline">Support Our Platform ❤️</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© 2025 AI Market – All Rights Reserved.</div>
+
+    <div class="footer-links">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refund</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
