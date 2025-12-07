@@ -2,143 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unlock Pro Plan – AI Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MPPBPXHVH7');
+    gtag("js", new Date());
+    gtag("config", "G-MPPBPXHVH7");
   </script>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
-      <div class="logo-text">
-        <span class="logo-title">AI Market</span>
-        <span class="logo-tagline">World's Smart AI Platform</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="AI Market logo" />
+        <div class="logo-text">
+          <span class="logo-title">AI Market</span>
+          <span class="logo-tagline">World’s Smart AI Platform</span>
+        </div>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="donate.html">Donate</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
+        <a href="login.html" class="btn-outline small">Login</a>
       </div>
-    </a>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Home</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle">🌙</button>
-      <a href="login.html" class="login-link">Login</a>
-      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="page-wrapper">
-  <section class="hero-small">
+  <main class="section">
     <div class="container">
-      <h1>Unlock Pro Plan</h1>
-      <p class="subtitle">
-        Pro is ideal for agencies and serious creators who need higher limits
-        and advanced AI features.
+      <h1 class="page-title">Unlock Pro Plan</h1>
+      <p class="section-intro">
+        Pro is best for regular creators, freelancers and editors who need reliable AI tools
+        every month.
       </p>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="unlock-card">
+      <div class="card">
         <h2>Pro Plan – ₹299 / month</h2>
-        <ul class="small">
-          <li>All Basic features plus higher usage limits.</li>
-          <li>More advanced video & audio tools unlocked.</li>
-          <li>Priority WhatsApp support for quicker help.</li>
+        <ul class="feature-list">
+          <li>Increased AI video &amp; image export limits</li>
+          <li>Access to all major tools and future updates</li>
+          <li>More templates and style presets</li>
+          <li>Priority WhatsApp support</li>
         </ul>
 
+        <p>
+          You will be redirected to a secure Razorpay page to complete the payment. Keep your
+          payment ID and contact us if your account is not activated after payment.
+        </p>
+
+        <a
+          href="https://rzp.io/rzp/mMXyAH0p"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener"
+          data-ga-event="unlock_pro_pay"
+        >
+          Pay ₹299 and Unlock Pro
+        </a>
+
         <p class="small">
-          Click the button below to pay securely via Razorpay. Keep your
-          transaction ID for activation.
+          By proceeding, you agree to the <a href="terms.html">Terms</a>,
+          <a href="privacy.html">Privacy</a> and <a href="refund.html">Refund Policy</a>.
         </p>
-
-        <a href="https://rzp.io/rzp/mMXyAH0p"
-           class="btn-primary"
-           target="_blank"
-           rel="noopener"
-           data-ga-event="unlock_pro_pay">
-          Pay ₹299 & Unlock Pro
-        </a>
-
-        <p class="small section-note">
-          After payment, send your payment reference, email ID and any
-          requirements to us on WhatsApp (<strong>+91 9676142165</strong>).
-          We will verify and activate Pro access quickly.
-        </p>
-
-        <a href="https://wa.me/919676142165"
-           class="btn-outline"
-           target="_blank"
-           rel="noopener"
-           data-ga-event="unlock_pro_whatsapp">
-          Send Payment Details on WhatsApp
-        </a>
       </div>
     </div>
-  </section>
-</div>
+  </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>© 2025 AI Market – World’s Smart AI Platform.</div>
-    <div class="footer-links">
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="cookies.html">Cookies</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 AI Market · World’s Smart AI Platform</p>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="chatbotWidget" class="chatbot-widget">
+    <div class="chatbot-header">
+      <span>AI Market Assistant</span>
+      <button id="chatbotClose" type="button">✕</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="bot-msg">
+        Unsure if Pro matches your workload? Tell me how many videos and images you create.
+      </div>
+    </div>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbotInput" placeholder="Describe your usage..." />
+      <button id="chatbotSend" type="button">➤</button>
     </div>
   </div>
-</footer>
 
-<div class="chatbot-panel" id="chatbotPanel">
-  <div class="chatbot-header">
-    <div>
-      <span class="chatbot-title">AI Market Help</span>
-      <small>Pro plan questions</small>
-    </div>
-    <button class="chatbot-close" type="button">✕</button>
-  </div>
-  <div class="chatbot-messages"></div>
-  <div class="chatbot-quick">
-    <button type="button"
-      data-bot-question="Who should use Pro plan?"
-      data-bot-answer="Pro is suitable for regular content creators, freelancers and agencies handling moderate client work.">
-      Who is Pro for?
-    </button>
-    <button type="button"
-      data-bot-question="Does Pro include more tools?"
-      data-bot-answer="Yes, Pro increases limits and unlocks more advanced video & audio tools compared to Basic.">
-      More tools in Pro?
-    </button>
-  </div>
-</div>
+  <button id="chatbotFAB" class="chatbot-fab" type="button">💬</button>
 
-<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
-  💬
-</button>
+  <a
+    href="https://wa.me/919676142165"
+    class="whatsapp-fab"
+    target="_blank"
+    rel="noopener"
+    title="Chat on WhatsApp"
+  >
+    ⟟
+  </a>
 
-<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
-  ⟟
-</a>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
