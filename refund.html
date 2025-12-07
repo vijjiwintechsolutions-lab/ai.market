@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Refund Policy – AI Market</title>
 
+  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -51,38 +52,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="section">
     <h1 class="section-title">Refund &amp; Cancellation Policy</h1>
     <p class="section-subtitle">
-      Please read this policy before placing orders. Digital content is different from physical products.
+      Please read this policy before placing orders or making donations.
     </p>
 
-    <h3>1. Digital Nature of Service</h3>
+    <p class="small" style="margin-bottom:16px;">
+      <strong>Language &amp; worldwide use:</strong> This policy is provided in English and applies to all AI Market
+      users worldwide. If we provide translations, the English version will control in case of conflict.
+    </p>
+
+    <h3>1. Digital Nature of Services</h3>
     <p class="small">
-      AI Market delivers customised digital outputs (videos, images, audio). Once work is started and
-      delivered, it cannot be “returned” like a physical item.
+      AI Market delivers customised digital content (such as videos, images and audio). Once work has been
+      created and delivered, it cannot be returned like a physical product.
     </p>
 
     <h3>2. No Refund After Final Delivery</h3>
     <p class="small">
-      In general, payments for completed and delivered work are <strong>non-refundable</strong>.
-      We may provide small edits or corrections if there is any clear issue from our side.
+      In general, payments for completed and delivered work are <strong>non-refundable</strong>. We may provide
+      reasonable corrections or small edits where there is a clear issue from our side.
     </p>
 
     <h3>3. Cancellation Before Work Starts</h3>
     <p class="small">
-      If you made a payment but <strong>no work has started yet</strong>, you can request cancellation.
-      We will review and may refund fully or partially, depending on payment charges and discussion.
+      If you have made a payment but we have not yet started work on your order, you may request cancellation.
+      We will review the situation and may provide a full or partial refund, depending on payment gateway charges
+      and any time already spent.
     </p>
 
     <h3>4. Technical or Payment Errors</h3>
     <p class="small">
-      If money is deducted but payment is not shown as successful, please share the transaction details
-      and we will coordinate with the payment gateway. Final decision may depend on Razorpay or your bank.
+      If money has been deducted from your account but payment status is unclear, please share the transaction
+      details (screenshot, transaction ID, date and time). We will coordinate with the payment gateway or request
+      that you contact your bank if needed.
     </p>
 
-    <h3>5. Contact for Refund Queries</h3>
+    <h3>5. Donations</h3>
     <p class="small">
-      For any refund or cancellation question, contact us on WhatsApp:
-      <a href="https://wa.me/919676142165" target="_blank">+91 96761 42165</a> or email
-      <a href="mailto:aimarket.in@gmail.com">aimarket.in@gmail.com</a>.
+      Donations made via the <a href="donate.html">Donate</a> page are voluntary and are generally
+      <strong>non-refundable</strong>. If a technical error occurs, we will try to assist, but final decisions
+      may depend on the payment provider and bank policies.
+    </p>
+
+    <h3>6. How to Request a Refund or Cancellation</h3>
+    <p class="small">
+      For refund or cancellation queries, please contact us:
+    </p>
+    <ul class="small" style="color:#9ca3af;">
+      <li>WhatsApp: <a href="https://wa.me/919676142165" target="_blank">+91 96761 42165</a></li>
+      <li>Email: <a href="mailto:aimarket.in@gmail.com">aimarket.in@gmail.com</a></li>
+    </ul>
+
+    <p class="small" style="margin-top:16px;color:#9ca3af;">
+      Last updated: 07 December 2025
     </p>
   </section>
 </main>
@@ -102,26 +123,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body;
-  const themeBtn=document.getElementById("themeToggle");
-  const menuBtn=document.getElementById("menuToggle");
-  const nav=document.getElementById("mainNav");
+  const body = document.body;
+  const themeBtn = document.getElementById("themeToggle");
+  const menuBtn = document.getElementById("menuToggle");
+  const nav = document.getElementById("mainNav");
 
-  const current="refund.html";
-  nav.querySelectorAll("a").forEach(a=>{
-    if(a.getAttribute("href")===current) a.classList.add("active");
+  const current = "refund.html";
+  nav.querySelectorAll("a").forEach(a => {
+    if (a.getAttribute("href") === current) a.classList.add("active");
   });
 
-  const saved=localStorage.getItem("aimarket-theme");
-  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{
+  const saved = localStorage.getItem("aimarket-theme");
+  if (saved === "light") {
+    body.classList.add("light-theme");
+    themeBtn.textContent = "☀";
+  }
+  themeBtn.addEventListener("click", () => {
     body.classList.toggle("light-theme");
-    const light=body.classList.contains("light-theme");
-    themeBtn.textContent=light?"☀":"🌙";
-    localStorage.setItem("aimarket-theme",light?"light":"dark");
+    const light = body.classList.contains("light-theme");
+    themeBtn.textContent = light ? "☀" : "🌙";
+    localStorage.setItem("aimarket-theme", light ? "light" : "dark");
   });
 
-  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
+  menuBtn.addEventListener("click", () => nav.classList.toggle("nav-open"));
 })();
 </script>
 </body>
