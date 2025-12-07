@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - AI Market</title>
+
+  <!-- GTM (same as other pages) -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
+  </script>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase auth logic -->
+  <script type="module" src="auth.js"></script>
+</head>
+<body class="auth-page">
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<section class="auth-container">
+  <div class="auth-card">
+    <h1>AI Market</h1>
+    <p class="auth-subtitle">Sign in to continue</p>
+
+    <form id="emailLoginForm">
+      <input type="email" id="email" placeholder="Email address" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit" class="btn-primary" style="width:100%;">Login</button>
+    </form>
+
+    <p class="auth-small">
+      New here?
+      <a href="#" id="createAccountLink">Create an account</a>
+    </p>
+
+    <div class="auth-divider"><span>OR</span></div>
+
+    <button id="googleLogin" class="btn-secondary" style="width:100%;margin-bottom:8px;">
+      Continue with Google
+    </button>
+
+    <button id="githubLogin" class="btn-secondary" style="width:100%;">
+      Continue with GitHub
+    </button>
+
+    <p id="authMessage" class="auth-message"></p>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById("emailLoginForm");
+  const msg  = document.getElementById("authMessage");
+  const createLink = document.getElementById("createAccountLink");
+
+  let mode = "login"; // or "signup"
+
+  createLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    mode = mode === "login" ? "signup" : "login";
+    form.querySelector("button").textContent = mode === "login" ? "Login" : "Create account";
+    createLink.textContent = mode === "login"
+      ? "Create an account"
+      : "Already have an account? Login";
+    msg.textContent = "";
+  });
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    msg.textContent = "Please wait...";
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    try {
+      if (mode === "login") {
+        await window.aiAuth.loginWithEmail(email, password);
+      } else {
+        await window.aiAuth.signUpWithEmail(email, password);
+      }
+      msg.textContent = "Success! Redirecting...";
+      window.location.href = "index.html";
+    } catch (err) {
+      console.error(err);
+      msg.textContent = err.message || "Error occurred";
+    }
+  });
+
+  document.getElementById("googleLogin").addEventListener("click", async () => {
+    msg.textContent = "Opening Google...";
+    try {
+      await window.aiAuth.loginWithGoogle();
+      window.location.href = "index.html";
+    } catch (err) {
+      console.error(err);
+      msg.textContent = err.message || "Google login failed";
+    }
+  });
+
+  document.getElementById("githubLogin").addEventListener("click", async () => {
+    msg.textContent = "Opening GitHub...";
+    try {
+      await window.aiAuth.loginWithGithub();
+      window.location.href = "index.html";
+    } catch (err) {
+      console.error(err);
+      msg.textContent = err.message || "GitHub login failed";
+    }
+  });
+</script>
+</body>
+</html>
