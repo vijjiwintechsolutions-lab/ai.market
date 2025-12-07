@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Donate – Support AI Market</title>
   <link rel="stylesheet" href="style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
 <body>
 <header class="site-header">
@@ -45,18 +52,18 @@
 
   <section class="section">
     <div class="container">
-      <div class="card donate-card">
+      <div class="donate-card">
         <h2>Donate Any Amount</h2>
         <p class="small">
           You can make a one-time donation using Razorpay. Every rupee helps us
           improve the platform and add more AI features for creators.
         </p>
 
-        <div class="hero-actions" style="justify-content:flex-start; flex-wrap:wrap;">
-          <a href="https://rzp.io/rzp/donateaimarket" class="btn-primary">Donate (Any Amount)</a>
-          <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-outline">₹99 Support</a>
-          <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-outline">₹299 Support</a>
-          <a href="https://rzp.io/rzp/67BhfxGW" class="btn-outline">₹999 Support</a>
+        <div class="hero-actions" style="justify-content:flex-start;flex-wrap:wrap;">
+          <a href="https://rzp.io/rzp/donateaimarket" class="btn-primary" data-ga-event="donate_any">Donate (Any Amount)</a>
+          <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-outline" data-ga-event="donate_99">₹99 Support</a>
+          <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-outline" data-ga-event="donate_299">₹299 Support</a>
+          <a href="https://rzp.io/rzp/67BhfxGW" class="btn-outline" data-ga-event="donate_999">₹999 Support</a>
         </div>
 
         <p class="small section-note">
@@ -80,6 +87,33 @@
     </div>
   </div>
 </footer>
+
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>Questions about donations?</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button type="button" data-bot-question="What is this donation used for?" data-bot-answer="Donations help us pay for servers, AI engines, new tools and support so we can keep prices low for creators.">
+      Where does money go?
+    </button>
+    <button type="button" data-bot-question="Will I get a confirmation?" data-bot-answer="Yes, Razorpay sends a confirmation to your email or phone. Keep your payment reference ID safe.">
+      Confirmation?
+    </button>
+  </div>
+</div>
+
+<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
+  💬
+</button>
+
+<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
+  ⟟
+</a>
 
 <script src="script.js"></script>
 </body>
