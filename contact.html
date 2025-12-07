@@ -15,8 +15,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
@@ -43,7 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
-      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <a href="login.html" class="login-link">Login</a>
       <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
@@ -51,30 +49,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main>
   <section class="section">
-    <h1 class="section-title">Contact</h1>
-    <p class="section-subtitle">Support and questions are handled mainly on WhatsApp.</p>
+    <h1 class="section-title">Contact AI Market</h1>
+    <p class="section-subtitle">
+      For orders, support or questions, WhatsApp is the fastest way to reach us.
+    </p>
 
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h2>WhatsApp Support</h2>
-        <p>For queries related to plans, payments or tools.</p>
-        <a
-          class="btn-primary full-btn"
-          href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question."
-          target="_blank"
-        >
-          Chat on WhatsApp
-        </a>
-      </div>
+    <h3>WhatsApp (Preferred)</h3>
+    <p class="small">
+      <a href="https://wa.me/919676142165" target="_blank">+91 96761 42165</a><br />
+      Please include your name, plan (Basic / Pro / Premium) and short description.
+    </p>
 
-      <div class="contact-card">
-        <h2>Basic Info</h2>
-        <p><strong>Brand:</strong> AI Market</p>
-        <p><strong>Support time:</strong> 9:00 AM – 8:00 PM IST</p>
-        <p><strong>Website:</strong> ai-market.pages.dev</p>
-        <p class="small">Response time can vary based on workload, but every message will be checked.</p>
-      </div>
-    </div>
+    <h3>Email</h3>
+    <p class="small">
+      You can email us at:
+      <a href="mailto:aimarket.in@gmail.com">aimarket.in@gmail.com</a><br />
+      Response time by email may be slower than WhatsApp.
+    </p>
+
+    <h3>Basic Contact Form (optional)</h3>
+    <p class="small">
+      This form is only for your own notes – it does <strong>not</strong> send data anywhere. After filling,
+      copy text and send on WhatsApp or email.
+    </p>
+
+    <form onsubmit="return false;" class="login-form" style="max-width:420px;margin-top:10px;">
+      <label>Your name</label>
+      <input type="text" placeholder="Your full name" />
+
+      <label>What do you need?</label>
+      <input type="text" placeholder="Example: 3 reels for Instagram" />
+
+      <label>Extra details</label>
+      <input type="text" placeholder="Song / language / duration / deadline" />
+    </form>
+
+    <p class="small" style="margin-top:10px;">
+      After you type here, select the text, copy it, and paste it into WhatsApp or your email app.
+    </p>
   </section>
 </main>
 
@@ -93,16 +105,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body, themeBtn=document.getElementById("themeToggle"),
-        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
-        current=window.location.pathname.split("/").pop()||"contact.html";
-  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const body=document.body;
+  const themeBtn=document.getElementById("themeToggle");
+  const menuBtn=document.getElementById("menuToggle");
+  const nav=document.getElementById("mainNav");
+
+  const current="contact.html";
+  nav.querySelectorAll("a").forEach(a=>{
+    if(a.getAttribute("href")===current) a.classList.add("active");
+  });
+
   const saved=localStorage.getItem("aimarket-theme");
   if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-theme");
+    const light=body.classList.contains("light-theme");
+    themeBtn.textContent=light?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",light?"light":"dark");
+  });
+
   menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
-<script type="module" src="auth.js"></script>
 </body>
 </html>
