@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cookies Policy - AI Market</title>
+  <title>Cookies Policy – AI Market</title>
 
-  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,33 +12,27 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
   </script>
-  <!-- End Google Tag Manager -->
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header>
+<header class="site-header">
   <div class="header-inner">
-      <div class="logo-wrap">
-          <img src="logo.png" class="logo" alt="AI Market logo" />
-          <div class="logo-text">
-              <span class="site-name">AI Market</span>
-              <span class="tagline">World’s Smart AI Platform</span>
-          </div>
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="site-name">AI Market</span>
+        <span class="site-tagline">World’s Smart AI Platform</span>
       </div>
-      <div class="header-right">
-          <button class="theme-toggle" id="themeToggle">🌙</button>
-          <button class="menu-toggle" id="menuToggle">☰</button>
-      </div>
-  </div>
-
-  <nav id="mainNav">
+    </a>
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
       <a href="pricing.html">Pricing</a>
@@ -48,84 +41,80 @@
       <a href="faq.html">FAQ</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-  </nav>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
 </header>
 
-<section class="page legal-page">
-  <h1 class="section-title">Cookies Policy</h1>
-  <p class="section-subtitle">
-      This Cookies Policy explains how AI Market may use cookies and similar technologies on this website.
-  </p>
+<main>
+  <section class="section legal-page">
+    <h1 class="section-title">Cookies Policy</h1>
+    <p class="section-subtitle">
+      This Cookies Policy explains how AI Market may use cookies and similar technologies.
+    </p>
 
-  <h2>1. What Are Cookies?</h2>
-  <p>
-      Cookies are small text files stored on your device when you visit a website. They help remember
-      your preferences and improve your browsing experience.
-  </p>
+    <h2>1. What Are Cookies?</h2>
+    <p>
+      Cookies are small text files stored on your device when you visit a website. They help the
+      site remember your actions and preferences over a period of time.
+    </p>
 
-  <h2>2. How We Use Cookies</h2>
-  <p>We may use cookies to:</p>
-  <ul>
-      <li>Remember basic settings and preferences</li>
-      <li>Understand how visitors use our website (analytics)</li>
-      <li>Improve site performance and user experience</li>
-  </ul>
+    <h2>2. How We Use Cookies</h2>
+    <p>We may use cookies to:</p>
+    <ul>
+      <li>Remember your theme preference (dark or light mode)</li>
+      <li>Keep you signed in to your account session</li>
+      <li>Measure basic usage statistics to improve AI Market</li>
+    </ul>
 
-  <h2>3. Third-Party Cookies</h2>
-  <p>
-      Some cookies may be placed by third-party services such as Google Analytics or other tools
-      integrated via Google Tag Manager. These services may collect information such as your browser,
-      device, IP address and visited pages.
-  </p>
+    <h2>3. Third-Party Cookies</h2>
+    <p>
+      Some cookies may come from third-party services like Google Analytics, Firebase or payment
+      gateways. These services have their own privacy and cookies policies.
+    </p>
 
-  <h2>4. Managing Cookies</h2>
-  <p>
-      You can control or delete cookies through your browser settings. Disabling certain cookies may
-      affect some features of this website.
-  </p>
+    <h2>4. Managing Cookies</h2>
+    <p>
+      You can control or delete cookies using your browser settings. If you disable certain cookies,
+      some features of AI Market may not work correctly (such as staying logged in or saving preferences).
+    </p>
 
-  <h2>5. Changes to This Policy</h2>
-  <p>
-      We may update this Cookies Policy from time to time. Please review it regularly to stay informed.
-  </p>
-</section>
+    <h2>5. Changes to This Policy</h2>
+    <p>
+      This Cookies Policy may be updated from time to time. Please check this page for the latest version.
+    </p>
+  </section>
+</main>
 
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question%20about%20Cookies."
-   class="whatsapp-float" target="_blank">💬</a>
-
-<footer>
-  © 2025 AI Market · World’s Smart AI Platform<br />
-  <a href="terms.html">Terms</a> ·
-  <a href="privacy.html">Privacy</a> ·
-  <a href="refund.html">Refund Policy</a> ·
-  <a href="disclaimer.html">Disclaimer</a> ·
-  <a href="cookies.html">Cookies</a>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <p class="footer-links">
+      <a href="terms.html">Terms</a><span>·</span>
+      <a href="privacy.html">Privacy</a><span>·</span>
+      <a href="refund.html">Refund Policy</a><span>·</span>
+      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
 </footer>
 
 <script>
 (function () {
-  const body = document.body;
-  const themeToggle = document.getElementById("themeToggle");
-  const menuToggle  = document.getElementById("menuToggle");
-  const nav         = document.getElementById("mainNav");
-
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-      body.classList.add("light-theme");
-      themeToggle.textContent = "☀";
-  }
-
-  themeToggle.addEventListener("click", () => {
-      body.classList.toggle("light-theme");
-      const light = body.classList.contains("light-theme");
-      themeToggle.textContent = light ? "☀" : "🌙";
-      localStorage.setItem("theme", light ? "light" : "dark");
-  });
-
-  menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-  });
+  const body=document.body, themeBtn=document.getElementById("themeToggle"),
+        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
+        current=window.location.pathname.split("/").pop()||"cookies.html";
+  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
+<script type="module" src="auth.js"></script>
 </body>
 </html>
