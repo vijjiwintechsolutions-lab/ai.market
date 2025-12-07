@@ -2,130 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact – AI Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MPPBPXHVH7');
+    gtag("js", new Date());
+    gtag("config", "G-MPPBPXHVH7");
   </script>
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
-      <div class="logo-text">
-        <span class="logo-title">AI Market</span>
-        <span class="logo-tagline">World's Smart AI Platform</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="AI Market logo" />
+        <div class="logo-text">
+          <span class="logo-title">AI Market</span>
+          <span class="logo-tagline">World’s Smart AI Platform</span>
+        </div>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="donate.html">Donate</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
+        <a href="login.html" class="btn-outline small">Login</a>
       </div>
-    </a>
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Home</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle">🌙</button>
-      <a href="login.html" class="login-link">Login</a>
-      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="page-wrapper">
-  <section class="hero-small">
+  <main class="section">
     <div class="container">
-      <h1>Contact & Support</h1>
-      <p class="subtitle">
-        Have questions, need help, or want a custom plan? Reach out using the details below.
+      <h1 class="page-title">Contact AI Market</h1>
+      <p class="section-intro">
+        For plan questions, custom integrations, billing, or feedback – send us a message.
       </p>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="form-grid">
-        <div class="contact-card">
-          <h2>Contact Details</h2>
+      <div class="contact-layout">
+        <section class="card">
+          <h2>Contact Form</h2>
+          <!-- You can plug Formspree or any backend later -->
+          <form
+            action="https://formspree.io/f/xjknozyo"
+            method="POST"
+            class="stack-form"
+          >
+            <label>
+              Your Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
           <p class="small">
-            For fast support, you can contact us on WhatsApp. Please mention your
-            plan (Basic / Pro / Premium), your requirement and your payment reference (if any).
+            By submitting this form, you agree to our
+            <a href="privacy.html">Privacy Policy</a>.
           </p>
+        </section>
 
-          <p class="small">
-            <strong>WhatsApp:</strong> +91 9676142165<br />
-            <strong>Email:</strong> support@aimarket.example (replace with your email)
+        <section class="card">
+          <h2>Direct Contact</h2>
+          <ul class="feature-list">
+            <li><strong>WhatsApp:</strong> +91 9676142165</li>
+            <li><strong>Preferred Time:</strong> 9:00 AM – 8:00 PM IST</li>
+          </ul>
+          <p>
+            For payment issues, please include your Razorpay payment ID, plan name and
+            the email/phone used while paying.
           </p>
-
-          <a href="https://wa.me/919676142165" class="btn-primary" target="_blank" rel="noopener" data-ga-event="contact_whatsapp">
+          <a
+            href="https://wa.me/919676142165"
+            class="btn-ghost"
+            target="_blank"
+            rel="noopener"
+          >
             Chat on WhatsApp
           </a>
-        </div>
-
-        <div class="card">
-          <h2>Support Info</h2>
-          <p class="small">
-            Support hours are generally 9:30 AM to 7:30 PM IST. We try to reply
-            as early as possible, including weekends if we are available.
-          </p>
-          <p class="small">
-            For faster resolution, share screenshots, examples or references of
-            what you are trying to create. This helps us guide you better.
-          </p>
-        </div>
+        </section>
       </div>
     </div>
-  </section>
-</div>
+  </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>© 2025 AI Market – World’s Smart AI Platform.</div>
-    <div class="footer-links">
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="cookies.html">Cookies</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 AI Market · World’s Smart AI Platform</p>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="chatbotWidget" class="chatbot-widget">
+    <div class="chatbot-header">
+      <span>AI Market Assistant</span>
+      <button id="chatbotClose" type="button">✕</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="bot-msg">
+        Need help contacting us? Tell me whether it’s about payment, tools or general enquiry.
+      </div>
+    </div>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbotInput" placeholder="Type your question..." />
+      <button id="chatbotSend" type="button">➤</button>
     </div>
   </div>
-</footer>
 
-<div class="chatbot-panel" id="chatbotPanel">
-  <div class="chatbot-header">
-    <div>
-      <span class="chatbot-title">AI Market Help</span>
-      <small>Contact questions</small>
-    </div>
-    <button class="chatbot-close" type="button">✕</button>
-  </div>
-  <div class="chatbot-messages"></div>
-  <div class="chatbot-quick">
-    <button type="button" data-bot-question="How can I contact support?" data-bot-answer="You can reach us via WhatsApp at +91 9676142165 or by email from this page.">
-      How to contact?
-    </button>
-    <button type="button" data-bot-question="What details should I share?" data-bot-answer="Share your name, plan (if any), your requirement and payment reference ID for billing questions.">
-      What to share?
-    </button>
-  </div>
-</div>
+  <button id="chatbotFAB" class="chatbot-fab" type="button">💬</button>
 
-<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
-  💬
-</button>
+  <a
+    href="https://wa.me/919676142165"
+    class="whatsapp-fab"
+    target="_blank"
+    rel="noopener"
+    title="Chat on WhatsApp"
+  >
+    ⟟
+  </a>
 
-<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
-  ⟟
-</a>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
