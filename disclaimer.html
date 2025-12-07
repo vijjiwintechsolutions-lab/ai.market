@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Disclaimer – AI Market</title>
   <link rel="stylesheet" href="style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
 <body>
 
@@ -39,7 +46,7 @@
     <div class="container">
       <h1>Disclaimer</h1>
       <p class="subtitle">
-        Important information about the AI-generated content and third-party
+        Important information about AI-generated content and third-party
         services used by AI Market.
       </p>
     </div>
@@ -104,6 +111,37 @@
     </div>
   </div>
 </footer>
+
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>Disclaimer info</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button type="button"
+      data-bot-question="Is AI output always correct?"
+      data-bot-answer="No, AI can sometimes be wrong or biased. Always review and edit the outputs before publishing or using commercially.">
+      AI always correct?
+    </button>
+    <button type="button"
+      data-bot-question="Who is responsible for copyright?"
+      data-bot-answer="You are responsible for ensuring that any input content you use (songs, images, clips) is legally allowed for your usage.">
+      Copyright responsibility?
+    </button>
+  </div>
+</div>
+
+<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
+  💬
+</button>
+
+<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
+  ⟟
+</a>
 
 <script src="script.js"></script>
 </body>
