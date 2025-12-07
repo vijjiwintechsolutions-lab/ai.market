@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing – AI Market</title>
+  <title>Pricing & Offers – AI Market</title>
 
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -15,8 +15,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
@@ -43,7 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
-      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <a href="login.html" class="login-link">Login</a>
       <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
@@ -51,45 +49,87 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main>
   <section class="section">
-    <h1 class="section-title">Pricing</h1>
-    <p class="section-subtitle">Simple one-time plans for creators.</p>
+    <h1 class="section-title">Plans & Offers</h1>
+    <p class="section-subtitle">
+      Choose a plan, apply coupon if available, and pay securely via Razorpay.
+      No login required.
+    </p>
 
+    <!-- Trending / offer badges -->
+    <div class="offers-strip">
+      <span class="offer-badge">🔥 Trending: Pro Plan for creators</span>
+      <span class="offer-badge">⭐ Use coupon <strong>AIFIRST</strong> to get 1 extra video free</span>
+      <span class="offer-badge">🎁 Festive offer coupons updated on this page</span>
+    </div>
+
+    <!-- Coupon box -->
+    <div class="coupon-box">
+      <label for="couponCode">Have a coupon code?</label>
+      <div class="coupon-row">
+        <input id="couponCode" type="text" placeholder="Enter coupon (e.g. AIFIRST)" />
+        <button type="button" id="applyCouponBtn" class="btn-outline">Apply</button>
+      </div>
+      <p id="couponMessage" class="small"></p>
+    </div>
+
+    <!-- Plans grid -->
     <div class="pricing-grid">
-      <article class="price-card">
+      <div class="pricing-card">
         <h2>Basic</h2>
         <p class="price">₹99</p>
         <ul>
-          <li>AI Video Generator</li>
-          <li>AI Image / Thumb Maker</li>
-          <li>720p exports</li>
+          <li>AI Video Generator (limited)</li>
+          <li>AI Image / Thumbnail Maker</li>
+          <li>Standard quality exports</li>
         </ul>
-        <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-primary">Buy Basic</a>
-        <p class="small">Redirect to unlock-basic page after payment.</p>
-      </article>
+        <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-primary full-btn">Pay ₹99</a>
+        <a
+          id="wa-basic"
+          class="btn-outline full-btn small"
+          href="https://wa.me/919676142165?text=I%20want%20Basic%20plan%20on%20AI%20Market."
+          target="_blank"
+        >
+          Order on WhatsApp
+        </a>
+      </div>
 
-      <article class="price-card price-card-popular">
-        <h2>Pro</h2>
+      <div class="pricing-card highlight">
+        <h2>Pro <span class="tag">Most Popular</span></h2>
         <p class="price">₹299</p>
         <ul>
           <li>Everything in Basic</li>
           <li>AI Cartoon Maker</li>
-          <li>Up to 1080p exports</li>
+          <li>Better quality exports</li>
         </ul>
-        <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary">Buy Pro</a>
-        <p class="small">Redirect to unlock-pro page after payment.</p>
-      </article>
+        <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary full-btn">Pay ₹299</a>
+        <a
+          id="wa-pro"
+          class="btn-outline full-btn small"
+          href="https://wa.me/919676142165?text=I%20want%20Pro%20plan%20on%20AI%20Market."
+          target="_blank"
+        >
+          Order on WhatsApp
+        </a>
+      </div>
 
-      <article class="price-card">
+      <div class="pricing-card">
         <h2>Premium</h2>
         <p class="price">₹999</p>
         <ul>
-          <li>All AI tools unlocked</li>
+          <li>All current AI tools</li>
           <li>AI Music & BGM Studio</li>
           <li>Priority support</li>
         </ul>
-        <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary">Buy Premium</a>
-        <p class="small">Redirect to unlock-premium page after payment.</p>
-      </article>
+        <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary full-btn">Pay ₹999</a>
+        <a
+          id="wa-premium"
+          class="btn-outline full-btn small"
+          href="https://wa.me/919676142165?text=I%20want%20Premium%20plan%20on%20AI%20Market."
+          target="_blank"
+        >
+          Order on WhatsApp
+        </a>
+      </div>
     </div>
   </section>
 </main>
@@ -108,17 +148,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
-  (function () {
-    const body=document.body, themeBtn=document.getElementById("themeToggle"),
-          menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
-          current=window.location.pathname.split("/").pop()||"pricing.html";
-    nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
-    const saved=localStorage.getItem("aimarket-theme");
-    if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-    themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
-    menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
-  })();
+(function () {
+  const body=document.body,
+        themeBtn=document.getElementById("themeToggle"),
+        menuBtn=document.getElementById("menuToggle"),
+        nav=document.getElementById("mainNav");
+
+  // active nav
+  const current="pricing.html";
+  nav.querySelectorAll("a").forEach(a=>{
+    if(a.getAttribute("href")===current)a.classList.add("active");
+  });
+
+  // theme
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+  themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-theme");
+    const l=body.classList.contains("light-theme");
+    themeBtn.textContent=l?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",l?"light":"dark");
+  });
+
+  // mobile nav
+  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
+
+  // coupon logic
+  const coupons={
+    "AIFIRST":{
+      text:"Coupon applied! You get 1 extra video free on any plan.",
+      waSuffix:"%20Coupon%3A%20AIFIRST%20(1%20extra%20video)"
+    },
+    "FEST10":{
+      text:"Festive coupon applied! Bonus creative support included.",
+      waSuffix:"%20Coupon%3A%20FEST10%20(festive%20bonus)"
+    }
+  };
+
+  const codeInput=document.getElementById("couponCode");
+  const msgEl=document.getElementById("couponMessage");
+  const applyBtn=document.getElementById("applyCouponBtn");
+
+  const waBasic=document.getElementById("wa-basic");
+  const waPro=document.getElementById("wa-pro");
+  const waPremium=document.getElementById("wa-premium");
+
+  const baseBasic = "https://wa.me/919676142165?text=I%20want%20Basic%20plan%20on%20AI%20Market";
+  const basePro   = "https://wa.me/919676142165?text=I%20want%20Pro%20plan%20on%20AI%20Market";
+  const basePremium="https://wa.me/919676142165?text=I%20want%20Premium%20plan%20on%20AI%20Market";
+
+  applyBtn.addEventListener("click",()=>{
+    const code=codeInput.value.trim().toUpperCase();
+    if(!code){
+      msgEl.textContent="Please enter a coupon code.";
+      msgEl.className="small error-text";
+      waBasic.href=baseBasic;
+      waPro.href=basePro;
+      waPremium.href=basePremium;
+      return;
+    }
+    const c=coupons[code];
+    if(!c){
+      msgEl.textContent="Invalid coupon code. Please check and try again.";
+      msgEl.className="small error-text";
+      waBasic.href=baseBasic;
+      waPro.href=basePro;
+      waPremium.href=basePremium;
+      return;
+    }
+    msgEl.textContent=c.text + " It will be visible in your WhatsApp order message.";
+    msgEl.className="small success-text";
+
+    waBasic.href=baseBasic + c.waSuffix;
+    waPro.href=basePro + c.waSuffix;
+    waPremium.href=basePremium + c.waSuffix;
+  });
+})();
 </script>
-<script type="module" src="auth.js"></script>
 </body>
 </html>
