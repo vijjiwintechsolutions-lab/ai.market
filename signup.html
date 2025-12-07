@@ -1,26 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Signup — AI Market</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up – AI Market</title>
+
+  <!-- GTM -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
+
   <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
   <script type="module" src="auth.js"></script>
 </head>
-
 <body class="auth-page">
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 
-<div class="auth-container">
+<section class="auth-container">
+  <div class="auth-card">
+    <h1>Create Account</h1>
+    <p class="auth-subtitle">Join AI Market in one minute</p>
 
-  <h2>Create Your AI Market Account</h2>
+    <form>
+      <input type="email" id="signupEmail" placeholder="Email address" required />
+      <input type="password" id="signupPassword" placeholder="Password" required />
+      <button id="signupBtn" class="btn-primary" type="submit">Create Account</button>
+    </form>
 
-  <input type="email" id="signupEmail" placeholder="Email">
-  <input type="password" id="signupPassword" placeholder="Password">
+    <p class="auth-small">
+      Already registered? <a href="login.html">Login</a>
+    </p>
 
-  <button id="signupBtn">Create Account</button>
-
-  <p>Already have an account? <a href="login.html">Login</a></p>
-
-</div>
+    <p id="authMessage" class="auth-message"></p>
+  </div>
+</section>
 
 </body>
 </html>
