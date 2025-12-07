@@ -15,9 +15,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
@@ -44,73 +41,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
-      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <a href="login.html" class="login-link">Login</a>
       <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
 </header>
 
 <main>
-  <section class="section legal-page">
+  <section class="section">
     <h1 class="section-title">Privacy Policy</h1>
     <p class="section-subtitle">
-      This Privacy Policy explains how AI Market collects, uses and protects your information.
+      This policy explains how AI Market handles your information. It may be updated from time to time.
     </p>
 
-    <h2>1. Information We Collect</h2>
-    <p>
-      We may collect basic details such as your email address, name and login information when you
-      create an account or sign in using Google or GitHub. We may also store information about the
-      plans or tools you use.
+    <h3>1. Information We Receive</h3>
+    <p class="small">
+      We may receive information when you:
     </p>
-
-    <h2>2. How We Use Your Information</h2>
-    <p>We use your information to:</p>
-    <ul>
-      <li>Provide and manage your access to AI tools</li>
-      <li>Process payments and maintain basic records</li>
-      <li>Improve the performance and reliability of our services</li>
-      <li>Communicate updates, support messages or important notices</li>
+    <ul class="small" style="color:#9ca3af;">
+      <li>Visit our website (IP address, browser type, basic analytics data).</li>
+      <li>Contact us via WhatsApp, email or other channels.</li>
+      <li>Send content (songs, photos, text, etc.) for projects.</li>
+      <li>Make a payment through Razorpay or other gateways.</li>
     </ul>
 
-    <h2>3. Data Storage &amp; Security</h2>
-    <p>
-      We use cloud services like Firebase and trusted payment gateways to store data in a secure way.
-      However, no system is 100% secure, so we recommend you use a strong password and avoid sharing
-      sensitive data unnecessarily.
+    <h3>2. How We Use Information</h3>
+    <p class="small">
+      We use your information to:
+    </p>
+    <ul class="small" style="color:#9ca3af;">
+      <li>Communicate with you about orders and support.</li>
+      <li>Create and deliver the requested digital content.</li>
+      <li>Improve our services and understand usage patterns (through analytics).</li>
+    </ul>
+
+    <h3>3. Payments</h3>
+    <p class="small">
+      Payments are processed by Razorpay or similar payment providers. We do not store your full card
+      details on our own servers.
     </p>
 
-    <h2>4. Third-Party Services</h2>
-    <p>
-      We may use third-party services such as Firebase Authentication, Razorpay, Google Analytics
-      or other tools integrated by Google Tag Manager. These services have their own privacy policies
-      and may collect information such as device type, IP address and usage behavior.
+    <h3>4. Sharing of Data</h3>
+    <p class="small">
+      We do not sell your personal data. We may share limited information with:
+    </p>
+    <ul class="small" style="color:#9ca3af;">
+      <li>Service providers (hosting, analytics, payment gateways) to run the platform.</li>
+      <li>Law enforcement or authorities if required by law.</li>
+    </ul>
+
+    <h3>5. Data Retention</h3>
+    <p class="small">
+      Project files and messages may be kept for a reasonable period for backup and support.
+      You can request deletion of specific files by contacting us, but backups may remain for some time.
     </p>
 
-    <h2>5. Cookies &amp; Tracking</h2>
-    <p>
-      This site may use cookies or similar technologies to remember your preferences and understand
-      how visitors use AI Market. For more details, see our <a href="cookies.html">Cookies Policy</a>.
+    <h3>6. Cookies & Analytics</h3>
+    <p class="small">
+      We may use cookies and tools like Google Analytics or Google Tag Manager to understand how visitors
+      use the site. You can control cookies through your browser settings.
     </p>
 
-    <h2>6. Data Retention</h2>
-    <p>
-      We retain account and transaction information for as long as reasonably necessary for legal,
-      tax and support reasons. You can request account deletion, but some records may be kept as
-      required by law.
-    </p>
-
-    <h2>7. Your Choices</h2>
-    <p>
-      You can update your login methods (for example, using Google or GitHub) in their respective
-      account settings. If you wish to delete your AI Market account or have questions about your
-      data, contact us using the details on the <a href="contact.html">Contact</a> page.
-    </p>
-
-    <h2>8. Changes to This Policy</h2>
-    <p>
-      We may update this Privacy Policy periodically. Any changes will be posted on this page with an
-      updated date. Continued use of AI Market means you accept the new policy.
+    <h3>7. Contact</h3>
+    <p class="small">
+      For privacy questions, please email
+      <a href="mailto:aimarket.in@gmail.com">aimarket.in@gmail.com</a> or message us on WhatsApp.
     </p>
   </section>
 </main>
@@ -130,16 +125,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body, themeBtn=document.getElementById("themeToggle"),
-        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
-        current=window.location.pathname.split("/").pop()||"privacy.html";
-  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const body=document.body;
+  const themeBtn=document.getElementById("themeToggle");
+  const menuBtn=document.getElementById("menuToggle");
+  const nav=document.getElementById("mainNav");
+
+  const current="privacy.html";
+  nav.querySelectorAll("a").forEach(a=>{
+    if(a.getAttribute("href")===current) a.classList.add("active");
+  });
+
   const saved=localStorage.getItem("aimarket-theme");
   if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-theme");
+    const light=body.classList.contains("light-theme");
+    themeBtn.textContent=light?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",light?"light":"dark");
+  });
+
   menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
-<script type="module" src="auth.js"></script>
 </body>
 </html>
