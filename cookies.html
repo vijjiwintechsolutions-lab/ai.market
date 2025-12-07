@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cookies Policy – AI Market</title>
 
+  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -51,13 +52,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="section">
     <h1 class="section-title">Cookies Policy</h1>
     <p class="section-subtitle">
-      This page explains how AI Market may use cookies and similar technologies.
+      How AI Market uses cookies and similar technologies.
+    </p>
+
+    <p class="small" style="margin-bottom:16px;">
+      <strong>Language &amp; worldwide use:</strong> This policy is provided in English and applies to all AI Market
+      users worldwide. If we provide translations, the English version will control in case of conflict.
     </p>
 
     <h3>1. What Are Cookies?</h3>
     <p class="small">
-      Cookies are small text files stored on your device when you visit a website. They help
-      remember certain information about your visit.
+      Cookies are small text files stored on your device when you visit a website. They can help remember your
+      preferences and improve your experience.
     </p>
 
     <h3>2. How We Use Cookies</h3>
@@ -65,21 +71,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       We may use cookies to:
     </p>
     <ul class="small" style="color:#9ca3af;">
-      <li>Remember basic preferences (like dark/light mode).</li>
-      <li>Understand how visitors use the site via analytics tools.</li>
-      <li>Help integrate third-party services like Google Tag Manager.</li>
+      <li>Remember basic preferences (such as dark/light mode).</li>
+      <li>Understand how visitors use the site through analytics tools.</li>
+      <li>Support the functioning of third-party integrations like Google Tag Manager.</li>
     </ul>
 
-    <h3>3. Managing Cookies</h3>
+    <h3>3. Third-Party Cookies</h3>
     <p class="small">
-      Most browsers allow you to control or delete cookies through settings. If you disable cookies
-      entirely, some parts of the site may not function perfectly, but basic pages should still work.
+      External services, including analytics and payment providers, may place their own cookies.
+      We do not control these third-party cookies directly but they are generally used for security,
+      analytics and payment processing.
     </p>
 
-    <h3>4. Third-Party Cookies</h3>
+    <h3>4. Managing Cookies</h3>
     <p class="small">
-      External services (for example Google Analytics, payment gateways) may use their own cookies.
-      We do not control those cookies directly, but they are generally used for analytics and security.
+      Most web browsers allow you to control or delete cookies via settings. If you disable cookies entirely,
+      some features of the site may not function as intended, but basic pages should still be usable.
+    </p>
+
+    <p class="small" style="margin-top:16px;color:#9ca3af;">
+      Last updated: 07 December 2025
     </p>
   </section>
 </main>
@@ -99,26 +110,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body;
-  const themeBtn=document.getElementById("themeToggle");
-  const menuBtn=document.getElementById("menuToggle");
-  const nav=document.getElementById("mainNav");
+  const body = document.body;
+  const themeBtn = document.getElementById("themeToggle");
+  const menuBtn = document.getElementById("menuToggle");
+  const nav = document.getElementById("mainNav");
 
-  const current="cookies.html";
-  nav.querySelectorAll("a").forEach(a=>{
-    if(a.getAttribute("href")===current) a.classList.add("active");
+  const current = "cookies.html";
+  nav.querySelectorAll("a").forEach(a => {
+    if (a.getAttribute("href") === current) a.classList.add("active");
   });
 
-  const saved=localStorage.getItem("aimarket-theme");
-  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{
+  const saved = localStorage.getItem("aimarket-theme");
+  if (saved === "light") {
+    body.classList.add("light-theme");
+    themeBtn.textContent = "☀";
+  }
+  themeBtn.addEventListener("click", () => {
     body.classList.toggle("light-theme");
-    const light=body.classList.contains("light-theme");
-    themeBtn.textContent=light?"☀":"🌙";
-    localStorage.setItem("aimarket-theme",light?"light":"dark");
+    const light = body.classList.contains("light-theme");
+    themeBtn.textContent = light ? "☀" : "🌙";
+    localStorage.setItem("aimarket-theme", light ? "light" : "dark");
   });
 
-  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
+  menuBtn.addEventListener("click", () => nav.classList.toggle("nav-open"));
 })();
 </script>
 </body>
