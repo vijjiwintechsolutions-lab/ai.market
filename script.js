@@ -6,7 +6,6 @@
   const nav = document.getElementById("mainNav");
 
   // --- THEME SETUP ---
-
   const savedTheme = localStorage.getItem("aimarket-theme");
   if (savedTheme === "light") {
     html.classList.add("light-theme"); // CSS listens on html/body
@@ -30,7 +29,6 @@
   }
 
   // --- MOBILE NAV ---
-
   if (menuBtn && nav) {
     menuBtn.addEventListener("click", () => {
       nav.classList.toggle("nav-open");
@@ -38,7 +36,6 @@
   }
 
   // --- ACTIVE NAV LINK HIGHLIGHT ---
-
   if (nav) {
     const current = window.location.pathname.split("/").pop() || "index.html";
     nav.querySelectorAll("a").forEach((a) => {
