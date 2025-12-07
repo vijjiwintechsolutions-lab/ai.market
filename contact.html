@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - AI Market</title>
+  <title>Contact – AI Market</title>
 
-  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,33 +12,26 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
   </script>
-  <!-- End Google Tag Manager -->
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header>
+<header class="site-header">
   <div class="header-inner">
-      <div class="logo-wrap">
-          <img src="logo.png" class="logo" alt="AI Market logo" />
-          <div class="logo-text">
-              <span class="site-name">AI Market</span>
-              <span class="tagline">World’s Smart AI Platform</span>
-          </div>
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="site-name">AI Market</span>
+        <span class="site-tagline">World’s Smart AI Platform</span>
       </div>
-      <div class="header-right">
-          <button class="theme-toggle" id="themeToggle">🌙</button>
-          <button class="menu-toggle" id="menuToggle">☰</button>
-      </div>
-  </div>
-
-  <nav id="mainNav">
+    </a>
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
       <a href="pricing.html">Pricing</a>
@@ -47,128 +39,70 @@
       <a href="portfolio.html">Portfolio</a>
       <a href="faq.html">FAQ</a>
       <a href="about.html">About</a>
-      <a class="active" href="contact.html">Contact</a>
-  </nav>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
 </header>
 
-<section class="page">
-  <h1 class="section-title">Contact & Quick Order</h1>
-  <p class="section-subtitle">
-      Select what you need and message us directly on WhatsApp.
-      No forms, no signup — just pick an option and send.
-  </p>
+<main>
+  <section class="section">
+    <h1 class="section-title">Contact</h1>
+    <p class="section-subtitle">Support and questions are handled mainly on WhatsApp.</p>
 
-  <div class="contact-grid">
-      <div class="contact-box">
-          <h3>Choose Your Requirement</h3>
-
-          <div class="features-container" style="margin-top:12px;">
-              <div class="card">
-                  <h3>AI Video / Reels</h3>
-                  <p>Reels, Shorts, Devotional videos, Cartoon videos and more.</p>
-                  <a
-                    href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20an%20AI%20Video%20(Reels/Shorts/Status).%20Please%20share%20details."
-                    class="btn-secondary" target="_blank"
-                    style="margin-top:10px;display:inline-block;">
-                    Order Video on WhatsApp
-                  </a>
-              </div>
-
-              <div class="card">
-                  <h3>AI Image / Photos</h3>
-                  <p>Cartoon photos, portrait enhancement, background change.</p>
-                  <a
-                    href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20AI%20Image%20service%20(Cartoon%20photo%2C%20Background%20change)."
-                    class="btn-secondary" target="_blank"
-                    style="margin-top:10px;display:inline-block;">
-                    Order Image on WhatsApp
-                  </a>
-              </div>
-
-              <div class="card">
-                  <h3>AI Music / BGM</h3>
-                  <p>Background music, vocal enhancement and AI music tracks.</p>
-                  <a
-                    href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20AI%20Music%20or%20BGM%20service."
-                    class="btn-secondary" target="_blank"
-                    style="margin-top:10px;display:inline-block;">
-                    Order Music on WhatsApp
-                  </a>
-              </div>
-
-              <div class="card">
-                  <h3>Custom Request</h3>
-                  <p>Special idea, bulk order or long-term project? Tell us your requirement.</p>
-                  <a
-                    href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20custom%20requirement.%20Please%20contact%20me."
-                    class="btn-secondary" target="_blank"
-                    style="margin-top:10px;display:inline-block;">
-                    Send Custom Request
-                  </a>
-              </div>
-          </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h2>WhatsApp Support</h2>
+        <p>For queries related to plans, payments or tools.</p>
+        <a
+          class="btn-primary full-btn"
+          href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question."
+          target="_blank"
+        >
+          Chat on WhatsApp
+        </a>
       </div>
 
-      <div class="contact-box">
-          <h3>Direct Contact</h3>
-          <p><strong>WhatsApp:</strong>
-             <a href="https://wa.me/919676142165" target="_blank">+91 96761 42165</a></p>
-          <p><strong>Email:</strong> support@aimarket.in (update if needed)</p>
-          <p><strong>Website:</strong>
-             <a href="https://ai-market.pages.dev" target="_blank">ai-market.pages.dev</a></p>
-
-          <p style="margin-top:14px;font-size:14px;">
-              <strong>Availability:</strong> Usually available between
-              <b>9:00 AM – 8:00 PM IST</b>. If we are busy with edits, replies may
-              take some time — but every message will be checked.
-          </p>
-
-          <p style="margin-top:14px;font-size:13px;opacity:0.85;">
-              Tip: When you message on WhatsApp, please mention clearly:<br />
-              • What you need (Video / Image / Music / Other)<br />
-              • Language (English / Telugu / Tamil / Hindi)<br />
-              • Any sample or reference link (if available)
-          </p>
+      <div class="contact-card">
+        <h2>Basic Info</h2>
+        <p><strong>Brand:</strong> AI Market</p>
+        <p><strong>Support time:</strong> 9:00 AM – 8:00 PM IST</p>
+        <p><strong>Website:</strong> ai-market.pages.dev</p>
+        <p class="small">Response time can vary based on workload, but every message will be checked.</p>
       </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <p class="footer-links">
+      <a href="terms.html">Terms</a><span>·</span>
+      <a href="privacy.html">Privacy</a><span>·</span>
+      <a href="refund.html">Refund Policy</a><span>·</span>
+      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+      <a href="cookies.html">Cookies</a>
+    </p>
   </div>
-</section>
-
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question."
-   class="whatsapp-float" target="_blank">💬</a>
-
-<footer>
-  © 2025 AI Market · World’s Smart AI Platform<br />
-  <a href="terms.html">Terms</a> ·
-  <a href="privacy.html">Privacy</a> ·
-  <a href="refund.html">Refund Policy</a> ·
-  <a href="disclaimer.html">Disclaimer</a> ·
-  <a href="cookies.html">Cookies</a>
 </footer>
 
 <script>
 (function () {
-  const body = document.body;
-  const themeToggle = document.getElementById("themeToggle");
-  const menuToggle  = document.getElementById("menuToggle");
-  const nav         = document.getElementById("mainNav");
-
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-      body.classList.add("light-theme");
-      themeToggle.textContent = "☀";
-  }
-
-  themeToggle.addEventListener("click", () => {
-      body.classList.toggle("light-theme");
-      const light = body.classList.contains("light-theme");
-      themeToggle.textContent = light ? "☀" : "🌙";
-      localStorage.setItem("theme", light ? "light" : "dark");
-  });
-
-  menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-  });
+  const body=document.body, themeBtn=document.getElementById("themeToggle"),
+        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
+        current=window.location.pathname.split("/").pop()||"contact.html";
+  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
+<script type="module" src="auth.js"></script>
 </body>
 </html>
