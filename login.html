@@ -5,40 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login – AI Market</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.png" />
+  <!-- GA tag (same as other pages) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
-<body class="login-page">
-  <div class="login-wrapper">
-    <div class="login-card">
-      <h1>AI Market</h1>
-      <p class="login-subtitle">Optional sign-in (not required to browse or buy)</p>
+<body>
 
-      <form class="login-form" onsubmit="return false;">
-        <label>Email address</label>
-        <input type="email" placeholder="you@example.com" disabled />
-
-        <label>Password</label>
-        <input type="password" placeholder="••••••••" disabled />
-
-        <button type="button" class="btn-primary full-btn" disabled>
-          Login (coming soon)
-        </button>
-      </form>
-
-      <div class="login-divider">OR</div>
-
-      <button type="button" class="btn-outline full-btn small" disabled>
-        Continue with Google (coming soon)
-      </button>
-      <button type="button" class="btn-outline full-btn small" disabled style="margin-top:6px;">
-        Continue with GitHub (coming soon)
-      </button>
-
-      <p class="small center" style="margin-top: 16px;">
-        Right now you can use AI Market without login.  
-        <a href="pricing.html">Go to Pricing</a>
-      </p>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
+      <div class="logo-text">
+        <span class="logo-title">AI Market</span>
+        <span class="logo-tagline">World's Smart AI Platform</span>
+      </div>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="ai-tools.html">AI Tools</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <a href="login.html" class="login-link">Login</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
+</header>
+
+<div class="page-wrapper">
+  <div class="login-page">
+    <div class="login-card">
+      <h1>Welcome back</h1>
+      <p class="small">
+        Login to access your AI tools, plans and projects.  
+        (Authentication integration coming soon.)
+      </p>
+
+      <form>
+        <label class="small">
+          Email<br />
+          <input type="email" name="email" placeholder="name@example.com" />
+        </label>
+        <br /><br />
+        <label class="small">
+          Password<br />
+          <input type="password" name="password" placeholder="********" />
+        </label>
+        <br /><br />
+        <div class="login-actions">
+          <button
+            type="button"
+            class="btn-primary"
+            data-ga-event="login_email_click"
+            data-ga-label="Login Email Button">
+            Login (Demo Only)
+          </button>
+        </div>
+      </form>
+
+      <p class="small section-note">
+        You can also continue with a social account (UI only – hook your auth later).
+      </p>
+
+      <div class="login-social">
+        <button
+          type="button"
+          class="btn-outline"
+          data-ga-event="login_google_click"
+          data-ga-label="Login with Google">
+          Continue with Google
+        </button>
+        <button
+          type="button"
+          class="btn-outline"
+          data-ga-event="login_github_click"
+          data-ga-label="Login with GitHub">
+          Continue with GitHub
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© 2025 AI Market – World’s Smart AI Platform.</div>
+    <div class="footer-links">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refund</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Chatbot & WhatsApp -->
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>Login & plans guidance</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button
+      type="button"
+      data-bot-question="I cannot login, what to do?"
+      data-bot-answer="Right now the login page is UI-only. Please contact us via WhatsApp with your plan details, and we will guide you when full authentication is enabled.">
+      Login not working?
+    </button>
+    <button
+      type="button"
+      data-bot-question="Which plan is suitable for me?"
+      data-bot-answer="If you create content occasionally, Basic is fine. For regular YouTube/clients, choose Pro. For studios or resellers, Premium is the best choice.">
+      Which plan is best?
+    </button>
+  </div>
+</div>
+
+<button
+  id="chatbotToggle"
+  class="chatbot-toggle"
+  type="button"
+  title="Chat with helper bot"
+  data-ga-event="chatbot_click"
+  data-ga-label="Chatbot Floating Button (Login)">
+  💬
+</button>
+
+<a
+  href="https://wa.me/919676142165"
+  class="whatsapp-fab"
+  target="_blank"
+  rel="noopener"
+  title="Chat on WhatsApp"
+  data-ga-event="whatsapp_click"
+  data-ga-label="WhatsApp Floating Button (Login)">
+  ⟟
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>
