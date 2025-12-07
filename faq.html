@@ -15,8 +15,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
@@ -43,7 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
-      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <a href="login.html" class="login-link">Login</a>
       <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
@@ -52,24 +50,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
   <section class="section">
     <h1 class="section-title">Frequently Asked Questions</h1>
+    <p class="section-subtitle">
+      Quick answers about how AI Market works, payments and delivery.
+    </p>
 
-    <h2>1. How do I start using AI Market?</h2>
-    <p>Log in, go to the <a href="pricing.html">Pricing</a> page, choose a plan and complete payment. After payment you will be redirected to an unlock page for your tools.</p>
+    <h3>1. Do I need to create an account?</h3>
+    <p class="small">
+      Right now, <strong>no login is required</strong>. You can open the website, choose a plan, pay and then
+      send details via WhatsApp.
+    </p>
 
-    <h2>2. Is everything fully automated?</h2>
-    <p>Some tools are automated, others are semi-manual with AI assistance. We may review outputs before final delivery to maintain quality.</p>
+    <h3>2. How do I place an order?</h3>
+    <p class="small">
+      Go to the <a href="pricing.html">Pricing</a> page, select a plan, pay via Razorpay or click “Order on WhatsApp”.
+      After payment, send your song / script / photos to our WhatsApp number with screenshot.
+    </p>
 
-    <h2>3. Do I need a powerful PC?</h2>
-    <p>No. AI Market runs in the cloud. You can create and manage content from mobile or simple laptops.</p>
+    <h3>3. How will I receive the final output?</h3>
+    <p class="small">
+      We normally deliver via WhatsApp or a download link (Google Drive, etc.) depending on file size.
+    </p>
 
-    <h2>4. What languages do you support?</h2>
-    <p>We primarily support English, Telugu, Tamil and Hindi content. Other languages can be discussed on request.</p>
+    <h3>4. How long will it take?</h3>
+    <p class="small">
+      Delivery time depends on queue and complexity. Small reels or thumbnails are usually delivered within
+      a few hours to 1 day. Bigger projects may take longer – we will update you on WhatsApp.
+    </p>
 
-    <h2>5. Can I cancel or get a refund?</h2>
-    <p>Since services are digital, refunds are limited. See the <a href="refund.html">Refund Policy</a> for details.</p>
+    <h3>5. Are payments secure?</h3>
+    <p class="small">
+      Yes. Online payments are processed via <strong>Razorpay</strong> (UPI, Cards, Netbanking, Wallets).
+      We do not store your card details.
+    </p>
 
-    <h2>6. How do I contact support?</h2>
-    <p>Use the options on the <a href="contact.html">Contact</a> page. WhatsApp support is available during normal working hours.</p>
+    <h3>6. Can I get a refund?</h3>
+    <p class="small">
+      Please read our <a href="refund.html">Refund Policy</a>. In short, digital work already completed and delivered
+      is usually non-refundable, but we will try to help if there is any genuine issue.
+    </p>
+
+    <h3>7. How can I contact support?</h3>
+    <p class="small">
+      Visit the <a href="contact.html">Contact</a> page or message us directly on WhatsApp:
+      <a href="https://wa.me/919676142165" target="_blank">+91 96761 42165</a>.
+    </p>
   </section>
 </main>
 
@@ -88,16 +112,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body, themeBtn=document.getElementById("themeToggle"),
-        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
-        current=window.location.pathname.split("/").pop()||"faq.html";
-  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const body=document.body;
+  const themeBtn=document.getElementById("themeToggle");
+  const menuBtn=document.getElementById("menuToggle");
+  const nav=document.getElementById("mainNav");
+
+  const current="faq.html";
+  nav.querySelectorAll("a").forEach(a=>{
+    if(a.getAttribute("href")===current) a.classList.add("active");
+  });
+
   const saved=localStorage.getItem("aimarket-theme");
   if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-theme");
+    const light=body.classList.contains("light-theme");
+    themeBtn.textContent=light?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",light?"light":"dark");
+  });
+
   menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
-<script type="module" src="auth.js"></script>
 </body>
 </html>
