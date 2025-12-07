@@ -1,17 +1,13 @@
-// AI Market - global script
-// Handles theme toggle, mobile nav, active menu highlight,
-// Google Analytics events and basic chatbot
+// script.js
 
 (function () {
   const html = document.documentElement;
+  const body = document.body;
   const themeBtn = document.getElementById("themeToggle");
   const menuBtn = document.getElementById("menuToggle");
   const nav = document.getElementById("mainNav");
-  const chatbotToggle = document.getElementById("chatbotToggle");
-  const chatbotPanel = document.getElementById("chatbotPanel");
 
-  // -------- THEME SETUP --------
-
+  // ---------------- THEME SETUP ----------------
   const savedTheme = localStorage.getItem("aimarket-theme");
   if (savedTheme === "light") {
     html.classList.add("light-theme");
@@ -31,97 +27,128 @@
       const isLight = html.classList.contains("light-theme");
       localStorage.setItem("aimarket-theme", isLight ? "light" : "dark");
       updateThemeIcon();
-      trackEvent("theme_toggle", isLight ? "light" : "dark");
     });
   }
 
-  // -------- MOBILE NAV TOGGLE --------
-
+  // ---------------- MOBILE NAV ----------------
   if (menuBtn && nav) {
     menuBtn.addEventListener("click", () => {
       nav.classList.toggle("nav-open");
-      const open = nav.classList.contains("nav-open");
-      trackEvent("menu_toggle", open ? "open" : "close");
     });
   }
 
-  // -------- ACTIVE NAV LINK HIGHLIGHT --------
-
+  // ---------------- ACTIVE NAV LINK ----------------
   if (nav) {
     const current = window.location.pathname.split("/").pop() || "index.html";
-
     nav.querySelectorAll("a").forEach((a) => {
       const href = a.getAttribute("href");
       if (!href) return;
-
-      if (href === current || (href === "index.html" && current === "")) {
+      if (href === current) {
         a.classList.add("active");
       }
     });
   }
 
-  // -------- GOOGLE ANALYTICS EVENTS --------
+  // ---------------- CHATBOT ----------------
+  const chatbotWidget = document.getElementById("chatbotWidget");
+  const chatbotFAB = document.getElementById("chatbotFAB");
+  const chatbotClose = document.getElementById("chatbotClose");
+  const messagesEl = document.getElementById("chatbotMessages");
+  const inputEl = document.getElementById("chatbotInput");
+  const sendBtn = document.getElementById("chatbotSend");
 
-  function trackEvent(action, label) {
-    if (typeof window.gtag === "function") {
-      window.gtag("event", action, {
-        event_category: "engagement",
-        event_label: label || action,
-      });
+  if (chatbotWidget && chatbotFAB && chatbotClose && messagesEl && inputEl && sendBtn) {
+    // Simple Q&A knowledge base
+    const faqMap = [
+      {
+        keywords: ["basic", "plan"],
+        answer:
+          "The Basic plan (₹99) is for personal / light usage. For more limits, check Pro or Premium on the Pricing page."
+      },
+      {
+        keywords: ["pro", "plan"],
+        answer:
+          "The Pro plan (₹299) is ideal for regular creators and freelancers. It includes more tools and higher limits."
+      },
+      {
+        keywords: ["premium", "plan"],
+        answer:
+          "Premium (₹999) is best for agencies, studios and resellers, with maximum limits and all tools unlocked."
+      },
+      {
+        keywords: ["payment", "razorpay", "fail", "failed", "refund"],
+        answer:
+          "If a payment failed or you need refund help, please note your Razorpay reference ID and contact us on WhatsApp: +91 9676142165."
+      },
+      {
+        keywords: ["contact", "help", "support"],
+        answer:
+          "You can contact us anytime via the Contact page or WhatsApp +91 9676142165. We usually reply as soon as possible."
+      }
+    ];
+
+    function scrollToBottom() {
+      messagesEl.scrollTop = messagesEl.scrollHeight;
     }
-  }
 
-  // Bind to elements with data-ga-event
-  document.querySelectorAll("[data-ga-event]").forEach((el) => {
-    el.addEventListener("click", () => {
-      const action = el.getAttribute("data-ga-event");
-      const label =
-        el.getAttribute("data-ga-label") || el.textContent.trim() || action;
-      trackEvent(action, label);
-    });
-  });
-
-  // -------- SIMPLE CHATBOT --------
-
-  if (chatbotToggle && chatbotPanel) {
-    const messages = chatbotPanel.querySelector(".chatbot-messages");
-    const closeBtn = chatbotPanel.querySelector(".chatbot-close");
-
-    function appendMessage(text, from = "bot") {
-      if (!messages) return;
+    function addMessage(text, type) {
       const div = document.createElement("div");
-      div.className =
-        "chatbot-msg " +
-        (from === "user" ? "chatbot-msg-user" : "chatbot-msg-bot");
+      div.className = type === "user" ? "user-msg" : "bot-msg";
       div.textContent = text;
-      messages.appendChild(div);
-      messages.scrollTop = messages.scrollHeight;
+      messagesEl.appendChild(div);
+      scrollToBottom();
     }
 
-    // Initial greeting
-    appendMessage("Hi! I’m the AI Market helper bot. Tap a question below to learn more.");
+    function findAnswer(q) {
+      const question = q.toLowerCase();
+      for (const item of faqMap) {
+        if (item.keywords.some((k) => question.includes(k))) {
+          return item.answer;
+        }
+      }
+      // default answer
+      return "Thanks for your question! For detailed help, please share your requirement or payment details on WhatsApp: +91 9676142165.";
+    }
 
-    chatbotToggle.addEventListener("click", () => {
-      const open = chatbotPanel.classList.toggle("open");
-      trackEvent("chatbot_toggle", open ? "open" : "close");
+    function handleSend() {
+      const text = inputEl.value.trim();
+      if (!text) return;
+      addMessage(text, "user");
+      inputEl.value = "";
+
+      const answer = findAnswer(text);
+      setTimeout(() => {
+        addMessage(answer, "bot");
+      }, 400);
+    }
+
+    // Toggle widget open/close
+    chatbotFAB.addEventListener("click", () => {
+      const isVisible = chatbotWidget.style.display === "flex";
+      chatbotWidget.style.display = isVisible ? "none" : "flex";
+      if (!isVisible) {
+        scrollToBottom();
+      }
+      // optional GA event
+      if (typeof gtag === "function") {
+        gtag("event", "chatbot_toggle", {
+          event_category: "engagement",
+          event_label: isVisible ? "close" : "open"
+        });
+      }
     });
 
-    if (closeBtn) {
-      closeBtn.addEventListener("click", () => {
-        chatbotPanel.classList.remove("open");
-        trackEvent("chatbot_toggle", "close_button");
-      });
-    }
+    chatbotClose.addEventListener("click", () => {
+      chatbotWidget.style.display = "none";
+    });
 
-    // Quick question buttons
-    chatbotPanel.querySelectorAll("[data-bot-question]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const q = btn.getAttribute("data-bot-question") || "";
-        const a = btn.getAttribute("data-bot-answer") || "";
-        if (q) appendMessage(q, "user");
-        if (a) appendMessage(a, "bot");
-        trackEvent("chatbot_question_click", q);
-      });
+    sendBtn.addEventListener("click", handleSend);
+
+    inputEl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        handleSend();
+      }
     });
   }
 })();
