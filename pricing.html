@@ -1,160 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Pricing – AI Market Plans &amp; Offers</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Pricing & Plans – AI Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Choose Basic, Pro or Premium plans on AI Market and unlock AI content services.">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Google tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VM41JL03HD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-MPPBPXHVH7");
+    gtag('js', new Date());
+    gtag('config', 'G-VM41JL03HD');
   </script>
 </head>
 <body>
-  <!-- HEADER (same structure) -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="logo.png" alt="AI Market logo" />
-        <div class="logo-text">
-          <span class="logo-title">AI Market</span>
-          <span class="logo-tagline">World’s Smart AI Platform</span>
-        </div>
-      </a>
-      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
-      <nav id="mainNav" class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="ai-tools.html">AI Tools</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="donate.html">Donate</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="faq.html">FAQ</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
-        <a href="login.html" class="btn-outline small">Login</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="AI Market logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-name">AI Market</span>
+        <span class="brand-tagline">World’s Smart AI Platform</span>
       </div>
-    </div>
-  </header>
+    </a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav id="mainNav" class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="ai-tools.html">AI Tools</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="donate.html">Donate</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="nav-login">Login</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </div>
+</header>
 
-  <!-- MAIN -->
-  <main class="section">
+<main class="page">
+  <section class="section">
     <div class="container">
-      <h1 class="page-title">Pricing &amp; Plans</h1>
-      <p class="section-intro">
-        Start small and grow when you’re ready. Upgrade anytime – your remaining validity is
-        adjusted fairly, and all plans are billed via Razorpay.
-      </p>
+      <h1>Pricing & Plans</h1>
+      <p>Pick a plan, complete payment, then send your requirements via WhatsApp.</p>
 
-      <div class="pricing-grid">
-        <!-- Basic -->
-        <article class="pricing-card">
+      <div class="grid pricing-grid">
+        <div class="card pricing-card">
           <h2>Basic</h2>
-          <p class="price">₹99<span>/month</span></p>
-          <p class="price-note">For personal &amp; light use</p>
-          <ul class="feature-list">
-            <li>Limited AI video exports per month</li>
-            <li>Access to basic image &amp; music tools</li>
-            <li>Standard templates collection</li>
-            <li>Email support</li>
+          <p class="price">₹99</p>
+          <ul>
+            <li>1 AI reel / short or</li>
+            <li>1 thumbnail / image design</li>
+            <li>Basic BGM or caption support</li>
           </ul>
-          <a href="unlock-basic.html" class="btn-primary" data-ga-event="plan_basic">
-            Unlock Basic
-          </a>
-        </article>
+          <a href="unlock-basic.html" class="btn primary" data-ga-event="unlock_basic_view">Unlock Basic</a>
+        </div>
 
-        <!-- Pro -->
-        <article class="pricing-card featured">
-          <div class="ribbon">Most Popular</div>
+        <div class="card pricing-card highlight">
           <h2>Pro</h2>
-          <p class="price">₹299<span>/month</span></p>
-          <p class="price-note">For creators &amp; freelancers</p>
-          <ul class="feature-list">
-            <li>Higher AI video &amp; image limits</li>
-            <li>Priority access to new tools</li>
-            <li>Extended template collections</li>
-            <li>Priority WhatsApp support</li>
+          <p class="price">₹299</p>
+          <ul>
+            <li>3 AI reels / shorts or</li>
+            <li>3 thumbnails / images</li>
+            <li>Priority delivery</li>
           </ul>
-          <a href="unlock-pro.html" class="btn-primary" data-ga-event="plan_pro">
-            Unlock Pro
-          </a>
-        </article>
+          <a href="unlock-pro.html" class="btn primary" data-ga-event="unlock_pro_view">Unlock Pro</a>
+        </div>
 
-        <!-- Premium -->
-        <article class="pricing-card">
+        <div class="card pricing-card">
           <h2>Premium</h2>
-          <p class="price">₹999<span>/month</span></p>
-          <p class="price-note">For studios &amp; agencies</p>
-          <ul class="feature-list">
-            <li>Maximum limits on tools &amp; exports</li>
-            <li>Early access to beta features</li>
-            <li>Custom onboarding and setup</li>
-            <li>Direct support via WhatsApp</li>
+          <p class="price">₹999</p>
+          <ul>
+            <li>10+ AI assets (video / image / music mix)</li>
+            <li>Custom branding & style</li>
+            <li>Best for agencies & serious creators</li>
           </ul>
-          <a href="unlock-premium.html" class="btn-primary" data-ga-event="plan_premium">
-            Unlock Premium
-          </a>
-        </article>
+          <a href="unlock-premium.html" class="btn primary" data-ga-event="unlock_premium_view">Unlock Premium</a>
+        </div>
       </div>
 
-      <div class="section-cta">
-        <p>Need a custom plan, yearly pricing or server-side integration?</p>
-        <a href="contact.html" class="btn-ghost">Contact for Custom Plan</a>
-      </div>
+      <p class="section-note">After payment, you’ll see instructions to send requirements and Razorpay Payment ID via WhatsApp.</p>
     </div>
-  </main>
+  </section>
+</main>
 
-  <!-- FOOTER + CHATBOT + WHATSAPP -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2025 AI Market · World’s Smart AI Platform</p>
-      <nav class="footer-nav">
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="refund.html">Refund</a>
-        <a href="disclaimer.html">Disclaimer</a>
-        <a href="cookies.html">Cookies</a>
-      </nav>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <nav class="footer-nav">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refund</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="cookies.html">Cookies</a>
+    </nav>
+  </div>
+</footer>
 
-  <div id="chatbotWidget" class="chatbot-widget">
+<a href="https://wa.me/919676142165?text=Hi%20AI%20Market%2C%20I%20want%20help%20with%20pricing"
+   class="whatsapp-fab"
+   target="_blank"
+   rel="noopener"
+   data-ga-event="whatsapp_click">💬</a>
+
+<div id="chatbot" class="chatbot">
+  <button id="chatbotToggle" class="chatbot-toggle">❓</button>
+  <div class="chatbot-window">
     <div class="chatbot-header">
-      <span>AI Market Assistant</span>
-      <button id="chatbotClose" type="button">✕</button>
+      <span>AI Market Help</span>
+      <button id="chatbotClose" class="chatbot-close">×</button>
     </div>
-    <div id="chatbotMessages" class="chatbot-messages">
-      <div class="bot-msg">
-        Not sure which plan to choose? Ask me your usage and I’ll suggest Basic, Pro or Premium.
-      </div>
-    </div>
-    <div class="chatbot-input-area">
-      <input type="text" id="chatbotInput" placeholder="Describe your usage..." />
-      <button id="chatbotSend" type="button">➤</button>
+    <div class="chatbot-body">
+      <p>Select a plan based on how many pieces of content you need. You can always upgrade later.</p>
+      <button class="bot-q" data-bot-answer="Basic is good for testing, Pro for regular creators, and Premium for brands or agencies who need more content.">Which plan is best for me?</button>
+      <button class="bot-q" data-bot-answer="Once you pay via Razorpay, note the Payment ID and send it with your requirements on WhatsApp.">What happens after payment?</button>
+      <div id="botAnswer" class="bot-answer"></div>
     </div>
   </div>
+</div>
 
-  <button id="chatbotFAB" class="chatbot-fab" type="button" title="Chat with AI Market Assistant">
-    💬
-  </button>
-
-  <a
-    href="https://wa.me/919676142165"
-    class="whatsapp-fab"
-    target="_blank"
-    rel="noopener"
-    title="Chat on WhatsApp"
-  >
-    ⟟
-  </a>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
