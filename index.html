@@ -1,175 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Market - World's Smart AI Platform</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home – AI Market</title>
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
-    </script>
-    <!-- End Google Tag Manager -->
+  <!-- GTM -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
+  </script>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
 </head>
-
 <body>
-
-<!-- Google Tag Manager (noscript) -->
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<!-- HEADER -->
-<header>
-    <div class="header-inner">
-        <div class="logo-wrap">
-            <img src="logo.png" class="logo" alt="AI Market Logo" />
-            <div class="logo-text">
-                <span class="site-name">AI Market</span>
-                <span class="tagline">World’s Smart AI Platform</span>
-            </div>
-        </div>
-
-        <div class="header-right">
-            <button class="theme-toggle" id="themeToggle">🌙</button>
-            <button class="menu-toggle" id="menuToggle">☰</button>
-        </div>
-    </div>
-
-    <nav id="mainNav">
-        <a class="active" href="index.html">Home</a>
-        <a href="ai-tools.html">AI Tools</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="donate.html">Donate</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="site-name">AI Market</span>
+        <span class="site-tagline">World’s Smart AI Platform</span>
+      </div>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="ai-tools.html">AI Tools</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="donate.html">Donate</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </div>
 </header>
 
-
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Welcome to <span>AI Market</span></h1>
-        <p class="hero-subtitle">
-            Create Videos • Enhance Photos • Generate Music  
-            Powered by smart AI tools designed for everyone.
-        </p>
-
-        <a href="ai-tools.html" class="btn-primary hero-btn">Start Creating</a>
-
-        <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20AI%20Services."
-           class="btn-secondary hero-btn" target="_blank">
-           Message on WhatsApp
-        </a>
+<main>
+  <section class="hero">
+    <h1>Welcome to <span class="gradient">AI Market</span></h1>
+    <p class="hero-subtitle">
+      The World’s Smart AI Platform — Create • Earn • Donate
+    </p>
+    <div class="hero-actions">
+      <a href="ai-tools.html" class="btn-primary">Start Creating</a>
+      <a href="pricing.html" class="btn-secondary">View Plans</a>
     </div>
-</section>
+  </section>
 
-
-<!-- FEATURES SECTION -->
-<section class="page">
+  <section class="section">
     <h2 class="section-title">What You Can Do With AI Market</h2>
-
-    <div class="features-container">
-
-        <div class="card">
-            <h3>AI Video Tools</h3>
-            <p>Create Reels, Shorts, Devotional Videos, Cinematic Edits & more.</p>
-            <a href="ai-tools.html#videos" class="btn-secondary">Explore Videos</a>
-        </div>
-
-        <div class="card">
-            <h3>AI Image Tools</h3>
-            <p>Cartoon photos, Background removal, HD enhancement.</p>
-            <a href="ai-tools.html#images" class="btn-secondary">Explore Images</a>
-        </div>
-
-        <div class="card">
-            <h3>AI Music Tools</h3>
-            <p>BGM creator, Vocal enhancement, AI music generator.</p>
-            <a href="ai-tools.html#music" class="btn-secondary">Explore Music</a>
-        </div>
-
-        <div class="card">
-            <h3>Custom AI Projects</h3>
-            <p>Need something special or bulk orders? We support it.</p>
-            <a href="contact.html" class="btn-secondary">Contact Us</a>
-        </div>
-
+    <div class="cards-grid">
+      <article class="card">
+        <h3>AI Video Generator</h3>
+        <p>Turn songs, text or images into short videos and reels automatically.</p>
+        <a href="ai-tools.html#video" class="card-link">Open Tool</a>
+      </article>
+      <article class="card">
+        <h3>AI Cartoon Maker</h3>
+        <p>Convert your photos into stunning cartoon or anime-style scenes.</p>
+        <a href="ai-tools.html#cartoon" class="card-link">Open Tool</a>
+      </article>
+      <article class="card">
+        <h3>AI Music & BGM Maker</h3>
+        <p>Create background music, vocal enhancement and sound design in seconds.</p>
+        <a href="ai-tools.html#music" class="card-link">Open Tool</a>
+      </article>
+      <article class="card">
+        <h3>AI Image & Art Generator</h3>
+        <p>Generate product photos, thumbnails and posters using AI prompts.</p>
+        <a href="ai-tools.html#image" class="card-link">Open Tool</a>
+      </article>
     </div>
-</section>
+  </section>
 
+  <section class="section">
+    <h2 class="section-title">Why Creators Love AI Market</h2>
+    <ul class="feature-list">
+      <li>Simple pricing with one-time and monthly plans.</li>
+      <li>Fast export for Instagram Reels, YouTube Shorts and TikTok.</li>
+      <li>Works on mobile and desktop — no heavy software required.</li>
+      <li>Made for Indian creators with local payments & support.</li>
+    </ul>
+  </section>
+</main>
 
-<!-- PORTFOLIO PREVIEW -->
-<section class="page">
-    <h2 class="section-title">Portfolio Highlights</h2>
-
-    <div class="portfolio-preview">
-        <div class="preview-card">AI Reel Video</div>
-        <div class="preview-card">AI Cartoon Photo</div>
-        <div class="preview-card">Cinematic AI BGM</div>
-    </div>
-
-    <div style="text-align:center;margin-top:20px;">
-        <a href="portfolio.html" class="btn-primary">View Full Portfolio</a>
-    </div>
-</section>
-
-
-<!-- WHATSAPP FLOAT BUTTON -->
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20a%20service."
-   class="whatsapp-float"
-   target="_blank">💬</a>
-
-
-<!-- FOOTER -->
-<footer>
-    © 2025 AI Market · World’s Smart AI Platform  
-    <br /><br />
-    <a href="terms.html">Terms</a> ·
-    <a href="privacy.html">Privacy</a> ·
-    <a href="refund.html">Refund Policy</a> ·
-    <a href="disclaimer.html">Disclaimer</a> ·
-    <a href="cookies.html">Cookies</a>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <p class="footer-links">
+      <a href="terms.html">Terms</a><span>·</span>
+      <a href="privacy.html">Privacy</a><span>·</span>
+      <a href="refund.html">Refund Policy</a><span>·</span>
+      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
 </footer>
 
-
-<!-- JS FOR THEME + MOBILE MENU -->
 <script>
-(function () {
+  (function () {
     const body = document.body;
-    const menuToggle = document.getElementById("menuToggle");
-    const themeToggle = document.getElementById("themeToggle");
+    const themeBtn = document.getElementById("themeToggle");
+    const menuBtn = document.getElementById("menuToggle");
     const nav = document.getElementById("mainNav");
+    const current = window.location.pathname.split("/").pop() || "index.html";
 
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "light") {
-        body.classList.add("light-theme");
-        themeToggle.textContent = "☀";
-    }
-
-    themeToggle.addEventListener("click", () => {
-        body.classList.toggle("light-theme");
-        const light = body.classList.contains("light-theme");
-        themeToggle.textContent = light ? "☀" : "🌙";
-        localStorage.setItem("theme", light ? "light" : "dark");
+    nav.querySelectorAll("a").forEach(a => {
+      if (a.getAttribute("href") === current) a.classList.add("active");
     });
 
-    menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
+    const savedTheme = localStorage.getItem("aimarket-theme");
+    if (savedTheme === "light") { body.classList.add("light-theme"); themeBtn.textContent = "☀"; }
+
+    themeBtn.addEventListener("click", () => {
+      body.classList.toggle("light-theme");
+      const light = body.classList.contains("light-theme");
+      themeBtn.textContent = light ? "☀" : "🌙";
+      localStorage.setItem("aimarket-theme", light ? "light" : "dark");
     });
-})();
+
+    menuBtn.addEventListener("click", () => {
+      nav.classList.toggle("nav-open");
+    });
+  })();
 </script>
 
+<script type="module" src="auth.js"></script>
 </body>
 </html>
