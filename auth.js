@@ -1,43 +1,93 @@
-import { 
-  GoogleAuthProvider, GithubAuthProvider, 
-  signInWithPopup, signOut,
-  createUserWithEmailAndPassword,
+// auth.js
+import {
+  auth,
+  GoogleAuthProvider,
+  GithubAuthProvider,
+  signInWithPopup,
+  signOut,
   signInWithEmailAndPassword,
-  onAuthStateChanged
+  createUserWithEmailAndPassword
 } from "./firebase-config.js";
 
-// GOOGLE LOGIN
-document.getElementById("googleLoginBtn")?.addEventListener("click", () => {
-  const provider = new GoogleAuthProvider();
-  signInWithPopup(aiAuth.auth, provider)
-    .then(() => window.location.href = "index.html")
-    .catch(err => alert(err.message));
-});
+// Make some helpers available globally (for logout etc.)
+window.aiAuth = { auth, signOut };
 
-// GITHUB LOGIN
-document.getElementById("githubLoginBtn")?.addEventListener("click", () => {
-  const provider = new GithubAuthProvider();
-  signInWithPopup(aiAuth.auth, provider)
-    .then(() => window.location.href = "index.html")
-    .catch(err => alert(err.message));
-});
+// ---------- EMAIL LOGIN ----------
+const emailLoginBtn = document.getElementById("emailLoginBtn");
+if (emailLoginBtn) {
+  emailLoginBtn.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+    const msg = document.getElementById("authMessage");
 
-// EMAIL SIGNUP
-document.getElementById("signupBtn")?.addEventListener("click", () => {
-  const email = signupEmail.value;
-  const pass = signupPassword.value;
+    try {
+      msg.textContent = "Signing in...";
+      await signInWithEmailAndPassword(auth, email, password);
+      location.href = "index.html";
+    } catch (err) {
+      msg.textContent = err.message || "Login failed";
+    }
+  });
+}
 
-  createUserWithEmailAndPassword(aiAuth.auth, email, pass)
-    .then(() => window.location.href = "index.html")
-    .catch(err => alert(err.message));
-});
+// ---------- EMAIL SIGNUP ----------
+const signupBtn = document.getElementById("signupBtn");
+if (signupBtn) {
+  signupBtn.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("signupEmail").value.trim();
+    const password = document.getElementById("signupPassword").value;
+    const msg = document.getElementById("authMessage");
 
-// EMAIL LOGIN
-document.getElementById("emailLoginBtn")?.addEventListener("click", () => {
-  const email = email.value;
-  const pass = password.value;
+    try {
+      msg.textContent = "Creating account...";
+      await createUserWithEmailAndPassword(auth, email, password);
+      location.href = "index.html";
+    } catch (err) {
+      msg.textContent = err.message || "Signup failed";
+    }
+  });
+}
 
-  signInWithEmailAndPassword(aiAuth.auth, email, pass)
-    .then(() => window.location.href = "index.html")
-    .catch(err => alert(err.message));
-});
+// ---------- GOOGLE LOGIN ----------
+const googleBtn = document.getElementById("googleLogin");
+if (googleBtn) {
+  googleBtn.addEventListener("click", async () => {
+    const msg = document.getElementById("authMessage");
+    msg.textContent = "Opening Google...";
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      location.href = "index.html";
+    } catch (err) {
+      msg.textContent = err.message || "Google login failed";
+    }
+  });
+}
+
+// ---------- GITHUB LOGIN ----------
+const githubBtn = document.getElementById("githubLogin");
+if (githubBtn) {
+  githubBtn.addEventListener("click", async () => {
+    const msg = document.getElementById("authMessage");
+    msg.textContent = "Opening GitHub...";
+    try {
+      const provider = new GithubAuthProvider();
+      await signInWithPopup(auth, provider);
+      location.href = "index.html";
+    } catch (err) {
+      msg.textContent = err.message || "GitHub login failed";
+    }
+  });
+}
+
+// ---------- LOGOUT (used on protected pages) ----------
+window.logoutUser = async function () {
+  try {
+    await signOut(auth);
+    location.href = "login.html";
+  } catch (err) {
+    alert(err.message || "Logout failed");
+  }
+};
