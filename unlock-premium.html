@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Premium Plan Unlocked – AI Market</title>
 
+  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -55,16 +56,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
 
     <ol class="small" style="color:#9ca3af;">
-      <li>Save your payment confirmation.</li>
-      <li>Press the WhatsApp button below.</li>
-      <li>Tell us your goals (YouTube, Instagram, business promo, etc.) so we can plan your content better.</li>
+      <li>Save your payment confirmation (screenshot or email).</li>
+      <li>Tap the WhatsApp button below.</li>
+      <li>
+        Share your goals (for example: YouTube channel growth, business ads, music promotions),
+        your preferred languages and what kind of assets you need first.
+      </li>
     </ol>
 
-    <p class="small">
-      Premium plan includes all tools, AI Music & BGM Studio, and priority help for complex projects.
+    <p class="small" style="margin-top:10px;">
+      With Premium, we can plan a small content strategy for you – which videos to create first,
+      what styles to use, and how to mix reels, thumbnails and music for better impact.
     </p>
 
-    <div style="margin-top:16px;">
+    <div style="margin-top:18px;">
       <a href="https://wa.me/919676142165?text=I%20completed%20payment%20for%20Premium%20plan%20on%20AI%20Market."
          target="_blank" class="btn-primary">
         Start Premium Plan on WhatsApp
@@ -88,21 +93,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body;
-  const themeBtn=document.getElementById("themeToggle");
-  const menuBtn=document.getElementById("menuToggle");
-  const nav=document.getElementById("mainNav");
+  const body = document.body;
+  const themeBtn = document.getElementById("themeToggle");
+  const menuBtn = document.getElementById("menuToggle");
+  const nav = document.getElementById("mainNav");
 
-  const saved=localStorage.getItem("aimarket-theme");
-  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{
+  const saved = localStorage.getItem("aimarket-theme");
+  if (saved === "light") {
+    body.classList.add("light-theme");
+    themeBtn.textContent = "☀";
+  }
+  themeBtn.addEventListener("click", () => {
     body.classList.toggle("light-theme");
-    const light=body.classList.contains("light-theme");
-    themeBtn.textContent=light?"☀":"🌙";
-    localStorage.setItem("aimarket-theme",light?"light":"dark");
+    const light = body.classList.contains("light-theme");
+    themeBtn.textContent = light ? "☀" : "🌙";
+    localStorage.setItem("aimarket-theme", light ? "light" : "dark");
   });
 
-  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
+  menuBtn.addEventListener("click", () => nav.classList.toggle("nav-open"));
 })();
 </script>
 </body>
