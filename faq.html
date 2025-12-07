@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ - AI Market</title>
+  <title>FAQ – AI Market</title>
 
-  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,154 +12,92 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
   </script>
-  <!-- End Google Tag Manager -->
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header>
+<header class="site-header">
   <div class="header-inner">
-      <div class="logo-wrap">
-          <img src="logo.png" class="logo" alt="AI Market logo" />
-          <div class="logo-text">
-              <span class="site-name">AI Market</span>
-              <span class="tagline">World’s Smart AI Platform</span>
-          </div>
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="site-name">AI Market</span>
+        <span class="site-tagline">World’s Smart AI Platform</span>
       </div>
-      <div class="header-right">
-          <button class="theme-toggle" id="themeToggle">🌙</button>
-          <button class="menu-toggle" id="menuToggle">☰</button>
-      </div>
-  </div>
-
-  <nav id="mainNav">
+    </a>
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
       <a href="pricing.html">Pricing</a>
       <a href="donate.html">Donate</a>
       <a href="portfolio.html">Portfolio</a>
-      <a class="active" href="faq.html">FAQ</a>
+      <a href="faq.html">FAQ</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-  </nav>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
 </header>
 
-<section class="page legal-page">
-  <h1 class="section-title">Frequently Asked Questions</h1>
-  <p class="section-subtitle">
-      Answers to common questions about AI Market services, delivery and payments.
-  </p>
+<main>
+  <section class="section">
+    <h1 class="section-title">Frequently Asked Questions</h1>
 
-  <h2>1. How do I place an order?</h2>
-  <p>
-      Go to the <a href="ai-tools.html">AI Tools</a> or <a href="contact.html">Contact</a> page,
-      choose what you need and tap the WhatsApp button. Send your details, and we will reply with
-      price confirmation, required files and delivery time.
-  </p>
+    <h2>1. How do I start using AI Market?</h2>
+    <p>Log in, go to the <a href="pricing.html">Pricing</a> page, choose a plan and complete payment. After payment you will be redirected to an unlock page for your tools.</p>
 
-  <h2>2. What files do I need to send?</h2>
-  <p>It depends on the service:</p>
-  <ul>
-      <li><b>Video / Reels:</b> photos, short clips, song/audio file, text to show on screen.</li>
-      <li><b>Image edits:</b> original photo, what style you want (cartoon, clean, background change, etc.).</li>
-      <li><b>Music / BGM:</b> type of mood (happy, sad, devotional, cinematic), approximate length.</li>
-  </ul>
+    <h2>2. Is everything fully automated?</h2>
+    <p>Some tools are automated, others are semi-manual with AI assistance. We may review outputs before final delivery to maintain quality.</p>
 
-  <h2>3. How long does delivery take?</h2>
-  <p>
-      Simple reels or single photo edits may be delivered within 24–48 hours.
-      Bigger or bulk orders can take longer. We will share an estimated time when you confirm your order.
-  </p>
+    <h2>3. Do I need a powerful PC?</h2>
+    <p>No. AI Market runs in the cloud. You can create and manage content from mobile or simple laptops.</p>
 
-  <h2>4. How do I pay?</h2>
-  <p>
-      You can pay securely via Razorpay using the links on the <a href="pricing.html">Pricing</a> or
-      <a href="donate.html">Donate</a> page. Once payment is confirmed, we start or continue the work.
-  </p>
+    <h2>4. What languages do you support?</h2>
+    <p>We primarily support English, Telugu, Tamil and Hindi content. Other languages can be discussed on request.</p>
 
-  <h2>5. What if I need changes?</h2>
-  <p>
-      Some plans include a limited number of revisions (for example one free revision in the Pro plan).
-      Minor adjustments like text correction, small timing changes or color tweaks are usually covered.
-      Big changes that require redoing most of the work may be treated as a new order.
-  </p>
+    <h2>5. Can I cancel or get a refund?</h2>
+    <p>Since services are digital, refunds are limited. See the <a href="refund.html">Refund Policy</a> for details.</p>
 
-  <h2>6. Which languages can you work with?</h2>
-  <p>
-      We mainly support content in <b>English, Telugu, Tamil and Hindi</b>. For other languages, we can
-      discuss on WhatsApp and check if it is possible.
-  </p>
+    <h2>6. How do I contact support?</h2>
+    <p>Use the options on the <a href="contact.html">Contact</a> page. WhatsApp support is available during normal working hours.</p>
+  </section>
+</main>
 
-  <h2>7. What formats will I receive?</h2>
-  <ul>
-      <li><b>Videos:</b> MP4 (suitable for Instagram, YouTube Shorts, WhatsApp).</li>
-      <li><b>Images:</b> JPG or PNG (high resolution where possible).</li>
-      <li><b>Audio:</b> MP3 or WAV, depending on requirement.</li>
-  </ul>
-
-  <h2>8. Do you give raw project files?</h2>
-  <p>
-      Normally we deliver only the final exported file. If you specifically need raw files (like editing
-      project files), please discuss this in advance. Additional charges may apply.
-  </p>
-
-  <h2>9. Can I use the content for commercial purposes?</h2>
-  <p>
-      Yes, in most cases you can use the delivered content for your own business or brand pages.
-      However, you are responsible for ensuring that any third-party material (songs, logos, photos)
-      you provide has proper rights.
-  </p>
-
-  <h2>10. How can I contact support?</h2>
-  <p>
-      The fastest way is via WhatsApp at
-      <a href="https://wa.me/919676142165" target="_blank">+91 96761 42165</a>.
-      You can also see more options on the <a href="contact.html">Contact</a> page.
-  </p>
-</section>
-
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question%20about%20your%20FAQ."
-   class="whatsapp-float" target="_blank">💬</a>
-
-<footer>
-  © 2025 AI Market · World’s Smart AI Platform<br />
-  <a href="terms.html">Terms</a> ·
-  <a href="privacy.html">Privacy</a> ·
-  <a href="refund.html">Refund Policy</a> ·
-  <a href="disclaimer.html">Disclaimer</a> ·
-  <a href="cookies.html">Cookies</a>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <p class="footer-links">
+      <a href="terms.html">Terms</a><span>·</span>
+      <a href="privacy.html">Privacy</a><span>·</span>
+      <a href="refund.html">Refund Policy</a><span>·</span>
+      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
 </footer>
 
 <script>
 (function () {
-  const body = document.body;
-  const themeToggle = document.getElementById("themeToggle");
-  const menuToggle  = document.getElementById("menuToggle");
-  const nav         = document.getElementById("mainNav");
-
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-      body.classList.add("light-theme");
-      themeToggle.textContent = "☀";
-  }
-
-  themeToggle.addEventListener("click", () => {
-      body.classList.toggle("light-theme");
-      const light = body.classList.contains("light-theme");
-      themeToggle.textContent = light ? "☀" : "🌙";
-      localStorage.setItem("theme", light ? "light" : "dark");
-  });
-
-  menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-  });
+  const body=document.body, themeBtn=document.getElementById("themeToggle"),
+        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
+        current=window.location.pathname.split("/").pop()||"faq.html";
+  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
+<script type="module" src="auth.js"></script>
 </body>
 </html>
