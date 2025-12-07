@@ -1,118 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - AI Market</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – AI Market</title>
+
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
 </head>
-
 <body>
-<header>
-  <div class="header-inner">
-      <div class="logo-wrap">
-          <img src="logo.png" class="logo" alt="AI Market logo" />
-          <div class="logo-text">
-              <span class="site-name">AI Market</span>
-              <span class="tagline">World’s Smart AI Platform</span>
-          </div>
-      </div>
-      <div class="header-right">
-          <button class="theme-toggle" id="themeToggle">🌙</button>
-          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
-      </div>
-  </div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <nav id="mainNav">
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="site-name">AI Market</span>
+        <span class="site-tagline">World’s Smart AI Platform</span>
+      </div>
+    </a>
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
       <a href="pricing.html">Pricing</a>
       <a href="donate.html">Donate</a>
-      <a class="active" href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-  </nav>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
 </header>
 
-<section class="page">
+<main>
+  <section class="section">
     <h1 class="section-title">About AI Market</h1>
     <p class="section-subtitle">
-        AI Market is a simple platform where anyone can order AI-generated videos, images and music through
-        WhatsApp and Razorpay – without needing technical skills.
+      AI Market is built to bring powerful AI creation tools to everyday creators,
+      small businesses and individuals who want quality content without complex software.
     </p>
 
-    <div class="features-container">
-        <div class="card">
-            <h3>Our Mission</h3>
-            <p>
-                To bring professional-quality AI content creation to small creators, businesses and individuals,
-                at an affordable price and in local languages.
-            </p>
-        </div>
-        <div class="card">
-            <h3>What We Offer</h3>
-            <p>
-                We create reels, shorts, devotional videos, cartoon edits, AI-enhanced photos, background music
-                and more, using advanced AI tools behind the scenes.
-            </p>
-        </div>
-        <div class="card">
-            <h3>How It Works</h3>
-            <p>
-                You send us your idea and content on WhatsApp, choose a pricing plan, pay via Razorpay and receive
-                the final output file ready to post on your social media.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Future Roadmap</h3>
-            <p>
-                We plan to add more AI tools, dashboards, automation and self-service features so that you can
-                generate content instantly from the browser.
-            </p>
-        </div>
-    </div>
-</section>
+    <h2>Mission</h2>
+    <p>
+      Our mission is to make video, image and music creation as simple as sending a message.
+      We focus on mobile-first workflows, local payment methods and support for Indian languages.
+    </p>
 
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20to%20know%20more%20about%20your%20services."
-   class="whatsapp-float" target="_blank">💬</a>
+    <h2>What We Offer</h2>
+    <ul>
+      <li>AI Video tools for reels, shorts and status clips</li>
+      <li>AI Image tools for cartoons, thumbnails and posters</li>
+      <li>AI Music & BGM tools for background sound and vocal enhancement</li>
+      <li>Simple paid plans and optional donations to support future development</li>
+    </ul>
 
-<footer>
-    © 2025 AI Market · World’s Smart AI Platform<br />
-    <a href="terms.html">Terms</a> ·
-    <a href="privacy.html">Privacy</a> ·
-    <a href="refund.html">Refund Policy</a> ·
-    <a href="disclaimer.html">Disclaimer</a> ·
-    <a href="cookies.html">Cookies</a>
+    <h2>Roadmap</h2>
+    <p>
+      Over time, AI Market will add more tools, automation and templates for
+      festival greetings, ads, YouTube creators and small brands.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <p class="footer-links">
+      <a href="terms.html">Terms</a><span>·</span>
+      <a href="privacy.html">Privacy</a><span>·</span>
+      <a href="refund.html">Refund Policy</a><span>·</span>
+      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
 </footer>
 
 <script>
 (function () {
-    const body   = document.body;
-    const themeToggle = document.getElementById("themeToggle");
-    const menuToggle  = document.getElementById("menuToggle");
-    const nav         = document.getElementById("mainNav");
-
-    const saved = localStorage.getItem("theme");
-    if (saved === "light") {
-        body.classList.add("light-theme");
-        if (themeToggle) themeToggle.textContent = "☀";
-    }
-
-    if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-            body.classList.toggle("light-theme");
-            const light = body.classList.contains("light-theme");
-            themeToggle.textContent = light ? "☀" : "🌙";
-            localStorage.setItem("theme", light ? "light" : "dark");
-        });
-    }
-
-    if (menuToggle && nav) {
-        menuToggle.addEventListener("click", () => {
-            nav.classList.toggle("open");
-        });
-    }
+  const body=document.body, themeBtn=document.getElementById("themeToggle"),
+        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
+        current=window.location.pathname.split("/").pop()||"about.html";
+  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
+<script type="module" src="auth.js"></script>
 </body>
 </html>
