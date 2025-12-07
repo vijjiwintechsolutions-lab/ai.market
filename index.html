@@ -2,239 +2,219 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Market – World's Smart AI Platform</title>
+  <title>AI Market – World’s Smart AI Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <link rel="stylesheet" href="style.css" />
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MPPBPXHVH7');
+    gtag("js", new Date());
+    gtag("config", "G-MPPBPXHVH7");
   </script>
 </head>
 <body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="AI Market logo" />
+        <div class="logo-text">
+          <span class="logo-title">AI Market</span>
+          <span class="logo-tagline">World’s Smart AI Platform</span>
+        </div>
+      </a>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
-      <div class="logo-text">
-        <span class="logo-title">AI Market</span>
-        <span class="logo-tagline">World's Smart AI Platform</span>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+        ☰
+      </button>
+
+      <nav id="mainNav" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="donate.html">Donate</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
+        <a href="login.html" class="btn-outline small">Login</a>
       </div>
-    </a>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Home</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle" type="button">🌙</button>
-      <a href="login.html" class="login-link">Login</a>
-      <button class="menu-toggle" id="menuToggle" type="button">☰</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="page-wrapper">
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-inner">
-        <h1>Create Anything with <span>AI Market</span></h1>
-        <p class="subtitle">
-          The most powerful AI tools in one place. Generate videos, voiceovers,
-          thumbnails, music, photos, posters & more in your own language.
+  <!-- MAIN -->
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">AI Videos • Reels • Music • Images</p>
+          <h1>Welcome to <span class="accent">AI Market</span></h1>
+          <p class="lead">
+            Turn songs, photos, text &amp; ideas into AI-powered reels, shorts, thumbnails,
+            BGM &amp; more – in Indian and international languages.
+          </p>
+          <div class="hero-actions">
+            <a href="pricing.html" class="btn-primary">View Plans &amp; Offers</a>
+            <a href="ai-tools.html" class="btn-ghost">Explore AI Tools</a>
+          </div>
+          <p class="hero-meta">
+            Simple web-based tools • No editing experience required • Works on mobile &amp; desktop
+          </p>
+        </div>
+
+        <div class="hero-highlight">
+          <div class="highlight-card">
+            <h3>Create, Earn &amp; Donate</h3>
+            <ul>
+              <li>Make AI reels &amp; shorts from songs, voice, or text.</li>
+              <li>Design thumbnails, posts &amp; festival creatives.</li>
+              <li>Create BGMs &amp; music loops for videos &amp; podcasts.</li>
+              <li>Support creators &amp; projects through donations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU CAN DO -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">What You Can Do with AI Market</h2>
+        <p class="section-intro">
+          AI Market is your shortcut to professional-level AI content. Use it for YouTube,
+          Instagram, Facebook, WhatsApp status, podcasts and more.
         </p>
-        <div class="hero-actions">
-          <a href="ai-tools.html" class="btn-primary" data-ga-event="home_explore_tools">Explore AI Tools 🚀</a>
-          <a href="pricing.html" class="btn-outline" data-ga-event="home_view_pricing">View Plans & Offers →</a>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>AI Video Generator</h3>
+            <p>
+              Convert songs, text or images into reels &amp; shorts for Instagram,
+              YouTube, Facebook or WhatsApp Status.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>AI Image &amp; Thumb Maker</h3>
+            <p>
+              Design eye-catching thumbnails &amp; social posts in trending styles with a few clicks.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>AI Cartoon Maker</h3>
+            <p>
+              Transform real photos into animated or comic-style characters and scenes.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>AI Music &amp; BGM Studio</h3>
+            <p>
+              Create background music, intros, loops and more with smart vocal &amp; sound enhancers.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Preset Templates</h3>
+            <p>
+              Use ready-to-go templates for festival wishes, promo videos, quotes and business posts.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Earn, Promote &amp; Donate</h3>
+            <p>
+              Grow your pages, attract clients and support creators using affiliate links &amp; donations.
+            </p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- POPULAR TOOLS -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Popular AI Tools</h2>
-      <p class="section-subtitle">
-        Everything you need to create professional digital content in minutes.
-      </p>
-
-      <div class="tools-grid">
-        <div class="tool-card">
-          <h3>AI Video Generator</h3>
-          <p>Create cinematic ads, reels & shorts from songs, photos or scripts.</p>
+    <!-- CTA -->
+    <section class="section section-accent">
+      <div class="container split">
+        <div>
+          <h2>Ready to launch your AI content workflow?</h2>
+          <p>
+            Choose a plan that fits your usage. You can always upgrade later as your audience grows.
+          </p>
         </div>
-
-        <div class="tool-card">
-          <h3>AI Face & Cartoon Maker</h3>
-          <p>Turn your photos into animated avatars or cartoon characters.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>AI Voiceover Studio</h3>
-          <p>Professional male & female voices in multiple Indian languages.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>AI Thumbnail Designer</h3>
-          <p>High-CTR thumbnails built for YouTube, Reels & Shorts.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>AI Music & BGM Maker</h3>
-          <p>Create copyright-free background tracks for any video or podcast.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>AI Cleanup & Watermark Remove</h3>
-          <p>Remove noise, watermarks and unwanted objects from media.</p>
+        <div class="cta-actions">
+          <a href="pricing.html" class="btn-primary">See Pricing</a>
+          <a href="contact.html" class="btn-ghost">Talk to Us</a>
         </div>
       </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 AI Market · World’s Smart AI Platform</p>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
     </div>
-  </section>
+  </footer>
 
-  <!-- WHY AI MARKET -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Why Creators Love AI Market</h2>
-      <p class="section-subtitle">
-        Built for content creators, agencies, businesses and freelancers.
-      </p>
-
-      <div class="tools-grid">
-        <div class="tool-card">
-          <h3>⚡ All-in-One Platform</h3>
-          <p>50+ powerful AI tools under one login – no separate subscriptions.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>🌍 Local Language Support</h3>
-          <p>English, Telugu, Hindi, Tamil & more – perfect for Indian creators.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>💸 Affordable Pricing</h3>
-          <p>Choose Basic, Pro or Premium based on your monthly workload.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>🎧 Audio & Voice Suite</h3>
-          <p>Voiceovers, vocal cleanup, background score & SFX in one place.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>🧠 Constant Updates</h3>
-          <p>New tools & templates added frequently – stay ahead of others.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>📞 WhatsApp Support</h3>
-          <p>Get personal help for orders, tools and campaign ideas.</p>
-        </div>
+  <!-- CHATBOT WIDGET -->
+  <div id="chatbotWidget" class="chatbot-widget">
+    <div class="chatbot-header">
+      <span>AI Market Assistant</span>
+      <button id="chatbotClose" type="button">✕</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="bot-msg">
+        Hi! I'm your AI Market helper bot. Ask me about plans, tools or payments.
       </div>
     </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="hero-inner">
-        <h2>Ready to Grow with AI?</h2>
-        <p class="subtitle">
-          Pick a plan that fits your budget and start creating stunning content today.
-        </p>
-        <div class="hero-actions">
-          <a href="pricing.html" class="btn-primary" data-ga-event="home_cta_pricing">Start with a Plan →</a>
-          <a href="contact.html" class="btn-outline" data-ga-event="home_cta_contact">Talk on WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>© 2025 AI Market – World’s Smart AI Platform.</div>
-    <div class="footer-links">
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="cookies.html">Cookies</a>
+    <div class="chatbot-input-area">
+      <input
+        type="text"
+        id="chatbotInput"
+        placeholder="Type your question and press Enter..."
+      />
+      <button id="chatbotSend" type="button">➤</button>
     </div>
   </div>
-</footer>
 
-<!-- Floating Chatbot & WhatsApp -->
-<div class="chatbot-panel" id="chatbotPanel">
-  <div class="chatbot-header">
-    <div>
-      <span class="chatbot-title">AI Market Help</span>
-      <small>Quick answers & guidance</small>
-    </div>
-    <button class="chatbot-close" type="button">✕</button>
-  </div>
-  <div class="chatbot-messages"></div>
-  <div class="chatbot-quick">
-    <button
-      type="button"
-      data-bot-question="What is AI Market?"
-      data-bot-answer="AI Market is a single platform where you can use multiple AI tools for video, audio, images, music, thumbnails and more, with local language support.">
-      What is AI Market?
-    </button>
-    <button
-      type="button"
-      data-bot-question="Which plan should I choose?"
-      data-bot-answer="If you are an individual creator, Basic may be enough. For regular client work or YouTube, Pro is better. For studios or resellers, Premium is ideal.">
-      Which plan is best?
-    </button>
-    <button
-      type="button"
-      data-bot-question="How do I contact support?"
-      data-bot-answer="You can contact us via WhatsApp at +91 9676142165 or from the Contact page. We usually reply within a few hours.">
-      How to contact support?
-    </button>
-    <button
-      type="button"
-      data-bot-question="Can I use AI Market for my YouTube channel?"
-      data-bot-answer="Yes, you can use AI Market to create videos, thumbnails, intros, BGMs and more. Please follow YouTube rules and avoid copyrighted inputs you don’t own.">
-      Use for YouTube?
-    </button>
-  </div>
-</div>
+  <!-- Chatbot FAB -->
+  <button
+    id="chatbotFAB"
+    class="chatbot-fab"
+    type="button"
+    title="Chat with AI Market Assistant"
+  >
+    💬
+  </button>
 
-<button
-  id="chatbotToggle"
-  class="chatbot-toggle"
-  type="button"
-  title="Chat with helper bot"
-  data-ga-event="chatbot_click"
-  data-ga-label="Chatbot Floating Button">
-  💬
-</button>
+  <!-- WhatsApp FAB -->
+  <a
+    href="https://wa.me/919676142165"
+    class="whatsapp-fab"
+    target="_blank"
+    rel="noopener"
+    title="Chat on WhatsApp"
+    data-ga-event="whatsapp_click"
+  >
+    ⟟
+  </a>
 
-<a
-  href="https://wa.me/919676142165"
-  class="whatsapp-fab"
-  target="_blank"
-  rel="noopener"
-  title="Chat on WhatsApp"
-  data-ga-event="whatsapp_click"
-  data-ga-label="WhatsApp Floating Button">
-  ⟟
-</a>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
