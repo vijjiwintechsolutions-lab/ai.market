@@ -15,8 +15,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
@@ -43,7 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
-      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <a href="login.html" class="login-link">Login</a>
       <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
@@ -53,22 +51,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="section">
     <h1 class="section-title">Support AI Market</h1>
     <p class="section-subtitle">
-      Your donation helps us build more AI tools for creators in India and worldwide.
-    </p>
-    <p>
-      We offer free and low-cost features. If you find AI Market useful and want to
-      support future development, you can donate any amount using the button below.
+      Donations help us maintain servers, build new AI tools and create helpful content for everyone.
     </p>
 
-    <div class="center">
-      <a href="https://rzp.io/rzp/donateaimarket" class="btn-primary">
-        Donate via Razorpay
+    <p>
+      If AI Market is useful to you and you would like to support our work, you can donate any amount using
+      UPI / Cards / Netbanking via Razorpay.
+    </p>
+
+    <ul style="margin-top:12px;font-size:0.9rem;color:#9ca3af;">
+      <li>Donations are voluntary and separate from paid plans.</li>
+      <li>There is no refund for donations.</li>
+      <li>We may use part of donations for experiments, learning and community support.</li>
+    </ul>
+
+    <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;">
+      <a href="https://rzp.io/rzp/donateaimarket" class="btn-primary">Donate via Razorpay</a>
+      <a href="https://wa.me/919676142165?text=I%20want%20to%20donate%20to%20AI%20Market."
+         target="_blank" class="btn-outline">
+        Talk on WhatsApp
       </a>
     </div>
-
-    <p class="small center">
-      After successful payment you will see a confirmation page from Razorpay.
-    </p>
   </section>
 </main>
 
@@ -86,17 +89,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
-  (function () {
-    const body=document.body, themeBtn=document.getElementById("themeToggle"),
-          menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
-          current=window.location.pathname.split("/").pop()||"donate.html";
-    nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
-    const saved=localStorage.getItem("aimarket-theme");
-    if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-    themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
-    menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
-  })();
+(function () {
+  const body=document.body;
+  const themeBtn=document.getElementById("themeToggle");
+  const menuBtn=document.getElementById("menuToggle");
+  const nav=document.getElementById("mainNav");
+
+  const current="donate.html";
+  nav.querySelectorAll("a").forEach(a=>{
+    if(a.getAttribute("href")===current) a.classList.add("active");
+  });
+
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+  themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-theme");
+    const light=body.classList.contains("light-theme");
+    themeBtn.textContent=light?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",light?"light":"dark");
+  });
+
+  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
+})();
 </script>
-<script type="module" src="auth.js"></script>
 </body>
 </html>
