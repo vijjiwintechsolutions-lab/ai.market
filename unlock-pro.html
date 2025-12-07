@@ -1,105 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unlock Pro Plan – AI Market</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Unlock the Pro AI Market plan for ₹299 – best for regular content creators." />
 
-  <!-- GA4 -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VM41JL03HD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-VM41JL03HD');
   </script>
+
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="brand">
-      <img src="logo.png" class="brand-logo" alt="AI Market logo">
-      <div class="brand-text">
-        <span class="brand-name">AI Market</span>
-        <span class="brand-tagline">World’s Smart AI Platform</span>
-      </div>
-    </a>
-    <button id="menuToggle" class="menu-toggle">☰</button>
-    <nav id="mainNav" class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="donate.html">Donate</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="login.html" class="nav-login">Login</a>
-    </nav>
-    <button id="themeToggle" class="theme-toggle">🌙</button>
-  </div>
-</header>
-
-<main class="page">
-  <section class="section">
-    <div class="container">
-      <h1>Unlock Pro Plan</h1>
-      <p>Pro is for regular content creators and small agencies.</p>
-
-      <div class="card">
-        <h2>Pro – ₹299</h2>
-        <ul>
-          <li>Up to 3 AI reels/shorts or 3 thumbnails/images</li>
-          <li>Priority work queue</li>
-          <li>Better creative guidance</li>
-        </ul>
-
-        <p>Step 1: Pay securely via Razorpay.</p>
-        <a href="https://rzp.io/rzp/mMXyAH0p"
-           class="btn primary"
-           target="_blank"
-           data-ga-event="unlock_pro_pay">Pay ₹299 on Razorpay</a>
-
-        <p>Step 2: Send your <strong>Payment ID</strong> and details (songs, text, images) via WhatsApp.</p>
-        <a href="https://wa.me/919676142165?text=I%20paid%20for%20AI%20Market%20Pro"
-           class="btn ghost"
-           target="_blank">Send Requirements on WhatsApp</a>
-
-        <p class="small">By paying, you accept our Terms, Privacy and Refund policies.</p>
-      </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="AI Market logo" class="logo-img" />
+        <div class="logo-text">
+          <span class="logo-title">AI Market</span>
+          <span class="logo-tagline">World’s Smart AI Platform</span>
+        </div>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="mainNav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
+      </nav>
     </div>
-  </section>
-</main>
+  </header>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© 2025 AI Market · World’s Smart AI Platform</p>
-    <nav class="footer-nav">
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="cookies.html">Cookies</a>
-    </nav>
-  </div>
-</footer>
+  <main class="section">
+    <div class="container narrow">
+      <h1>Unlock Pro Plan – ₹299</h1>
+      <p>
+        Pro is the most popular plan for regular creators. Get more credits, premium templates
+        and faster support for your channels.
+      </p>
 
-<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank">💬</a>
+      <ol class="step-list">
+        <li>Click the payment button below.</li>
+        <li>Complete secure payment via Razorpay.</li>
+        <li>Unlock information will be sent to you after payment.</li>
+      </ol>
 
-<div id="chatbot" class="chatbot">
-  <button id="chatbotToggle" class="chatbot-toggle">❓</button>
-  <div class="chatbot-window">
-    <div class="chatbot-header"><span>AI Market Help</span><button id="chatbotClose" class="chatbot-close">×</button></div>
-    <div class="chatbot-body">
-      <button class="bot-q" data-bot-answer="Pro is ideal if you need multiple outputs each month and want faster delivery.">Is Pro for me?</button>
-      <button class="bot-q" data-bot-answer="Yes, we can upgrade you from Pro to Premium by adjusting future work.">Can I later upgrade to Premium?</button>
-      <div id="botAnswer" class="bot-answer"></div>
+      <!-- Razorpay payment link -->
+      <a href="https://rzp.io/rzp/mMXyAH0p"
+         id="pay-pro"
+         class="btn btn-primary btn-large"
+         target="_blank"
+         rel="noopener">
+        Pay ₹299 &amp; Unlock Pro
+      </a>
+
+      <p class="section-note">
+        For team or agency plans, you can also message us on WhatsApp after payment.
+      </p>
     </div>
-  </div>
-</div>
+  </main>
 
-<script src="script.js"></script>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 AI Market · World’s Smart AI Platform</p>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919676142165?text=I%20need%20help%20with%20Pro%20plan%20payment."
+     id="whatsapp-btn"
+     class="whatsapp-fab"
+     target="_blank"
+     rel="noopener">💬</a>
 </body>
 </html>
