@@ -4,59 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login – AI Market</title>
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
-  </script>
-  <!-- End GTM -->
-
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-
-  <!-- Firebase + Auth -->
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
-  <script type="module" src="auth.js"></script>
 </head>
-<body class="auth-page">
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+<body class="login-page">
 
-<section class="auth-container">
-  <div class="auth-card">
-    <h1>AI Market</h1>
-    <p class="auth-subtitle">Sign in to continue</p>
+  <div class="login-wrapper">
+    <div class="login-card">
+      <h1>AI Market</h1>
+      <p class="login-subtitle">Optional sign-in (not required to browse)</p>
 
-    <form>
-      <input type="email" id="email" placeholder="Email address" required />
-      <input type="password" id="password" placeholder="Password" required />
-      <button id="emailLoginBtn" class="btn-primary" type="submit">Login</button>
-    </form>
+      <form class="login-form" onsubmit="return false;">
+        <label>Email address</label>
+        <input type="email" placeholder="you@example.com" disabled />
 
-    <p class="auth-small">
-      New here?
-      <a href="signup.html">Create an account</a>
-    </p>
+        <label>Password</label>
+        <input type="password" placeholder="••••••••" disabled />
 
-    <div class="auth-divider"><span>OR</span></div>
+        <button type="button" class="btn-primary" disabled>Login (coming soon)</button>
+      </form>
 
-    <button id="googleLogin" class="btn-secondary full-btn">
-      Continue with Google
-    </button>
-    <button id="githubLogin" class="btn-secondary full-btn">
-      Continue with GitHub
-    </button>
+      <div class="login-divider">OR</div>
 
-    <p id="authMessage" class="auth-message"></p>
+      <button type="button" class="btn-outline" disabled>
+        Continue with Google (coming soon)
+      </button>
+      <button type="button" class="btn-outline" disabled>
+        Continue with GitHub (coming soon)
+      </button>
+
+      <p class="small center" style="margin-top: 16px;">
+        Right now, you can use AI Market without logging in.  
+        <a href="pricing.html">Go to Pricing</a>
+      </p>
+    </div>
   </div>
-</section>
 
 </body>
 </html>
