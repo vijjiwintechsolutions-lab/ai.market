@@ -4,36 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About – AI Market</title>
-
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
-  </script>
-
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.png" />
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="index.html" class="logo-wrap">
-      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
       <div class="logo-text">
-        <span class="site-name">AI Market</span>
-        <span class="site-tagline">World’s Smart AI Platform</span>
+        <span class="logo-title">AI Market</span>
+        <span class="logo-tagline">World's Smart AI Platform</span>
       </div>
     </a>
     <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
       <a href="pricing.html">Pricing</a>
-      <a href="donate.html">Donate</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="faq.html">FAQ</a>
       <a href="about.html">About</a>
@@ -47,70 +34,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<main>
-  <section class="section">
-    <h1 class="section-title">About AI Market</h1>
-    <p class="section-subtitle">
-      AI Market is an experimental platform to create AI-powered videos, images and music for creators and businesses.
-    </p>
-
-    <p>
-      The idea behind AI Market is simple: many people have great ideas, songs and stories, but not everyone has
-      time, hardware or software skills to edit professional content. We use AI + manual editing to bridge that gap.
-    </p>
-
-    <p style="margin-top:10px;">
-      We focus on:
-    </p>
-    <ul style="font-size:0.9rem;color:#9ca3af;">
-      <li>Helping small creators and local businesses with affordable content.</li>
-      <li>Experimenting with new AI workflows and templates.</li>
-      <li>Providing simple WhatsApp-based ordering instead of complex dashboards.</li>
-    </ul>
-
-    <p style="margin-top:14px;font-size:0.9rem;color:#9ca3af;">
-      AI Market is still evolving. Features, pricing and tools may change as we learn what works best.
-      Feedback is always welcome.
-    </p>
+<div class="page-wrapper">
+  <section class="hero-small">
+    <div class="container">
+      <h1>About AI Market</h1>
+      <p class="subtitle">
+        AI Market is built to make advanced AI tools accessible to creators,
+        businesses and studios without complex setups or huge costs.
+      </p>
+    </div>
   </section>
-</main>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Our Vision</h2>
+        <p class="small">
+          We believe that AI should be simple, affordable and available in
+          local languages. Many creators struggle with complicated tools,
+          multiple subscriptions and technical setups. AI Market aims to
+          solve this by offering a single, easy-to-use platform.
+        </p>
+
+        <h2>What We Offer</h2>
+        <ul class="small">
+          <li>AI tools for video, audio, image, music, thumbnails and more.</li>
+          <li>Templates for promotions, festivals, greetings and branding.</li>
+          <li>Workflows designed specially for Indian content creators.</li>
+          <li>Support via WhatsApp for quick doubt clearing and guidance.</li>
+        </ul>
+
+        <h2>Who Uses AI Market?</h2>
+        <ul class="small">
+          <li>YouTube creators and short-form video creators.</li>
+          <li>Small businesses promoting their products and services.</li>
+          <li>Freelancers and agencies handling client work.</li>
+          <li>People who want to start digital services without big investment.</li>
+        </ul>
+
+        <h2>Roadmap</h2>
+        <p class="small">
+          We are continuously adding new AI engines, templates and automation
+          features. Our focus is to support multiple Indian languages, high
+          quality output and useful integrations for real-world use.
+        </p>
+
+        <p class="small">
+          If you want to partner with us, resell AI services or request
+          custom tools, please contact us using the details on the
+          <a href="contact.html">Contact page</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <p>© 2025 AI Market · World’s Smart AI Platform</p>
-    <p class="footer-links">
-      <a href="terms.html">Terms</a><span>·</span>
-      <a href="privacy.html">Privacy</a><span>·</span>
-      <a href="refund.html">Refund Policy</a><span>·</span>
-      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+    <div>© 2025 AI Market – World’s Smart AI Platform.</div>
+    <div class="footer-links">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refund</a>
+      <a href="disclaimer.html">Disclaimer</a>
       <a href="cookies.html">Cookies</a>
-    </p>
+    </div>
   </div>
 </footer>
 
-<script>
-(function () {
-  const body=document.body;
-  const themeBtn=document.getElementById("themeToggle");
-  const menuBtn=document.getElementById("menuToggle");
-  const nav=document.getElementById("mainNav");
-
-  const current="about.html";
-  nav.querySelectorAll("a").forEach(a=>{
-    if(a.getAttribute("href")===current) a.classList.add("active");
-  });
-
-  const saved=localStorage.getItem("aimarket-theme");
-  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{
-    body.classList.toggle("light-theme");
-    const light=body.classList.contains("light-theme");
-    themeBtn.textContent=light?"☀":"🌙";
-    localStorage.setItem("aimarket-theme",light?"light":"dark");
-  });
-
-  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
-})();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
