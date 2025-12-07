@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Disclaimer – AI Market</title>
 
+  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -54,29 +55,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       General information and limitation of responsibility for AI Market.
     </p>
 
-    <h3>1. No Professional Advice</h3>
-    <p class="small">
-      Content on this website (including examples, tips or explanations) is for general information only.
-      It should not be treated as legal, financial, medical or any other professional advice.
+    <p class="small" style="margin-bottom:16px;">
+      <strong>Language &amp; worldwide use:</strong> This Disclaimer is provided in English and applies to all AI Market
+      users worldwide. If we provide translations, the English version will control in case of conflict.
     </p>
 
-    <h3>2. Third-Party Content & Rights</h3>
+    <h3>1. No Professional Advice</h3>
     <p class="small">
-      When you provide songs, images or other material, you are responsible for ensuring that you have the
-      necessary rights. AI Market is not responsible for any claims arising out of unauthorised use of content
-      supplied by you.
+      Content and examples on this website are for general informational and experimental purposes only.
+      They do not constitute professional legal, financial, medical or other specialist advice.
+      You should consult appropriate professionals for specific guidance.
+    </p>
+
+    <h3>2. Third-Party Rights &amp; Content</h3>
+    <p class="small">
+      When you provide songs, logos, images, text or other material, you are responsible for ensuring you have
+      the necessary rights or permissions. AI Market is not responsible for any claims arising from unauthorised
+      use of such material.
     </p>
 
     <h3>3. External Links</h3>
     <p class="small">
-      Our website may contain links to third-party sites (payment gateways, social media, etc.).
-      We are not responsible for their content, privacy practices or policies.
+      Our website may contain links to third-party websites or services (including payment providers and social
+      platforms). We have no control over their content, privacy practices or policies and are not responsible
+      for them.
     </p>
 
     <h3>4. “As-Is” Service</h3>
     <p class="small">
-      The services and information on this site are provided on an “as-is” and “as-available” basis.
-      We do not guarantee that the website will be error-free or uninterrupted, though we try to keep it stable.
+      The Service is provided on an “as-is” and “as-available” basis. We do not guarantee that the website will be
+      free from errors or interruptions, or that AI-generated content will always be accurate or suitable for every
+      situation. You use the Service at your own risk.
+    </p>
+
+    <p class="small" style="margin-top:16px;color:#9ca3af;">
+      Last updated: 07 December 2025
     </p>
   </section>
 </main>
@@ -96,26 +109,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body;
-  const themeBtn=document.getElementById("themeToggle");
-  const menuBtn=document.getElementById("menuToggle");
-  const nav=document.getElementById("mainNav");
+  const body = document.body;
+  const themeBtn = document.getElementById("themeToggle");
+  const menuBtn = document.getElementById("menuToggle");
+  const nav = document.getElementById("mainNav");
 
-  const current="disclaimer.html";
-  nav.querySelectorAll("a").forEach(a=>{
-    if(a.getAttribute("href")===current) a.classList.add("active");
+  const current = "disclaimer.html";
+  nav.querySelectorAll("a").forEach(a => {
+    if (a.getAttribute("href") === current) a.classList.add("active");
   });
 
-  const saved=localStorage.getItem("aimarket-theme");
-  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{
+  const saved = localStorage.getItem("aimarket-theme");
+  if (saved === "light") {
+    body.classList.add("light-theme");
+    themeBtn.textContent = "☀";
+  }
+  themeBtn.addEventListener("click", () => {
     body.classList.toggle("light-theme");
-    const light=body.classList.contains("light-theme");
-    themeBtn.textContent=light?"☀":"🌙";
-    localStorage.setItem("aimarket-theme",light?"light":"dark");
+    const light = body.classList.contains("light-theme");
+    themeBtn.textContent = light ? "☀" : "🌙";
+    localStorage.setItem("aimarket-theme", light ? "light" : "dark");
   });
 
-  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
+  menuBtn.addEventListener("click", () => nav.classList.toggle("nav-open"));
 })();
 </script>
 </body>
