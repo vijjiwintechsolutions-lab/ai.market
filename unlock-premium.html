@@ -1,98 +1,864 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unlock Premium Plan – AI Market</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* =========================================
+   AI Market - Global Styles
+   Dark + Light Themes, Sticky Footer,
+   Responsive Header & Cards, WhatsApp FAB,
+   Chatbot Widget
+   ========================================= */
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
-      <div class="logo-text">
-        <span class="logo-title">AI Market</span>
-        <span class="logo-tagline">World's Smart AI Platform</span>
-      </div>
-    </a>
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Home</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle">🌙</button>
-      <a href="login.html" class="login-link">Login</a>
-      <button class="menu-toggle" id="menuToggle">☰</button>
-    </div>
-  </div>
-</header>
+/* ---------- 1. RESET ---------- */
 
-<div class="page-wrapper">
-  <section class="hero-small">
-    <div class="container">
-      <h1>Unlock Premium Plan</h1>
-      <p class="subtitle">
-        Premium is for studios, brands and resellers who want full power and
-        maximum flexibility.
-      </p>
-    </div>
-  </section>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  <section class="section">
-    <div class="container">
-      <div class="unlock-card">
-        <h2>Premium Plan – ₹999 / month</h2>
-        <ul class="small">
-          <li>Access to all current and upcoming AI tools.</li>
-          <li>Highest usage limits and priority processing.</li>
-          <li>Suitable for agencies, resellers and studios.</li>
-          <li>Priority support and onboarding assistance.</li>
-        </ul>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
-        <p class="small">
-          Click the button below to pay securely via Razorpay. This plan is
-          best for those who handle regular client work or high-volume content.
-        </p>
+/* The body is a flex column so footer sticks to bottom */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
 
-        <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary" target="_blank" rel="noopener">
-          Pay ₹999 & Unlock Premium
-        </a>
+/* Wrapper for each page's main content (between header & footer) */
+.page-wrapper {
+  flex: 1;
+}
 
-        <p class="small section-note">
-          After payment, send your payment reference, business name (if any) and
-          email ID to us on WhatsApp (<strong>+91 9676142165</strong>). We will
-          verify and set up your Premium access, and share any onboarding
-          details.
-        </p>
+/* ---------- 2. THEME VARIABLES ---------- */
 
-        <a href="https://wa.me/919676142165" class="btn-outline" target="_blank" rel="noopener">
-          Send Payment Details on WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-</div>
+/* Default = dark theme */
+:root {
+  --bg-body: #020617;
+  --bg-surface: #020617;
+  --bg-surface-soft: #020617;
+  --bg-card: #020617;
+  --bg-card-alt: #020617;
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>© 2025 AI Market – World’s Smart AI Platform.</div>
-    <div class="footer-links">
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="cookies.html">Cookies</a>
-    </div>
-  </div>
-</footer>
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --text-soft: #64748b;
+  --text-invert: #020617;
 
-<script src="script.js"></script>
-</body>
-</html>
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-soft: #38bdf8;
+
+  --border-subtle: rgba(148, 163, 184, 0.35);
+  --shadow-soft: 0 26px 70px rgba(15, 23, 42, 0.95);
+  --shadow-card: 0 20px 50px rgba(15, 23, 42, 0.9);
+
+  --radius-lg: 26px;
+  --radius-md: 18px;
+  --radius-pill: 999px;
+  --transition-fast: 160ms ease-out;
+}
+
+/* Light theme overrides — applied when html.light-theme is added */
+html.light-theme body,
+body.light-theme {
+  --bg-body: #edf2ff;
+  --bg-surface: #f8fafc;
+  --bg-surface-soft: #eef2ff;
+  --bg-card: #ffffff;
+  --bg-card-alt: #f9fafb;
+
+  --text-main: #0f172a;
+  --text-muted: #4b5563;
+  --text-soft: #6b7280;
+  --text-invert: #f9fafb;
+
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-soft: #38bdf8;
+
+  --border-subtle: rgba(148, 163, 184, 0.7);
+  --shadow-soft: 0 26px 60px rgba(148, 163, 184, 0.45);
+  --shadow-card: 0 20px 45px rgba(148, 163, 184, 0.4);
+}
+
+/* ---------- 3. BODY BACKGROUND & TYPOGRAPHY ---------- */
+
+body {
+  background:
+    radial-gradient(circle at top left, #0ea5e9 0, transparent 40%),
+    radial-gradient(circle at top right, #6366f1 0, transparent 40%),
+    radial-gradient(circle at bottom, #020617 0, var(--bg-body) 70%);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Light background */
+html.light-theme body,
+body.light-theme {
+  background: radial-gradient(circle at top, #dbeafe 0, #eef2ff 40%, #e5e7eb);
+}
+
+/* Anchor defaults */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Containers & sections */
+.container,
+.section,
+.header-inner,
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+.section {
+  padding-block: 40px;
+}
+
+/* Small text utility */
+.small {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ---------- 4. HEADER & NAVIGATION ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(16px);
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.96),
+    rgba(15, 23, 42, 0.92)
+  );
+  border-bottom: 1px solid rgba(30, 64, 175, 0.7);
+}
+
+/* Light header */
+html.light-theme .site-header,
+body.light-theme .site-header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: #e5e7eb;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 10px;
+}
+
+/* Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.logo-tagline {
+  font-size: 0.75rem;
+  color: var(--text-soft);
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 0.9rem;
+}
+
+.main-nav a {
+  color: var(--text-muted);
+  padding: 6px 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: center;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  transition: transform var(--transition-fast);
+}
+
+.main-nav a:hover {
+  color: var(--text-main);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  transform: scaleX(1);
+}
+
+.main-nav a.active {
+  color: var(--accent-soft);
+}
+
+/* Header actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(148, 163, 184, 0.65);
+  background: radial-gradient(circle at top, #0b1120, #020617);
+  color: #f9fafb;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast), border-color var(--transition-fast),
+    transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Light toggle */
+html.light-theme .theme-toggle,
+body.light-theme .theme-toggle {
+  background: radial-gradient(circle at top, #e5f0ff, #ffffff);
+  color: #0f172a;
+  border-color: #d1d5db;
+}
+
+/* Login pill */
+.login-link {
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.85);
+  color: #e5e7eb;
+  white-space: nowrap;
+  transition: background var(--transition-fast), color var(--transition-fast),
+    border-color var(--transition-fast), transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.login-link:hover {
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  border-color: transparent;
+  color: #f9fafb;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.7);
+}
+
+/* Light login pill */
+html.light-theme .login-link,
+body.light-theme .login-link {
+  background: #ffffff;
+  color: #111827;
+  border-color: #d1d5db;
+}
+
+html.light-theme .login-link:hover,
+body.light-theme .login-link:hover {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #f9fafb;
+}
+
+/* Mobile nav toggle button */
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* ---------- 5. HERO ---------- */
+
+.hero {
+  padding-top: 28px;
+  padding-bottom: 10px;
+}
+
+.hero-small {
+  padding-top: 32px;
+  padding-bottom: 20px;
+}
+
+.hero .container,
+.hero-small .container {
+  padding-block: 0;
+}
+
+.hero-inner {
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.35), transparent 60%),
+    radial-gradient(circle at bottom, var(--bg-surface) 0, var(--bg-surface) 65%);
+  border-radius: var(--radius-lg);
+  padding: 34px 24px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(30, 64, 175, 0.7);
+}
+
+/* Light hero */
+html.light-theme .hero-inner,
+body.light-theme .hero-inner {
+  background: linear-gradient(135deg, #ffffff 0, #e1ecff 40%, #f9fafb 100%);
+  border-color: #d1d5db;
+}
+
+.hero-inner h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  letter-spacing: 0.04em;
+}
+
+.hero-inner h1 span {
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-inner .subtitle,
+.subtitle {
+  margin: 0 auto 18px;
+  max-width: 640px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Hero actions */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ---------- 6. BUTTONS ---------- */
+
+.btn,
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast),
+    border-color var(--transition-fast), box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+/* Primary button */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: #f9fafb;
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.7);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 50px rgba(37, 99, 235, 0.9);
+}
+
+/* Outline button */
+.btn-outline {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-soft);
+  color: var(--accent-soft);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+/* Light outline */
+html.light-theme .btn-outline,
+body.light-theme .btn-outline {
+  background: #ffffff;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+html.light-theme .btn-outline:hover,
+body.light-theme .btn-outline:hover {
+  background: #eef2ff;
+  border-color: var(--accent-strong);
+  color: var(--accent-strong);
+}
+
+/* ---------- 7. GRID & CARDS ---------- */
+
+.tools-grid,
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 960px) {
+  .tools-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .tools-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Generic card */
+.card,
+.tool-card,
+.pricing-card,
+.donate-card,
+.legal-card,
+.contact-card,
+.unlock-card,
+.faq-item,
+.login-card {
+  background: radial-gradient(circle at top left, #020617, #020617 70%);
+  border-radius: var(--radius-md);
+  padding: 18px 16px 18px;
+  border: 1px solid rgba(31, 41, 55, 0.9);
+  box-shadow: var(--shadow-card);
+}
+
+/* Light cards */
+html.light-theme .card,
+body.light-theme .card,
+html.light-theme .tool-card,
+body.light-theme .tool-card,
+html.light-theme .pricing-card,
+body.light-theme .pricing-card,
+html.light-theme .donate-card,
+body.light-theme .donate-card,
+html.light-theme .legal-card,
+body.light-theme .legal-card,
+html.light-theme .contact-card,
+body.light-theme .contact-card,
+html.light-theme .unlock-card,
+body.light-theme .unlock-card,
+html.light-theme .faq-item,
+body.light-theme .faq-item,
+html.light-theme .login-card,
+body.light-theme .login-card {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  box-shadow: var(--shadow-card);
+}
+
+/* Card titles & text */
+.tool-card h2,
+.tool-card h3,
+.pricing-card h2,
+.pricing-card h3,
+.card h2,
+.card h3,
+.faq-item .faq-q,
+.login-card h1,
+.login-card h2 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
+.tool-card p,
+.pricing-card p,
+.card p,
+.faq-item .faq-a {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+/* Section headings */
+.section-title {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+  color: var(--text-main);
+}
+
+.section-subtitle {
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.section-note {
+  padding-top: 10px;
+}
+
+/* ---------- 8. FORMS & LOGIN ---------- */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 0.92rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card-alt);
+  color: var(--text-main);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-soft);
+}
+
+/* Light form fields */
+html.light-theme input,
+body.light-theme input,
+html.light-theme textarea,
+body.light-theme textarea,
+html.light-theme select,
+body.light-theme select {
+  background: #ffffff;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+html.light-theme input::placeholder,
+body.light-theme input::placeholder,
+html.light-theme textarea::placeholder,
+body.light-theme textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Contact form layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Login page */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px 40px;
+}
+
+.login-card {
+  max-width: 420px;
+  width: 100%;
+}
+
+.login-card h1 {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.login-card p {
+  margin-bottom: 16px;
+}
+
+.login-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-social {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.login-social button {
+  width: 100%;
+}
+
+/* ---------- 9. FOOTER ---------- */
+
+.site-footer {
+  margin-top: 40px;
+  border-top: 1px solid rgba(30, 64, 175, 0.75);
+  background: #020617;
+}
+
+.footer-inner {
+  padding: 16px 16px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+}
+
+.footer-links a:hover {
+  color: #f9fafb;
+}
+
+/* Light footer stays dark for contrast */
+html.light-theme .site-footer,
+body.light-theme .site-footer {
+  background: #0b1120;
+  border-top-color: #020617;
+  color: #e5e7eb;
+}
+
+/* ---------- 10. WHATSAPP FLOATING BUTTON ---------- */
+
+.whatsapp-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 18px 40px rgba(34, 197, 94, 0.75);
+  text-decoration: none;
+  z-index: 50;
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.whatsapp-fab:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 22px 52px rgba(34, 197, 94, 0.95);
+}
+
+/* ---------- 11. CHATBOT WIDGET ---------- */
+
+.chatbot-toggle {
+  position: fixed;
+  right: 80px;
+  bottom: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: #f9fafb;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.85);
+  cursor: pointer;
+  z-index: 50;
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.chatbot-toggle:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 22px 52px rgba(37, 99, 235, 1);
+}
+
+.chatbot-panel {
+  position: fixed;
+  right: 16px;
+  bottom: 76px;
+  width: 320px;
+  max-height: 70vh;
+  background: var(--bg-card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(30, 64, 175, 0.8);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 60;
+}
+
+.chatbot-panel.open {
+  display: flex;
+}
+
+.chatbot-header {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(30, 64, 175, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.chatbot-header small {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.chatbot-close {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.chatbot-messages {
+  padding: 10px 12px;
+  flex: 1;
+  overflow-y: auto;
+  font-size: 0.85rem;
+}
+
+.chatbot-msg {
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+
+.chatbot-msg-bot {
+  background: rgba(15, 23, 42, 0.8);
+  color: #e5e7eb;
+}
+
+html.light-theme .chatbot-msg-bot,
+body.light-theme .chatbot-msg-bot {
+  background: #eef2ff;
+  color: #111827;
+}
+
+.chatbot-msg-user {
+  background: rgba(37, 99, 235, 0.7);
+  color: #f9fafb;
+  align-self: flex-end;
+}
+
+.chatbot-quick {
+  padding: 8px 10px 10px;
+  border-top: 1px solid rgba(30, 64, 175, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chatbot-quick button {
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: transparent;
+  color: var(--text-main);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* ---------- 12. RESPONSIVE NAVIGATION ---------- */
+
+@media (max-width: 820px) {
+  .header-inner {
+    align-items: flex-start;
+  }
+}
+
+/* For smaller screens: collapse nav into hamburger */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .main-nav.nav-open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+}
