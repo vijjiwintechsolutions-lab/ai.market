@@ -1,99 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ – AI Market</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- GA -->
+  <meta name="description"
+        content="Frequently asked questions about AI Market plans, payments, unlock process and AI tools." />
+  <link rel="canonical" href="https://ai-market.pages.dev/faq.html" />
+  <link rel="stylesheet" href="style.css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VM41JL03HD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-VM41JL03HD');
   </script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html" class="brand">
-      <img src="logo.png" class="brand-logo">
-      <div class="brand-text"><span class="brand-name">AI Market</span><span class="brand-tagline">World’s Smart AI Platform</span></div>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="logo-title">AI Market</span>
+        <span class="logo-tagline">World’s Smart AI Platform</span>
+      </div>
     </a>
     <button id="menuToggle" class="menu-toggle">☰</button>
-    <nav id="mainNav" class="main-nav">
+    <nav id="mainNav" class="nav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
       <a href="pricing.html">Pricing</a>
       <a href="donate.html">Donate</a>
       <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
+      <a href="faq.html" class="active">FAQ</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="login.html" class="nav-login">Login</a>
+      <a href="login.html" class="btn btn-outline nav-login">Login</a>
+      <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
     </nav>
-    <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </header>
 
-<main class="page">
-  <section class="section">
-    <div class="container">
-      <h1>Frequently Asked Questions</h1>
+<main class="section">
+  <div class="container narrow">
+    <h1 class="section-title">Frequently Asked Questions</h1>
 
-      <div class="faq-item">
-        <h3>What is AI Market?</h3>
-        <p>AI Market is an AI-powered content creation service for Indian and global creators.</p>
-      </div>
+    <h2>1. Do I need to log in to use AI Market?</h2>
+    <p>
+      Right now, you can browse all pages without logging in.  
+      For future features like coupons, saved projects and redemptions, login may be required.
+    </p>
 
-      <div class="faq-item">
-        <h3>What languages do you support?</h3>
-        <p>We support Telugu, Tamil, Hindi, English and many more Indian languages.</p>
-      </div>
+    <h2>2. How does the unlock system work?</h2>
+    <p>
+      Choose a plan on the <a href="pricing.html">Pricing</a> page and pay using Razorpay.  
+      After successful payment, we’ll send unlock details by WhatsApp or email.
+    </p>
 
-      <div class="faq-item">
-        <h3>How fast is delivery?</h3>
-        <p>Basic: 6–12 hours. Pro: 3–6 hours. Premium: Priority delivery.</p>
-      </div>
+    <h2>3. Can I get a refund?</h2>
+    <p>
+      Please read our <a href="refund.html">Refund Policy</a>.  
+      In general, we don’t refund already used credits, but we’ll try our best if something goes wrong.
+    </p>
 
-      <div class="faq-item">
-        <h3>How do I send requirements?</h3>
-        <p>After payment, you will receive a WhatsApp link to submit your songs, text, photos etc.</p>
-      </div>
-    </div>
-  </section>
+    <h2>4. What languages do you support?</h2>
+    <p>
+      We focus on Indian languages such as Telugu, Tamil and Hindi, along with English.
+    </p>
+
+    <h2>5. How do I contact support?</h2>
+    <p>
+      Use the WhatsApp button on any page or visit the <a href="contact.html">Contact</a> page.
+    </p>
+  </div>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© 2025 AI Market</p>
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
     <nav class="footer-nav">
       <a href="terms.html">Terms</a>
       <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
+      <a href="refund.html">Refund Policy</a>
       <a href="disclaimer.html">Disclaimer</a>
       <a href="cookies.html">Cookies</a>
     </nav>
   </div>
 </footer>
 
-<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank">💬</a>
-
-<div id="chatbot" class="chatbot">
-  <button id="chatbotToggle" class="chatbot-toggle">❓</button>
-  <div class="chatbot-window">
-    <div class="chatbot-header"><span>AI Market Help</span><button id="chatbotClose" class="chatbot-close">×</button></div>
-    <div class="chatbot-body">
-      <button class="bot-q" data-bot-answer="You can unlock Basic, Pro or Premium plans depending on your needs.">Which plan is right?</button>
-      <button class="bot-q" data-bot-answer="We generate videos, thumbnails, BGMs, templates and more.">What services do you offer?</button>
-      <div id="botAnswer" class="bot-answer"></div>
-    </div>
-  </div>
-</div>
-
-<script src="script.js"></script>
+<a href="https://wa.me/919676142165?text=Hi,%20I%20have%20a%20question%20about%20AI%20Market."
+   id="whatsapp-btn" class="whatsapp-fab" target="_blank" rel="noopener">💬</a>
 </body>
 </html>
