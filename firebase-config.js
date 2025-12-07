@@ -1,37 +1,35 @@
-<script type="module">
-  // Firebase SDKs
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getAuth, 
-           GoogleAuthProvider, 
-           GithubAuthProvider, 
-           signInWithPopup, 
-           signOut,
-           onAuthStateChanged,
-           createUserWithEmailAndPassword,
-           signInWithEmailAndPassword } 
-  from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+// firebase-config.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  GithubAuthProvider,
+  onAuthStateChanged,
+  signOut,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signInWithPopup
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
-  // TODO — PUT YOUR REAL FIREBASE CONFIG HERE
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    appId: "YOUR_APP_ID"
-  };
+// 🔴 REPLACE these values with your real Firebase config
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  appId: "YOUR_APP_ID"
+};
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
+const app  = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-  // Export globally
-  window.aiAuth = {
-    auth,
-    GoogleAuthProvider,
-    GithubAuthProvider,
-    signInWithPopup,
-    signInWithEmailAndPassword,
-    createUserWithEmailAndPassword,
-    signOut,
-    onAuthStateChanged
-  };
-</script>
+// Export everything other scripts need
+export {
+  auth,
+  GoogleAuthProvider,
+  GithubAuthProvider,
+  onAuthStateChanged,
+  signOut,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signInWithPopup
+};
