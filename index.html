@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Market – World's Smart AI Platform</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
 <body>
 
@@ -47,8 +55,8 @@
           thumbnails, music, photos, posters & more in your own language.
         </p>
         <div class="hero-actions">
-          <a href="ai-tools.html" class="btn-primary">Explore AI Tools 🚀</a>
-          <a href="pricing.html" class="btn-outline">View Plans & Offers →</a>
+          <a href="ai-tools.html" class="btn-primary" data-ga-event="home_explore_tools">Explore AI Tools 🚀</a>
+          <a href="pricing.html" class="btn-outline" data-ga-event="home_view_pricing">View Plans & Offers →</a>
         </div>
       </div>
     </div>
@@ -117,7 +125,7 @@
 
         <div class="tool-card">
           <h3>💸 Affordable Pricing</h3>
-          <p>Choose Basic, Pro or Premium based on your monthly work load.</p>
+          <p>Choose Basic, Pro or Premium based on your monthly workload.</p>
         </div>
 
         <div class="tool-card">
@@ -147,8 +155,8 @@
           Pick a plan that fits your budget and start creating stunning content today.
         </p>
         <div class="hero-actions">
-          <a href="pricing.html" class="btn-primary">Start with a Plan →</a>
-          <a href="contact.html" class="btn-outline">Talk on WhatsApp</a>
+          <a href="pricing.html" class="btn-primary" data-ga-event="home_cta_pricing">Start with a Plan →</a>
+          <a href="contact.html" class="btn-outline" data-ga-event="home_cta_contact">Talk on WhatsApp</a>
         </div>
       </div>
     </div>
@@ -167,6 +175,65 @@
     </div>
   </div>
 </footer>
+
+<!-- Floating Chatbot & WhatsApp -->
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>Quick answers & guidance</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button
+      type="button"
+      data-bot-question="What is AI Market?"
+      data-bot-answer="AI Market is a single platform where you can use multiple AI tools for video, audio, images, music, thumbnails and more, with local language support.">
+      What is AI Market?
+    </button>
+    <button
+      type="button"
+      data-bot-question="Which plan should I choose?"
+      data-bot-answer="If you are an individual creator, Basic may be enough. For regular client work or YouTube, Pro is better. For studios or resellers, Premium is ideal.">
+      Which plan is best?
+    </button>
+    <button
+      type="button"
+      data-bot-question="How do I contact support?"
+      data-bot-answer="You can contact us via WhatsApp at +91 9676142165 or from the Contact page. We usually reply within a few hours.">
+      How to contact support?
+    </button>
+    <button
+      type="button"
+      data-bot-question="Can I use AI Market for my YouTube channel?"
+      data-bot-answer="Yes, you can use AI Market to create videos, thumbnails, intros, BGMs and more. Please follow YouTube rules and avoid copyrighted inputs you don’t own.">
+      Use for YouTube?
+    </button>
+  </div>
+</div>
+
+<button
+  id="chatbotToggle"
+  class="chatbot-toggle"
+  type="button"
+  title="Chat with helper bot"
+  data-ga-event="chatbot_click"
+  data-ga-label="Chatbot Floating Button">
+  💬
+</button>
+
+<a
+  href="https://wa.me/919676142165"
+  class="whatsapp-fab"
+  target="_blank"
+  rel="noopener"
+  title="Chat on WhatsApp"
+  data-ga-event="whatsapp_click"
+  data-ga-label="WhatsApp Floating Button">
+  ⟟
+</a>
 
 <script src="script.js"></script>
 </body>
