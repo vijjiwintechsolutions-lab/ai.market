@@ -2,122 +2,150 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – AI Market</title>
+  <title>Portfolio – Sample Works from AI Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MPPBPXHVH7');
+    gtag("js", new Date());
+    gtag("config", "G-MPPBPXHVH7");
   </script>
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
-      <div class="logo-text">
-        <span class="logo-title">AI Market</span>
-        <span class="logo-tagline">World's Smart AI Platform</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="AI Market logo" />
+        <div class="logo-text">
+          <span class="logo-title">AI Market</span>
+          <span class="logo-tagline">World’s Smart AI Platform</span>
+        </div>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="donate.html">Donate</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
+        <a href="login.html" class="btn-outline small">Login</a>
       </div>
-    </a>
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Home</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle">🌙</button>
-      <a href="login.html" class="login-link">Login</a>
-      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="page-wrapper">
-  <section class="hero-small">
+  <main class="section">
     <div class="container">
-      <h1>Sample Works & Portfolio</h1>
-      <p class="subtitle">
-        A quick look at the type of content we can create using AI Market tools.
+      <h1 class="page-title">Sample Works &amp; Portfolio</h1>
+      <p class="section-intro">
+        A quick look at the type of content we can generate with AI Market tools.
+        For privacy reasons, some videos are blurred, muted or shortened.
       </p>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="card">
-        <p class="small">
-          We are continuously adding examples of client projects and demo outputs.
-          For privacy reasons, some videos may be blurred or shortened.
-        </p>
+      <div class="card-grid">
+        <article class="card">
+          <h2>Short Reels &amp; Status Videos</h2>
+          <p>
+            Regional songs, devotional tracks, movie dialogues and trending audios converted
+            into vertical reels with AI visuals.
+          </p>
+        </article>
 
-        <ul class="small">
-          <li>Reels & Shorts made from regional songs and dialogues.</li>
-          <li>Cartoon versions of real photos for profile pictures and posters.</li>
-          <li>Festival greetings and business promos using templates.</li>
-          <li>Background music and BGM tracks for YouTube and podcasts.</li>
-        </ul>
+        <article class="card">
+          <h2>Cartoon &amp; Character Art</h2>
+          <p>
+            Single-person and group photos turned into cartoon, painting or comic styles –
+            great for DPs, posters and invites.
+          </p>
+        </article>
 
-        <p class="small">
-          To see latest samples, message us on WhatsApp and ask for
+        <article class="card">
+          <h2>Festival &amp; Promo Creatives</h2>
+          <p>
+            Templates for festivals, sales, offers and events customised for local businesses
+            and online pages.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Music &amp; BGM Projects</h2>
+          <p>
+            Loops and background tracks used in videos, podcasts and explainer content, generated
+            and fine-tuned with AI Market tools.
+          </p>
+        </article>
+      </div>
+
+      <section class="section">
+        <h2>Want to See Live Samples?</h2>
+        <p>
+          We regularly share demo videos and images through WhatsApp. Message us and ask for
           <strong>“demo videos”</strong> or <strong>“sample thumbnails”</strong>.
         </p>
-
-        <a href="https://wa.me/919676142165" class="btn-primary" target="_blank" rel="noopener" data-ga-event="portfolio_whatsapp">
+        <a
+          href="https://wa.me/919676142165?text=Hi%2C%20please%20send%20AI%20Market%20demo%20videos%20and%20samples."
+          class="btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
           Get Samples on WhatsApp
         </a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 AI Market · World’s Smart AI Platform</p>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="chatbotWidget" class="chatbot-widget">
+    <div class="chatbot-header">
+      <span>AI Market Assistant</span>
+      <button id="chatbotClose" type="button">✕</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="bot-msg">
+        Want to know if a style is possible with AI Market? Describe it and I’ll tell you the closest tool.
       </div>
     </div>
-  </section>
-</div>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>© 2025 AI Market – World’s Smart AI Platform.</div>
-    <div class="footer-links">
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="cookies.html">Cookies</a>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbotInput" placeholder="Describe the style you want..." />
+      <button id="chatbotSend" type="button">➤</button>
     </div>
   </div>
-</footer>
 
-<div class="chatbot-panel" id="chatbotPanel">
-  <div class="chatbot-header">
-    <div>
-      <span class="chatbot-title">AI Market Help</span>
-      <small>Portfolio & samples info</small>
-    </div>
-    <button class="chatbot-close" type="button">✕</button>
-  </div>
-  <div class="chatbot-messages"></div>
-  <div class="chatbot-quick">
-    <button type="button" data-bot-question="Can I see real examples?" data-bot-answer="Yes, you can message us on WhatsApp and we’ll share sample videos, thumbnails or posters depending on your interest.">
-      See examples?
-    </button>
-    <button type="button" data-bot-question="Are client projects private?" data-bot-answer="Yes, we never share client content publicly without permission. Portfolio items may be anonymised or re-created.">
-      Client privacy?
-    </button>
-  </div>
-</div>
+  <button id="chatbotFAB" class="chatbot-fab" type="button">
+    💬
+  </button>
 
-<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
-  💬
-</button>
+  <a
+    href="https://wa.me/919676142165"
+    class="whatsapp-fab"
+    target="_blank"
+    rel="noopener"
+    title="Chat on WhatsApp"
+  >
+    ⟟
+  </a>
 
-<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
-  ⟟
-</a>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
