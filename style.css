@@ -1,580 +1,164 @@
 /* =====================================
-   AI Market - Colorful Dark UI
-   One simple theme for all pages
+   LIGHT THEME OVERRIDES
+   (Works with the existing colorful UI)
    ===================================== */
 
-/* ---------- 1. RESET ---------- */
+/* Basic variables & background */
+body.light-theme {
+  /* override colors from :root */
+  --bg-deep: #f4f5fb;
+  --bg-card: #ffffff;
+  --bg-card-alt: #f9fafb;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* ---------- 2. GLOBAL THEME ---------- */
-
-:root {
-  /* Primary brand */
-  --ai-blue: #2563eb;
-  --ai-blue-soft: #1d4ed8;
-  --ai-cyan: #22d3ee;
-  --ai-magenta: #ec4899;
-
-  /* Backgrounds */
-  --bg-deep: #020617;
-  --bg-card: #020617;
-  --bg-card-alt: #020617;
-
-  /* Text */
-  --text-main: #e5e7eb;
-  --text-muted: #9ca3af;
+  --text-main: #0f172a;
+  --text-muted: #4b5563;
   --text-soft: #6b7280;
 
-  /* Borders / shadows */
-  --border-soft: rgba(148, 163, 184, 0.45);
-  --shadow-hero: 0 26px 80px rgba(15, 23, 42, 0.95);
-  --shadow-card: 0 20px 45px rgba(15, 23, 42, 0.8);
+  --border-soft: rgba(148, 163, 184, 0.8);
 
-  --radius-lg: 26px;
-  --radius-md: 18px;
-  --radius-pill: 999px;
-  --transition-fast: 150ms ease-out;
-}
-
-/* Base body */
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  background:
-    radial-gradient(circle at top left, #0ea5e9 0, transparent 40%),
-    radial-gradient(circle at top right, #6366f1 0, transparent 40%),
-    radial-gradient(circle at bottom, #020617 0, #020617 70%);
+  background: radial-gradient(circle at top, #e0ecff 0, #f5f5fb 45%, #e5e7eb);
   color: var(--text-main);
-  line-height: 1.6;
 }
 
-/* Base links */
-
-a {
-  color: inherit;
-  text-decoration: none;
+/* Header / nav in light mode */
+body.light-theme header,
+body.light-theme .site-header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e5e7eb;
+  backdrop-filter: blur(16px);
 }
 
-a:hover {
-  text-decoration: none;
+body.light-theme .logo-title,
+body.light-theme .site-name {
+  color: #111827;
 }
 
-/* Generic wrapper */
-
-.wrapper,
-main,
-section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
+body.light-theme .logo-tagline,
+body.light-theme .site-tagline {
+  color: #6b7280;
 }
 
-/* ---------- 3. HEADER / NAV ---------- */
-
-header,
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  background: linear-gradient(
-    90deg,
-    rgba(15, 23, 42, 0.96),
-    rgba(15, 23, 42, 0.9)
-  );
-  border-bottom: 1px solid rgba(37, 99, 235, 0.55);
-  backdrop-filter: blur(14px);
+body.light-theme nav a,
+body.light-theme .main-nav a {
+  color: #4b5563;
 }
 
-/* Inner header layout */
-
-header > div,
-.site-header > .header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
+body.light-theme nav a.active,
+body.light-theme .main-nav a.active,
+body.light-theme nav a:hover,
+body.light-theme .main-nav a:hover {
+  color: #1d4ed8;
 }
 
-/* Logo cluster */
-
-.logo-link,
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* Login button & theme toggle look */
+body.light-theme .login-link {
+  background: #ffffff;
+  color: #111827;
+  border-color: #d1d5db;
 }
 
-header img,
-.site-header img {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
+/* Hero card in light mode */
+body.light-theme .hero-card,
+body.light-theme .hero-inner {
+  background: linear-gradient(135deg, #ffffff 0, #e1edff 40%, #f9fafb 100%);
+  border-color: #d1d5db;
+  box-shadow: 0 16px 40px rgba(148, 163, 184, 0.55);
 }
 
-.logo-block,
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+body.light-theme .hero-card h1,
+body.light-theme .hero-inner h1 {
+  color: #111827;
 }
 
-.logo-title,
-.site-name {
-  font-size: 1.06rem;
-  font-weight: 700;
+body.light-theme .hero-sub,
+body.light-theme .hero-inner p.subtitle,
+body.light-theme .hero-inner .hero-sub {
+  color: #4b5563;
 }
 
-.logo-tagline,
-.site-tagline {
-  font-size: 0.75rem;
-  color: var(--text-soft);
-}
-
-/* Navigation */
-
-nav,
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  font-size: 0.9rem;
-}
-
-nav a,
-.main-nav a {
-  color: var(--text-muted);
-  padding: 6px 0;
-  position: relative;
-  transition: color var(--transition-fast);
-}
-
-nav a::after,
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  height: 2px;
-  border-radius: 999px;
-  transform: scaleX(0);
-  transform-origin: center;
-  background: linear-gradient(90deg, var(--ai-blue), var(--ai-cyan));
-  transition: transform var(--transition-fast);
-}
-
-nav a:hover,
-.main-nav a:hover {
+/* Primary / secondary buttons */
+body.light-theme .btn-primary,
+body.light-theme .button-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #f9fafb;
+  box-shadow: 0 16px 38px rgba(37, 99, 235, 0.6);
 }
 
-nav a:hover::after,
-.main-nav a:hover::after,
-nav a.active::after,
-.main-nav a.active::after {
-  transform: scaleX(1);
+body.light-theme .btn-secondary,
+body.light-theme .button-secondary {
+  background: #ffffff;
+  border-color: #d1d5db;
+  color: #111827;
 }
 
-nav a.active,
-.main-nav a.active {
-  color: var(--ai-cyan);
+body.light-theme .btn-secondary:hover,
+body.light-theme .button-secondary:hover {
+  background: #eef2ff;
+  border-color: #1d4ed8;
+  color: #1d4ed8;
 }
 
-/* Header actions (Login etc.) */
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* “What You Can Do” / tools cards */
+body.light-theme .features-card,
+body.light-theme .tools-section {
+  background: #ffffff;
+  border-color: #dde3f0;
+  box-shadow: 0 16px 38px rgba(148, 163, 184, 0.55);
 }
 
-/* Login pill */
+body.light-theme .feature-item,
+body.light-theme .tool-card {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
 
-.login-link {
-  font-size: 0.85rem;
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(148, 163, 184, 0.65);
-  background: radial-gradient(circle at top, #0b1120, #020617);
+body.light-theme .feature-item h3,
+body.light-theme .tool-card h3,
+body.light-theme .tool-card-title {
+  color: #111827;
+}
+
+body.light-theme .feature-item p,
+body.light-theme .tool-card p,
+body.light-theme .tool-card-text {
+  color: #4b5563;
+}
+
+/* Generic cards (pricing, donate, legal, contact, unlock) */
+body.light-theme .card,
+body.light-theme .pricing-card,
+body.light-theme .donate-card,
+body.light-theme .legal-card,
+body.light-theme .contact-card,
+body.light-theme .unlock-card,
+body.light-theme .faq-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 16px 38px rgba(148, 163, 184, 0.55);
+}
+
+/* Form fields */
+body.light-theme input,
+body.light-theme textarea,
+body.light-theme select {
+  background: #ffffff;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+body.light-theme input::placeholder,
+body.light-theme textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Keep footer dark for contrast */
+body.light-theme footer,
+body.light-theme .site-footer {
+  background: #0f172a;
+  border-top-color: #020617;
   color: #e5e7eb;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background var(--transition-fast), color var(--transition-fast),
-    border-color var(--transition-fast), transform var(--transition-fast),
-    box-shadow var(--transition-fast);
 }
 
-.login-link:hover {
-  background: linear-gradient(135deg, var(--ai-blue), var(--ai-magenta));
-  border-color: transparent;
-  color: #f9fafb;
-  transform: translateY(-1px);
-  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.8);
-}
-
-/* On small screens we let the nav wrap naturally */
-.menu-toggle,
-#menuToggle {
-  display: none;
-}
-
-/* ---------- 4. HERO SECTION ---------- */
-
-.hero,
-.hero-section {
-  max-width: 1100px;
-  margin: 30px auto 0;
-  padding: 0 16px;
-}
-
-/* Main hero card */
-
-.hero-card,
-.hero-inner {
-  border-radius: var(--radius-lg);
-  padding: 34px 22px 32px;
-  text-align: center;
-  background:
-    radial-gradient(circle at top, rgba(56, 189, 248, 0.35), transparent 60%),
-    radial-gradient(circle at bottom, #020617 0, #020617 65%);
-  box-shadow: var(--shadow-hero);
-  border: 1px solid rgba(30, 64, 175, 0.6);
-}
-
-/* Hero heading */
-
-.hero-card h1,
-.hero-inner h1,
-main h1 {
-  margin: 0 0 8px;
-  font-size: clamp(2rem, 3.1vw, 2.7rem);
-  letter-spacing: 0.04em;
-}
-
-.hero-card h1 span,
-.hero-inner h1 span {
-  background: linear-gradient(90deg, var(--ai-blue), var(--ai-cyan));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* Hero subtitle */
-
-.hero-sub,
-.hero-inner p.subtitle,
-.hero-inner .hero-sub {
-  margin: 0 auto 22px;
-  max-width: 660px;
-  font-size: 0.96rem;
-  color: var(--text-muted);
-}
-
-/* Hero actions */
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-/* ---------- 5. BUTTONS ---------- */
-
-.btn,
-.button,
-a.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 9px 18px;
-  border-radius: var(--radius-pill);
-  border: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background var(--transition-fast), color var(--transition-fast),
-    box-shadow var(--transition-fast), transform var(--transition-fast),
-    border-color var(--transition-fast);
-}
-
-/* Primary (blue→cyan) */
-
-.btn-primary,
-.button-primary {
-  background: linear-gradient(135deg, var(--ai-blue), var(--ai-cyan));
-  color: #f9fafb;
-  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.85);
-}
-
-.btn-primary:hover,
-.button-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 22px 50px rgba(37, 99, 235, 1);
-}
-
-/* Secondary (outline) */
-
-.btn-secondary,
-.button-secondary {
-  border: 1px solid rgba(148, 163, 184, 0.7);
-  background: rgba(15, 23, 42, 0.75);
-  color: var(--text-main);
-}
-
-.btn-secondary:hover,
-.button-secondary:hover {
-  border-color: var(--ai-cyan);
-  color: var(--ai-cyan);
-  background: rgba(15, 23, 42, 0.95);
-}
-
-/* ---------- 6. MAIN CONTENT & SECTIONS ---------- */
-
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 26px 16px 40px;
-}
-
-/* Generic section wrapper */
-
-.section,
-.page-section,
-main > section {
-  margin-top: 32px;
-}
-
-/* Section titles */
-
-.section h2,
-.page-section h2,
-main h2 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  font-size: 1.35rem;
-}
-
-.section p.subtitle,
-.page-section p.subtitle {
-  margin-top: 0;
-  color: var(--text-muted);
-  font-size: 0.94rem;
-}
-
-/* “What You Can Do” container */
-
-.features-card,
-.tools-section {
-  background: radial-gradient(circle at top, #0b1120, #020617);
-  border-radius: var(--radius-lg);
-  padding: 20px 18px 22px;
-  border: 1px solid rgba(30, 64, 175, 0.75);
-  box-shadow: var(--shadow-card);
-}
-
-/* Feature / tool grid */
-
-.features-grid,
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 16px;
-}
-
-@media (max-width: 960px) {
-  .features-grid,
-  .tools-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .features-grid,
-  .tools-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Individual feature / tool card */
-
-.feature-item,
-.tool-card {
-  border-radius: var(--radius-md);
-  padding: 13px 14px 15px;
-  background:
-    radial-gradient(circle at top left, #0f172a, #020617 60%),
-    linear-gradient(135deg, rgba(37, 99, 235, 0.15), transparent);
-  border: 1px solid rgba(31, 41, 55, 0.85);
-}
-
-.feature-item h3,
-.tool-card-title,
-.tool-card h3 {
-  margin: 0 0 4px;
-  font-size: 0.96rem;
-}
-
-.feature-item p,
-.tool-card-text,
-.tool-card p {
-  margin: 0;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-}
-
-/* Generic headings / paragraphs (if not using cards) */
-
-main h3 {
-  margin-top: 18px;
-  margin-bottom: 4px;
-}
-
-main p {
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-/* ---------- 7. FORMS (CONTACT / UNLOCK / DONATE) ---------- */
-
-input,
-textarea,
-select {
-  font-family: inherit;
-  font-size: 0.92rem;
-  width: 100%;
-  max-width: 100%;
-  padding: 8px 10px;
-  border-radius: 10px;
-  border: 1px solid var(--border-soft);
-  background: #020617;
-  color: var(--text-main);
-}
-
-textarea {
-  min-height: 110px;
-  resize: vertical;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: var(--text-soft);
-}
-
-/* Optional form layout helper */
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 18px;
-}
-
-@media (max-width: 900px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ---------- 8. FOOTER ---------- */
-
-footer,
-.site-footer {
-  border-top: 1px solid rgba(30, 64, 175, 0.8);
-  background: #020617;
-  margin-top: 40px;
-}
-
-footer > div,
-.site-footer > .footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 14px 16px 18px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px 16px;
-  font-size: 0.86rem;
-  color: var(--text-muted);
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.footer-links a {
-  color: var(--text-muted);
-}
-
-.footer-links a:hover {
-  color: #f9fafb;
-}
-
-/* ---------- 9. WHATSAPP FAB (if used) ---------- */
-
-.whatsapp-fab {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: #22c55e;
-  color: #f9fafb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  box-shadow: 0 18px 40px rgba(34, 197, 94, 0.75);
-  text-decoration: none;
-  z-index: 50;
-  transition: transform var(--transition-fast),
-    box-shadow var(--transition-fast);
-}
-
-.whatsapp-fab:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 22px 52px rgba(34, 197, 94, 0.95);
-}
-
-/* ---------- 10. MOBILE TWEAKS ---------- */
-
-@media (max-width: 768px) {
-  header > div,
-  .site-header > .header-inner {
-    align-items: flex-start;
-    row-gap: 6px;
-  }
-
-  .hero-card,
-  .hero-inner {
-    padding: 26px 18px 26px;
-  }
-
-  .features-card,
-  .tools-section {
-    padding: 18px 15px 20px;
-  }
+body.light-theme .footer-links a {
+  color: #cbd5f5;
 }
