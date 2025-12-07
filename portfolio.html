@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio – AI Market</title>
   <link rel="stylesheet" href="style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
 <body>
 <header class="site-header">
@@ -63,7 +70,9 @@
           <strong>“demo videos”</strong> or <strong>“sample thumbnails”</strong>.
         </p>
 
-        <a href="contact.html" class="btn-primary">Get Samples on WhatsApp</a>
+        <a href="https://wa.me/919676142165" class="btn-primary" target="_blank" rel="noopener" data-ga-event="portfolio_whatsapp">
+          Get Samples on WhatsApp
+        </a>
       </div>
     </div>
   </section>
@@ -81,6 +90,33 @@
     </div>
   </div>
 </footer>
+
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>Portfolio & samples info</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button type="button" data-bot-question="Can I see real examples?" data-bot-answer="Yes, you can message us on WhatsApp and we’ll share sample videos, thumbnails or posters depending on your interest.">
+      See examples?
+    </button>
+    <button type="button" data-bot-question="Are client projects private?" data-bot-answer="Yes, we never share client content publicly without permission. Portfolio items may be anonymised or re-created.">
+      Client privacy?
+    </button>
+  </div>
+</div>
+
+<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
+  💬
+</button>
+
+<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
+  ⟟
+</a>
 
 <script src="script.js"></script>
 </body>
