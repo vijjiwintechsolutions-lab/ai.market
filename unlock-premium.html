@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Plan Unlocked – AI Market</title>
+
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="site-name">AI Market</span>
+        <span class="site-tagline">World’s Smart AI Platform</span>
+      </div>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="ai-tools.html">AI Tools</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="donate.html">Donate</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <h1 class="section-title">Premium Plan Unlocked</h1>
+    <p class="section-subtitle">
+      Thank you for choosing the Premium plan. All current AI tools are unlocked for your account.
+    </p>
+    <ul>
+      <li>AI Video Generator – access enabled</li>
+      <li>AI Image / Thumb Maker – access enabled</li>
+      <li>AI Cartoon Maker – access enabled</li>
+      <li>AI Music &amp; BGM Studio – access enabled</li>
+      <li>Priority support (WhatsApp / future channels)</li>
+    </ul>
+    <p>
+      You can now explore every tool inside the AI Tools page. New tools added in the future may
+      also be included in this plan.
+    </p>
+    <p class="center" style="margin-top:16px;">
+      <a href="ai-tools.html" class="btn-primary">Go to AI Tools</a>
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <p class="footer-links">
+      <a href="terms.html">Terms</a><span>·</span>
+      <a href="privacy.html">Privacy</a><span>·</span>
+      <a href="refund.html">Refund Policy</a><span>·</span>
+      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const body=document.body, themeBtn=document.getElementById("themeToggle"),
+        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav");
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");if(themeBtn)themeBtn.textContent="☀";}
+  if(themeBtn){
+    themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  }
+  if(menuBtn){
+    menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
+  }
+})();
+</script>
+<script type="module" src="auth.js"></script>
+</body>
+</html>
