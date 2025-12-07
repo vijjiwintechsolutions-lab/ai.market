@@ -1,7 +1,7 @@
 /* =========================================
-   AI Market - Unified Dark + Light Theme
-   Works with all pages (header, hero, tools,
-   pricing, legal, contact, unlock, etc.)
+   AI Market - Global Styles
+   Dark + Light Themes, Sticky Footer,
+   Responsive Header & Cards
    ========================================= */
 
 /* ---------- 1. RESET ---------- */
@@ -16,6 +16,19 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+/* The body is a flex column so footer sticks to bottom */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper for each page's main content (between header & footer) */
+.page-wrapper {
+  flex: 1;
 }
 
 /* ---------- 2. THEME VARIABLES ---------- */
@@ -47,8 +60,7 @@ body {
   --transition-fast: 160ms ease-out;
 }
 
-/* Light theme overrides:
-   Works if you use <body class="light-theme"> OR <html class="light-theme"> */
+/* Light theme overrides — applied when html.light-theme is added */
 html.light-theme body,
 body.light-theme {
   --bg-body: #edf2ff;
@@ -71,11 +83,9 @@ body.light-theme {
   --shadow-card: 0 20px 45px rgba(148, 163, 184, 0.4);
 }
 
-/* ---------- 3. BASE BODY / TYPOGRAPHY ---------- */
+/* ---------- 3. BODY BACKGROUND & TYPOGRAPHY ---------- */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
   background:
     radial-gradient(circle at top left, #0ea5e9 0, transparent 40%),
     radial-gradient(circle at top right, #6366f1 0, transparent 40%),
@@ -90,7 +100,7 @@ body.light-theme {
   background: radial-gradient(circle at top, #dbeafe 0, #eef2ff 40%, #e5e7eb);
 }
 
-/* Links */
+/* Anchor defaults */
 a {
   color: inherit;
   text-decoration: none;
@@ -100,19 +110,16 @@ a:hover {
   text-decoration: none;
 }
 
-/* Containers */
+/* Containers & sections */
 .container,
 .section,
 .header-inner,
-.footer-inner,
-.legal-section,
-.legal-content {
+.footer-inner {
   max-width: 1100px;
   margin: 0 auto;
   padding-inline: 16px;
 }
 
-/* Generic section */
 .section {
   padding-block: 40px;
 }
@@ -124,7 +131,7 @@ a:hover {
   color: var(--text-muted);
 }
 
-/* ---------- 4. HEADER & NAV ---------- */
+/* ---------- 4. HEADER & NAVIGATION ---------- */
 
 .site-header {
   position: sticky;
@@ -155,8 +162,6 @@ body.light-theme .site-header {
 }
 
 /* Logo */
-.logo,
-.logo-wrap,
 .logo-link {
   display: flex;
   align-items: center;
@@ -175,21 +180,18 @@ body.light-theme .site-header {
   line-height: 1.1;
 }
 
-.logo-title,
-.site-name {
+.logo-title {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-main);
 }
 
-.logo-tagline,
-.site-tagline {
+.logo-tagline {
   font-size: 0.75rem;
   color: var(--text-soft);
 }
 
-/* Nav */
-.nav,
+/* Navigation */
 .main-nav {
   display: flex;
   align-items: center;
@@ -198,7 +200,6 @@ body.light-theme .site-header {
   font-size: 0.9rem;
 }
 
-.nav a,
 .main-nav a {
   color: var(--text-muted);
   padding: 6px 0;
@@ -206,7 +207,6 @@ body.light-theme .site-header {
   transition: color var(--transition-fast);
 }
 
-.nav a::after,
 .main-nav a::after {
   content: "";
   position: absolute;
@@ -221,19 +221,15 @@ body.light-theme .site-header {
   transition: transform var(--transition-fast);
 }
 
-.nav a:hover,
 .main-nav a:hover {
   color: var(--text-main);
 }
 
-.nav a:hover::after,
 .main-nav a:hover::after,
-.nav a.active::after,
 .main-nav a.active::after {
   transform: scaleX(1);
 }
 
-.nav a.active,
 .main-nav a.active {
   color: var(--accent-soft);
 }
@@ -245,7 +241,7 @@ body.light-theme .site-header {
   gap: 10px;
 }
 
-/* Theme toggle (uses emoji text) */
+/* Theme toggle */
 .theme-toggle {
   width: 36px;
   height: 36px;
@@ -262,7 +258,7 @@ body.light-theme .site-header {
     transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-/* Light theme toggle look */
+/* Light toggle */
 html.light-theme .theme-toggle,
 body.light-theme .theme-toggle {
   background: radial-gradient(circle at top, #e5f0ff, #ffffff);
@@ -292,7 +288,7 @@ body.light-theme .theme-toggle {
   box-shadow: 0 12px 30px rgba(37, 99, 235, 0.7);
 }
 
-/* Light login */
+/* Light login pill */
 html.light-theme .login-link,
 body.light-theme .login-link {
   background: #ffffff;
@@ -306,10 +302,8 @@ body.light-theme .login-link:hover {
   color: #f9fafb;
 }
 
-/* Mobile nav toggle (shown on small screens) */
-.nav-toggle,
-.menu-toggle,
-#menuToggle {
+/* Mobile nav toggle button */
+.menu-toggle {
   display: none;
   border: none;
   background: transparent;
@@ -346,15 +340,6 @@ body.light-theme .login-link:hover {
   border: 1px solid rgba(30, 64, 175, 0.7);
 }
 
-.hero-small .container > h1 {
-  margin: 0 0 6px;
-  font-size: 1.6rem;
-}
-
-.hero-small .subtitle {
-  margin: 0;
-}
-
 /* Light hero */
 html.light-theme .hero-inner,
 body.light-theme .hero-inner {
@@ -362,7 +347,6 @@ body.light-theme .hero-inner {
   border-color: #d1d5db;
 }
 
-/* Hero titles */
 .hero-inner h1 {
   margin: 0 0 8px;
   font-size: clamp(2rem, 3vw, 2.6rem);
@@ -395,10 +379,8 @@ body.light-theme .hero-inner {
 /* ---------- 6. BUTTONS ---------- */
 
 .btn,
-.button,
 .btn-primary,
-.btn-outline,
-.btn-secondary {
+.btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -415,7 +397,7 @@ body.light-theme .hero-inner {
     transform var(--transition-fast);
 }
 
-/* Primary */
+/* Primary button */
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
   color: #f9fafb;
@@ -427,16 +409,14 @@ body.light-theme .hero-inner {
   box-shadow: 0 22px 50px rgba(37, 99, 235, 0.9);
 }
 
-/* Outline / secondary */
-.btn-outline,
-.btn-secondary {
+/* Outline button */
+.btn-outline {
   background: rgba(15, 23, 42, 0.7);
   border: 1px solid rgba(148, 163, 184, 0.7);
   color: var(--text-main);
 }
 
-.btn-outline:hover,
-.btn-secondary:hover {
+.btn-outline:hover {
   border-color: var(--accent-soft);
   color: var(--accent-soft);
   background: rgba(15, 23, 42, 0.9);
@@ -444,26 +424,21 @@ body.light-theme .hero-inner {
 
 /* Light outline */
 html.light-theme .btn-outline,
-body.light-theme .btn-outline,
-html.light-theme .btn-secondary,
-body.light-theme .btn-secondary {
+body.light-theme .btn-outline {
   background: #ffffff;
   border-color: #d1d5db;
   color: #111827;
 }
 
 html.light-theme .btn-outline:hover,
-body.light-theme .btn-outline:hover,
-html.light-theme .btn-secondary:hover,
-body.light-theme .btn-secondary:hover {
+body.light-theme .btn-outline:hover {
   background: #eef2ff;
   border-color: var(--accent-strong);
   color: var(--accent-strong);
 }
 
-/* ---------- 7. GRID / CARDS ---------- */
+/* ---------- 7. GRID & CARDS ---------- */
 
-/* Generic grids */
 .tools-grid,
 .pricing-grid {
   display: grid;
@@ -471,7 +446,6 @@ body.light-theme .btn-secondary:hover {
   gap: 18px;
 }
 
-/* Responsive grids */
 @media (max-width: 960px) {
   .tools-grid,
   .pricing-grid {
@@ -524,12 +498,13 @@ body.light-theme .faq-item {
   box-shadow: var(--shadow-card);
 }
 
-/* Titles & text inside cards */
+/* Card titles & text */
 .tool-card h2,
 .tool-card h3,
 .pricing-card h2,
 .pricing-card h3,
-.legal-card h2,
+.card h2,
+.card h3,
 .faq-item .faq-q {
   margin-top: 0;
   margin-bottom: 6px;
@@ -539,20 +514,18 @@ body.light-theme .faq-item {
 
 .tool-card p,
 .pricing-card p,
-.legal-card p,
+.card p,
 .faq-item .faq-a {
   margin: 0 0 8px;
   font-size: 0.9rem;
   color: var(--text-muted);
 }
 
-/* FAQ */
 .faq-item {
   margin-bottom: 10px;
 }
 
-/* ---------- 8. TEXT STYLES ---------- */
-
+/* Section headings */
 .section-title {
   margin: 0 0 6px;
   font-size: 1.4rem;
@@ -566,10 +539,10 @@ body.light-theme .faq-item {
 }
 
 .section-note {
-  padding-top: 0;
+  padding-top: 10px;
 }
 
-/* ---------- 9. FORMS ---------- */
+/* ---------- 8. FORMS ---------- */
 
 input,
 textarea,
@@ -595,7 +568,7 @@ textarea::placeholder {
   color: var(--text-soft);
 }
 
-/* Light fields */
+/* Light form fields */
 html.light-theme input,
 body.light-theme input,
 html.light-theme textarea,
@@ -614,7 +587,7 @@ body.light-theme textarea::placeholder {
   color: #9ca3af;
 }
 
-/* Form grid (contact) */
+/* Contact form layout */
 .form-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -627,7 +600,7 @@ body.light-theme textarea::placeholder {
   }
 }
 
-/* ---------- 10. FOOTER ---------- */
+/* ---------- 9. FOOTER ---------- */
 
 .site-footer {
   margin-top: 40px;
@@ -668,7 +641,7 @@ body.light-theme .site-footer {
   color: #e5e7eb;
 }
 
-/* ---------- 11. WHATSAPP FAB (optional) ---------- */
+/* ---------- 10. WHATSAPP FLOATING BUTTON (optional) ---------- */
 
 .whatsapp-fab {
   position: fixed;
@@ -695,15 +668,29 @@ body.light-theme .site-footer {
   box-shadow: 0 22px 52px rgba(34, 197, 94, 0.95);
 }
 
-/* ---------- 12. MOBILE NAV TWEAKS ---------- */
+/* ---------- 11. RESPONSIVE NAVIGATION ---------- */
 
 @media (max-width: 820px) {
   .header-inner {
     align-items: flex-start;
   }
+}
 
-  .nav,
+/* For smaller screens: collapse nav into hamburger */
+@media (max-width: 768px) {
   .main-nav {
-    row-gap: 4px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .main-nav.nav-open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
   }
 }
