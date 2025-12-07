@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - AI Market</title>
+  <title>Privacy Policy – AI Market</title>
 
-  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,33 +12,27 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
   </script>
-  <!-- End Google Tag Manager -->
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header>
+<header class="site-header">
   <div class="header-inner">
-      <div class="logo-wrap">
-          <img src="logo.png" class="logo" alt="AI Market logo" />
-          <div class="logo-text">
-              <span class="site-name">AI Market</span>
-              <span class="tagline">World’s Smart AI Platform</span>
-          </div>
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="AI Market logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="site-name">AI Market</span>
+        <span class="site-tagline">World’s Smart AI Platform</span>
       </div>
-      <div class="header-right">
-          <button class="theme-toggle" id="themeToggle">🌙</button>
-          <button class="menu-toggle" id="menuToggle">☰</button>
-      </div>
-  </div>
-
-  <nav id="mainNav">
+    </a>
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
       <a href="ai-tools.html">AI Tools</a>
       <a href="pricing.html">Pricing</a>
@@ -48,114 +41,105 @@
       <a href="faq.html">FAQ</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-  </nav>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </div>
 </header>
 
-<section class="page legal-page">
-  <h1 class="section-title">Privacy Policy</h1>
-  <p class="section-subtitle">
+<main>
+  <section class="section legal-page">
+    <h1 class="section-title">Privacy Policy</h1>
+    <p class="section-subtitle">
       This Privacy Policy explains how AI Market collects, uses and protects your information.
-  </p>
+    </p>
 
-  <h2>1. Information We Collect</h2>
-  <p>
-      We may collect basic contact details (such as name, phone number, email address) when you
-      contact us on WhatsApp or through this website. We may also receive files you send for
-      editing (photos, videos, audio, text).
-  </p>
+    <h2>1. Information We Collect</h2>
+    <p>
+      We may collect basic details such as your email address, name and login information when you
+      create an account or sign in using Google or GitHub. We may also store information about the
+      plans or tools you use.
+    </p>
 
-  <h2>2. How We Use Information</h2>
-  <p>We use your information to:</p>
-  <ul>
-      <li>Communicate with you regarding your order or inquiry</li>
-      <li>Process payments and send invoices where applicable</li>
-      <li>Create and deliver the requested digital content</li>
-      <li>Improve our services and website</li>
-  </ul>
+    <h2>2. How We Use Your Information</h2>
+    <p>We use your information to:</p>
+    <ul>
+      <li>Provide and manage your access to AI tools</li>
+      <li>Process payments and maintain basic records</li>
+      <li>Improve the performance and reliability of our services</li>
+      <li>Communicate updates, support messages or important notices</li>
+    </ul>
 
-  <h2>3. Data Storage &amp; Security</h2>
-  <p>
-      We take reasonable steps to protect your information from unauthorized access.
-      However, no method of transmission or storage is completely secure. We recommend that
-      you avoid sending highly sensitive personal information unless necessary.
-  </p>
+    <h2>3. Data Storage &amp; Security</h2>
+    <p>
+      We use cloud services like Firebase and trusted payment gateways to store data in a secure way.
+      However, no system is 100% secure, so we recommend you use a strong password and avoid sharing
+      sensitive data unnecessarily.
+    </p>
 
-  <h2>4. Third-Party Services</h2>
-  <p>
-      We may use third-party services such as Razorpay for payments and Google Analytics
-      for usage statistics. These services have their own privacy policies and may collect
-      data such as device information, IP address and usage behavior.
-  </p>
+    <h2>4. Third-Party Services</h2>
+    <p>
+      We may use third-party services such as Firebase Authentication, Razorpay, Google Analytics
+      or other tools integrated by Google Tag Manager. These services have their own privacy policies
+      and may collect information such as device type, IP address and usage behavior.
+    </p>
 
-  <h2>5. Cookies &amp; Analytics</h2>
-  <p>
-      This site may use cookies and similar technologies to remember preferences and
-      analyze traffic. You can control cookies through your browser settings. For more
-      details, see our <a href="cookies.html">Cookies Policy</a>.
-  </p>
+    <h2>5. Cookies &amp; Tracking</h2>
+    <p>
+      This site may use cookies or similar technologies to remember your preferences and understand
+      how visitors use AI Market. For more details, see our <a href="cookies.html">Cookies Policy</a>.
+    </p>
 
-  <h2>6. Data Retention</h2>
-  <p>
-      We may retain your order details and communication records for a reasonable period
-      for support, accounting and legal purposes. Media files sent for editing may be
-      deleted after project completion, unless otherwise required.
-  </p>
+    <h2>6. Data Retention</h2>
+    <p>
+      We retain account and transaction information for as long as reasonably necessary for legal,
+      tax and support reasons. You can request account deletion, but some records may be kept as
+      required by law.
+    </p>
 
-  <h2>7. Your Rights</h2>
-  <p>
-      You can contact us to request correction or deletion of your personal information
-      where reasonably possible, subject to legal and operational requirements.
-  </p>
+    <h2>7. Your Choices</h2>
+    <p>
+      You can update your login methods (for example, using Google or GitHub) in their respective
+      account settings. If you wish to delete your AI Market account or have questions about your
+      data, contact us using the details on the <a href="contact.html">Contact</a> page.
+    </p>
 
-  <h2>8. Updates to This Policy</h2>
-  <p>
-      We may update this Privacy Policy from time to time. The latest version will always
-      be available on this page with an updated date.
-  </p>
+    <h2>8. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy periodically. Any changes will be posted on this page with an
+      updated date. Continued use of AI Market means you accept the new policy.
+    </p>
+  </section>
+</main>
 
-  <h2>9. Contact</h2>
-  <p>
-      For privacy-related questions, please contact us using the details on the
-      <a href="contact.html">Contact</a> page.
-  </p>
-</section>
-
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question%20about%20Privacy."
-   class="whatsapp-float" target="_blank">💬</a>
-
-<footer>
-  © 2025 AI Market · World’s Smart AI Platform<br />
-  <a href="terms.html">Terms</a> ·
-  <a href="privacy.html">Privacy</a> ·
-  <a href="refund.html">Refund Policy</a> ·
-  <a href="disclaimer.html">Disclaimer</a> ·
-  <a href="cookies.html">Cookies</a>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <p class="footer-links">
+      <a href="terms.html">Terms</a><span>·</span>
+      <a href="privacy.html">Privacy</a><span>·</span>
+      <a href="refund.html">Refund Policy</a><span>·</span>
+      <a href="disclaimer.html">Disclaimer</a><span>·</span>
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
 </footer>
 
 <script>
 (function () {
-  const body = document.body;
-  const themeToggle = document.getElementById("themeToggle");
-  const menuToggle  = document.getElementById("menuToggle");
-  const nav         = document.getElementById("mainNav");
-
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-      body.classList.add("light-theme");
-      themeToggle.textContent = "☀";
-  }
-
-  themeToggle.addEventListener("click", () => {
-      body.classList.toggle("light-theme");
-      const light = body.classList.contains("light-theme");
-      themeToggle.textContent = light ? "☀" : "🌙";
-      localStorage.setItem("theme", light ? "light" : "dark");
-  });
-
-  menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-  });
+  const body=document.body, themeBtn=document.getElementById("themeToggle"),
+        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
+        current=window.location.pathname.split("/").pop()||"privacy.html";
+  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const saved=localStorage.getItem("aimarket-theme");
+  if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
+  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
+<script type="module" src="auth.js"></script>
 </body>
 </html>
