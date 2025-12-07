@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login — AI Market</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – AI Market</title>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N4Z93Z4T');
+  </script>
+  <!-- End GTM -->
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
+
+  <!-- Firebase + Auth -->
   <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth-guard.js"></script>
   <script type="module" src="auth.js"></script>
 </head>
-
 <body class="auth-page">
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 
-<div class="auth-container">
-  
-  <h2>Sign In to AI Market</h2>
+<section class="auth-container">
+  <div class="auth-card">
+    <h1>AI Market</h1>
+    <p class="auth-subtitle">Sign in to continue</p>
 
-  <!-- Email Login -->
-  <input type="email" id="email" placeholder="Email">
-  <input type="password" id="password" placeholder="Password">
+    <form>
+      <input type="email" id="email" placeholder="Email address" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button id="emailLoginBtn" class="btn-primary" type="submit">Login</button>
+    </form>
 
-  <button id="emailLoginBtn">Login</button>
+    <p class="auth-small">
+      New here?
+      <a href="signup.html">Create an account</a>
+    </p>
 
-  <p>New user? <a href="signup.html">Create account</a></p>
+    <div class="auth-divider"><span>OR</span></div>
 
-  <hr>
+    <button id="googleLogin" class="btn-secondary full-btn">
+      Continue with Google
+    </button>
+    <button id="githubLogin" class="btn-secondary full-btn">
+      Continue with GitHub
+    </button>
 
-  <!-- Google Login -->
-  <button id="googleLoginBtn" class="social-btn google">
-    Continue with Google
-  </button>
-
-  <!-- GitHub Login -->
-  <button id="githubLoginBtn" class="social-btn github">
-    Continue with GitHub
-  </button>
-
-</div>
+    <p id="authMessage" class="auth-message"></p>
+  </div>
+</section>
 
 </body>
 </html>
