@@ -1,14 +1,18 @@
+// AI Market - global script
+// Handles theme toggle, mobile nav and active menu highlight
+
 (function () {
   const html = document.documentElement;
-  const body = document.body;
   const themeBtn = document.getElementById("themeToggle");
   const menuBtn = document.getElementById("menuToggle");
   const nav = document.getElementById("mainNav");
 
-  // --- THEME SETUP ---
+  // -------- THEME SETUP --------
+
+  // Read saved theme from localStorage
   const savedTheme = localStorage.getItem("aimarket-theme");
   if (savedTheme === "light") {
-    html.classList.add("light-theme"); // CSS listens on html/body
+    html.classList.add("light-theme");
   }
 
   function updateThemeIcon() {
@@ -28,20 +32,26 @@
     });
   }
 
-  // --- MOBILE NAV ---
+  // -------- MOBILE NAV TOGGLE --------
+
   if (menuBtn && nav) {
     menuBtn.addEventListener("click", () => {
       nav.classList.toggle("nav-open");
     });
   }
 
-  // --- ACTIVE NAV LINK HIGHLIGHT ---
+  // -------- ACTIVE NAV LINK HIGHLIGHT --------
+
   if (nav) {
     const current = window.location.pathname.split("/").pop() || "index.html";
+
     nav.querySelectorAll("a").forEach((a) => {
       const href = a.getAttribute("href");
       if (!href) return;
-      if (href === current) a.classList.add("active");
+
+      if (href === current || (href === "index.html" && current === "")) {
+        a.classList.add("active");
+      }
     });
   }
 })();
