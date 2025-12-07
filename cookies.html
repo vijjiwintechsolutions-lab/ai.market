@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cookies Policy – AI Market</title>
   <link rel="stylesheet" href="style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
 <body>
 
@@ -60,7 +67,7 @@
         </p>
         <ul class="small">
           <li>Remember your theme preference (dark / light).</li>
-          <li>Maintain basic session or authentication state.</li>
+          <li>Maintain basic session or authentication state (future updates).</li>
           <li>Measure site traffic and usage patterns.</li>
         </ul>
 
@@ -99,6 +106,37 @@
     </div>
   </div>
 </footer>
+
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>Cookies info</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button type="button"
+      data-bot-question="Why do you use cookies?"
+      data-bot-answer="We mainly use cookies to remember your theme (dark/light) and to understand how users navigate the site.">
+      Why cookies?
+    </button>
+    <button type="button"
+      data-bot-question="Can I disable cookies?"
+      data-bot-answer="Yes, you can disable cookies in your browser settings. Some features might not work properly after that.">
+      Disable cookies?
+    </button>
+  </div>
+</div>
+
+<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
+  💬
+</button>
+
+<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
+  ⟟
+</a>
 
 <script src="script.js"></script>
 </body>
