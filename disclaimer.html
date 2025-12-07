@@ -15,9 +15,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
@@ -44,50 +41,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
-      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <a href="login.html" class="login-link">Login</a>
       <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
 </header>
 
 <main>
-  <section class="section legal-page">
+  <section class="section">
     <h1 class="section-title">Disclaimer</h1>
     <p class="section-subtitle">
-      Information and services provided by AI Market are offered on an “as is” and “as available” basis.
+      General information and limitation of responsibility for AI Market.
     </p>
 
-    <h2>1. No Professional Advice</h2>
-    <p>
-      Content created or shared through AI Market, including AI-generated videos, images and music,
-      is for creative and informational purposes only. It should not be treated as legal, financial,
-      medical or any other professional advice.
+    <h3>1. No Professional Advice</h3>
+    <p class="small">
+      Content on this website (including examples, tips or explanations) is for general information only.
+      It should not be treated as legal, financial, medical or any other professional advice.
     </p>
 
-    <h2>2. Third-Party Rights &amp; Platforms</h2>
-    <p>
-      You are responsible for ensuring that any material you provide (songs, logos, photos, footage,
-      text, etc.) has appropriate rights for use. AI Market is not responsible for copyright or policy
-      violations arising from user-supplied content or third-party platform rules (e.g. YouTube, Instagram).
+    <h3>2. Third-Party Content & Rights</h3>
+    <p class="small">
+      When you provide songs, images or other material, you are responsible for ensuring that you have the
+      necessary rights. AI Market is not responsible for any claims arising out of unauthorised use of content
+      supplied by you.
     </p>
 
-    <h2>3. Platform Results</h2>
-    <p>
-      We cannot guarantee any specific results on social media platforms, including reach, views,
-      engagement, monetization or approval of your posts. Platform algorithms and policies are
-      outside our control.
+    <h3>3. External Links</h3>
+    <p class="small">
+      Our website may contain links to third-party sites (payment gateways, social media, etc.).
+      We are not responsible for their content, privacy practices or policies.
     </p>
 
-    <h2>4. Limitation of Liability</h2>
-    <p>
-      AI Market and its owners will not be liable for any direct or indirect damages, including loss
-      of business, income or data, arising from the use of this website or services.
-    </p>
-
-    <h2>5. Updates</h2>
-    <p>
-      This Disclaimer may be updated from time to time. The latest version will always be available
-      on this page.
+    <h3>4. “As-Is” Service</h3>
+    <p class="small">
+      The services and information on this site are provided on an “as-is” and “as-available” basis.
+      We do not guarantee that the website will be error-free or uninterrupted, though we try to keep it stable.
     </p>
   </section>
 </main>
@@ -107,16 +96,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body, themeBtn=document.getElementById("themeToggle"),
-        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
-        current=window.location.pathname.split("/").pop()||"disclaimer.html";
-  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const body=document.body;
+  const themeBtn=document.getElementById("themeToggle");
+  const menuBtn=document.getElementById("menuToggle");
+  const nav=document.getElementById("mainNav");
+
+  const current="disclaimer.html";
+  nav.querySelectorAll("a").forEach(a=>{
+    if(a.getAttribute("href")===current) a.classList.add("active");
+  });
+
   const saved=localStorage.getItem("aimarket-theme");
   if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-theme");
+    const light=body.classList.contains("light-theme");
+    themeBtn.textContent=light?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",light?"light":"dark");
+  });
+
   menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
-<script type="module" src="auth.js"></script>
 </body>
 </html>
