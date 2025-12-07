@@ -5,89 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login – AI Market</title>
   <meta name="description"
-        content="Login to AI Market to access your account, future coupons and offers." />
+        content="Login to AI Market to manage your plans and unlocks. Social login coming soon." />
   <link rel="canonical" href="https://ai-market.pages.dev/login.html" />
   <link rel="stylesheet" href="style.css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VM41JL03HD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-VM41JL03HD');
   </script>
   <script defer src="script.js"></script>
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="AI Market logo" class="logo-img" />
-      <div class="logo-text">
-        <span class="logo-title">AI Market</span>
-        <span class="logo-tagline">World’s Smart AI Platform</span>
-      </div>
-    </a>
-    <button id="menuToggle" class="menu-toggle">☰</button>
-    <nav id="mainNav" class="nav">
-      <a href="index.html">Home</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="donate.html">Donate</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="login.html" class="btn btn-outline nav-login active">Login</a>
-      <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
-    </nav>
-  </div>
-</header>
-
-<main class="section">
-  <div class="container narrow">
-    <h1 class="section-title">Login (Coming Soon)</h1>
-    <p>
-      We’re building a simple login system for coupons, saved projects and special offers.
-      For now, you don’t need an account to use AI Market – just choose a plan and unlock.
-    </p>
-
-    <form class="auth-form">
-      <label>
-        Email address
-        <input type="email" placeholder="you@example.com" disabled />
-      </label>
-      <label>
-        Password
-        <input type="password" placeholder="Password" disabled />
-      </label>
-      <button type="button" class="btn btn-primary" disabled>Login (coming soon)</button>
-    </form>
-
-    <div class="auth-alt">
-      <button type="button" class="btn btn-outline" disabled>Continue with Google (coming soon)</button>
-      <button type="button" class="btn btn-outline" disabled>Continue with GitHub (coming soon)</button>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="AI Market logo" class="logo-img" />
+        <div class="logo-text">
+          <span class="logo-title">AI Market</span>
+          <span class="logo-tagline">World’s Smart AI Platform</span>
+        </div>
+      </a>
+      <button id="menuToggle" class="menu-toggle">☰</button>
+      <nav id="mainNav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="donate.html">Donate</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="btn btn-outline nav-login active">Login</a>
+        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
+      </nav>
     </div>
+  </header>
 
-    <p class="section-note">
-      If you have any issues with payments or unlock, please contact us on WhatsApp instead.
-    </p>
-  </div>
-</main>
+  <main class="section">
+    <div class="container narrow">
+      <h1 class="section-title">Login</h1>
+      <p class="section-lead">
+        Full login system with email / Google / GitHub is coming soon.
+        For now, you don’t need to login to use AI Market.
+      </p>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© 2025 AI Market · World’s Smart AI Platform</p>
-    <nav class="footer-nav">
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund Policy</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="cookies.html">Cookies</a>
-    </nav>
-  </div>
-</footer>
+      <form class="card auth-form" onsubmit="return false;">
+        <label>
+          Email address
+          <input type="email" placeholder="you@example.com" disabled />
+        </label>
+        <label>
+          Password
+          <input type="password" placeholder="Coming soon" disabled />
+        </label>
+        <button class="btn btn-primary" disabled>Login (coming soon)</button>
 
-<a href="https://wa.me/919676142165?text=Hi,%20I%20have%20a%20question%20about%20login."
-   id="whatsapp-btn" class="whatsapp-fab" target="_blank" rel="noopener">💬</a>
+        <div class="auth-divider">OR</div>
+
+        <button class="btn btn-outline" disabled>Continue with Google (coming soon)</button>
+        <button class="btn btn-outline" disabled>Continue with GitHub (coming soon)</button>
+      </form>
+
+      <p class="section-note">
+        Right now, you can use AI Market without logging in.
+        <a href="pricing.html">Go to Pricing</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 AI Market · World’s Smart AI Platform</p>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919676142165?text=I%20have%20a%20question%20about%20AI%20Market%20login."
+     id="whatsapp-btn" class="whatsapp-fab" target="_blank" rel="noopener">💬</a>
 </body>
 </html>
