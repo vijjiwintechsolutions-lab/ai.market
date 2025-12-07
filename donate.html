@@ -1,154 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Donate – Support AI Market Projects</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Donate – Support Creators & AI Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Support AI Market creators and help us build more tools for India and worldwide.">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Google tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VM41JL03HD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-MPPBPXHVH7");
+    gtag('js', new Date());
+    gtag('config', 'G-VM41JL03HD');
   </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="logo.png" alt="AI Market logo" />
-        <div class="logo-text">
-          <span class="logo-title">AI Market</span>
-          <span class="logo-tagline">World’s Smart AI Platform</span>
-        </div>
-      </a>
-      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
-      <nav id="mainNav" class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="ai-tools.html">AI Tools</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="donate.html">Donate</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="faq.html">FAQ</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
-        <a href="login.html" class="btn-outline small">Login</a>
-      </div>
-    </div>
-  </header>
 
-  <main class="section">
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-name">AI Market</span>
+        <span class="brand-tagline">World’s Smart AI Platform</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="mainNav" class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="ai-tools.html">AI Tools</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="donate.html">Donate</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="nav-login">Login</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </div>
+</header>
+
+<main class="page">
+  <section class="section">
     <div class="container">
-      <h1 class="page-title">Donate to Support AI Market</h1>
-      <p class="section-intro">
-        Your support helps us maintain servers, build new AI tools and run community projects.
-        Every contribution – small or big – makes a difference.
-      </p>
+      <h1>Support AI Creators</h1>
+      <p>Your donation helps us add new AI tools, support regional languages, and help small creators grow.</p>
 
-      <div class="donate-grid">
-        <article class="card">
-          <h2>Support AI Market</h2>
-          <p>
-            Use this link to make a flexible donation of any amount. Ideal if you just want to
-            say “thanks” or support the platform.
-          </p>
-          <a
-            href="https://rzp.io/rzp/donateaimarket"
-            class="btn-primary"
-            target="_blank"
-            rel="noopener"
-            data-ga-event="donate_generic"
-          >
-            Donate via Razorpay
-          </a>
-        </article>
+      <div class="card donate-box">
+        <h2>Donate via UPI</h2>
+        <p>Scan the UPI QR code or send to:</p>
+        <p><strong>UPI ID:</strong> ai.market@upi</p>
+        <img src="upi.png" class="qr-img" alt="UPI QR">
 
-        <article class="card">
-          <h2>One-Time Support Packs</h2>
-          <ul class="feature-list">
-            <li>
-              <strong>₹99 Booster</strong> – <a href="https://rzp.io/rzp/MoQmtvPr" target="_blank" rel="noopener">Pay now</a>
-            </li>
-            <li>
-              <strong>₹299 Creator Pack</strong> – <a href="https://rzp.io/rzp/mMXyAH0p" target="_blank" rel="noopener">Pay now</a>
-            </li>
-            <li>
-              <strong>₹999 Super Supporter</strong> – <a href="https://rzp.io/rzp/67BhfxGW" target="_blank" rel="noopener">Pay now</a>
-            </li>
-          </ul>
-          <p class="small">
-            These links are handled securely by Razorpay. You’ll receive confirmation directly
-            from Razorpay after a successful payment.
-          </p>
-        </article>
+        <a href="https://wa.me/919676142165?text=I%20donated%20to%20AI%20Market"
+           class="btn primary" target="_blank">Notify via WhatsApp</a>
       </div>
-
-      <section class="section">
-        <h2>How Donations Are Used</h2>
-        <ul class="feature-list">
-          <li>Server and infrastructure costs for AI tools</li>
-          <li>New feature development and experimenting with models</li>
-          <li>Subsidised free or low-cost tools for students &amp; small creators</li>
-          <li>Support for social impact projects and non-profits (where applicable)</li>
-        </ul>
-        <p class="small">
-          For any billing or receipt-related questions, please contact us with your Razorpay
-          payment ID via WhatsApp or the Contact page.
-        </p>
-      </section>
     </div>
-  </main>
+  </section>
+</main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2025 AI Market · World’s Smart AI Platform</p>
-      <nav class="footer-nav">
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="refund.html">Refund</a>
-        <a href="disclaimer.html">Disclaimer</a>
-        <a href="cookies.html">Cookies</a>
-      </nav>
-    </div>
-  </footer>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 AI Market · World’s Smart AI Platform</p>
+    <nav class="footer-nav">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refund</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="cookies.html">Cookies</a>
+    </nav>
+  </div>
+</footer>
 
-  <!-- CHATBOT + FAB + WHATSAPP -->
-  <div id="chatbotWidget" class="chatbot-widget">
+<!-- WhatsApp Button -->
+<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank">💬</a>
+
+<!-- Chatbot -->
+<div id="chatbot" class="chatbot">
+  <button id="chatbotToggle" class="chatbot-toggle">❓</button>
+  <div class="chatbot-window">
     <div class="chatbot-header">
-      <span>AI Market Assistant</span>
-      <button id="chatbotClose" type="button">✕</button>
+      <span>AI Market Help</span>
+      <button id="chatbotClose" class="chatbot-close">×</button>
     </div>
-    <div id="chatbotMessages" class="chatbot-messages">
-      <div class="bot-msg">
-        Have a question about donations or receipts? Ask here or contact us on WhatsApp.
-      </div>
-    </div>
-    <div class="chatbot-input-area">
-      <input type="text" id="chatbotInput" placeholder="Type your question..." />
-      <button id="chatbotSend" type="button">➤</button>
+    <div class="chatbot-body">
+      <p>Need help with donations?</p>
+      <button class="bot-q" data-bot-answer="You can donate using UPI, QR code, or direct bank transfer.">How can I donate?</button>
+      <button class="bot-q" data-bot-answer="Your donations help improve AI tools and regional language models.">Where does donation go?</button>
+      <div id="botAnswer" class="bot-answer"></div>
     </div>
   </div>
+</div>
 
-  <button id="chatbotFAB" class="chatbot-fab" type="button">
-    💬
-  </button>
-
-  <a
-    href="https://wa.me/919676142165"
-    class="whatsapp-fab"
-    target="_blank"
-    rel="noopener"
-    title="Chat on WhatsApp"
-  >
-    ⟟
-  </a>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
