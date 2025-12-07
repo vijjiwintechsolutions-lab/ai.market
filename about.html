@@ -15,8 +15,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" />
-  <script type="module" src="firebase-config.js"></script>
-  <script type="module" src="auth-guard.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4Z93Z4T"
@@ -43,7 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle">🌙</button>
-      <button class="logout-btn" type="button" onclick="logoutUser()">Logout</button>
+      <a href="login.html" class="login-link">Login</a>
       <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
@@ -53,28 +51,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="section">
     <h1 class="section-title">About AI Market</h1>
     <p class="section-subtitle">
-      AI Market is built to bring powerful AI creation tools to everyday creators,
-      small businesses and individuals who want quality content without complex software.
+      AI Market is an experimental platform to create AI-powered videos, images and music for creators and businesses.
     </p>
 
-    <h2>Mission</h2>
     <p>
-      Our mission is to make video, image and music creation as simple as sending a message.
-      We focus on mobile-first workflows, local payment methods and support for Indian languages.
+      The idea behind AI Market is simple: many people have great ideas, songs and stories, but not everyone has
+      time, hardware or software skills to edit professional content. We use AI + manual editing to bridge that gap.
     </p>
 
-    <h2>What We Offer</h2>
-    <ul>
-      <li>AI Video tools for reels, shorts and status clips</li>
-      <li>AI Image tools for cartoons, thumbnails and posters</li>
-      <li>AI Music & BGM tools for background sound and vocal enhancement</li>
-      <li>Simple paid plans and optional donations to support future development</li>
+    <p style="margin-top:10px;">
+      We focus on:
+    </p>
+    <ul style="font-size:0.9rem;color:#9ca3af;">
+      <li>Helping small creators and local businesses with affordable content.</li>
+      <li>Experimenting with new AI workflows and templates.</li>
+      <li>Providing simple WhatsApp-based ordering instead of complex dashboards.</li>
     </ul>
 
-    <h2>Roadmap</h2>
-    <p>
-      Over time, AI Market will add more tools, automation and templates for
-      festival greetings, ads, YouTube creators and small brands.
+    <p style="margin-top:14px;font-size:0.9rem;color:#9ca3af;">
+      AI Market is still evolving. Features, pricing and tools may change as we learn what works best.
+      Feedback is always welcome.
     </p>
   </section>
 </main>
@@ -94,16 +90,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body, themeBtn=document.getElementById("themeToggle"),
-        menuBtn=document.getElementById("menuToggle"), nav=document.getElementById("mainNav"),
-        current=window.location.pathname.split("/").pop()||"about.html";
-  nav.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===current)a.classList.add("active");});
+  const body=document.body;
+  const themeBtn=document.getElementById("themeToggle");
+  const menuBtn=document.getElementById("menuToggle");
+  const nav=document.getElementById("mainNav");
+
+  const current="about.html";
+  nav.querySelectorAll("a").forEach(a=>{
+    if(a.getAttribute("href")===current) a.classList.add("active");
+  });
+
   const saved=localStorage.getItem("aimarket-theme");
   if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
-  themeBtn.addEventListener("click",()=>{body.classList.toggle("light-theme");const l=body.classList.contains("light-theme");themeBtn.textContent=l?"☀":"🌙";localStorage.setItem("aimarket-theme",l?"light":"dark");});
+  themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-theme");
+    const light=body.classList.contains("light-theme");
+    themeBtn.textContent=light?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",light?"light":"dark");
+  });
+
   menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 })();
 </script>
-<script type="module" src="auth.js"></script>
 </body>
 </html>
