@@ -2,143 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unlock Basic Plan – AI Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MPPBPXHVH7');
+    gtag("js", new Date());
+    gtag("config", "G-MPPBPXHVH7");
   </script>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="assets/logo.png" class="logo-img" alt="AI Market" />
-      <div class="logo-text">
-        <span class="logo-title">AI Market</span>
-        <span class="logo-tagline">World's Smart AI Platform</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="AI Market logo" />
+        <div class="logo-text">
+          <span class="logo-title">AI Market</span>
+          <span class="logo-tagline">World’s Smart AI Platform</span>
+        </div>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="donate.html">Donate</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" type="button">🌙</button>
+        <a href="login.html" class="btn-outline small">Login</a>
       </div>
-    </a>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Home</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle">🌙</button>
-      <a href="login.html" class="login-link">Login</a>
-      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="page-wrapper">
-  <section class="hero-small">
+  <main class="section">
     <div class="container">
-      <h1>Unlock Basic Plan</h1>
-      <p class="subtitle">
-        Start your AI journey with the Basic plan – perfect for individuals and
-        small creators.
+      <h1 class="page-title">Unlock Basic Plan</h1>
+      <p class="section-intro">
+        Basic is ideal for trying AI Market or for light personal usage.
       </p>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="unlock-card">
+      <div class="card">
         <h2>Basic Plan – ₹99 / month</h2>
-        <ul class="small">
-          <li>Access to core AI tools (video, image, basic audio).</li>
-          <li>Limited usage suitable for personal projects.</li>
-          <li>Standard support via WhatsApp and email.</li>
+        <ul class="feature-list">
+          <li>Limited AI video &amp; image exports per month</li>
+          <li>Access to core tools: video, image, music</li>
+          <li>Standard templates</li>
+          <li>Email-based support</li>
         </ul>
 
+        <p>
+          When you click the button below, you’ll be taken to a Razorpay payment
+          link. After successful payment, keep your payment ID safely and contact
+          us if you face any activation issues.
+        </p>
+
+        <a
+          href="https://rzp.io/rzp/MoQmtvPr"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener"
+          data-ga-event="unlock_basic_pay"
+        >
+          Pay ₹99 and Unlock Basic
+        </a>
+
         <p class="small">
-          Click the button below to pay securely via Razorpay. After payment,
-          please keep the transaction ID safe.
+          By proceeding, you agree to our
+          <a href="terms.html">Terms</a>,
+          <a href="privacy.html">Privacy</a> and
+          <a href="refund.html">Refund Policy</a>.
         </p>
-
-        <a href="https://rzp.io/rzp/MoQmtvPr"
-           class="btn-primary"
-           target="_blank"
-           rel="noopener"
-           data-ga-event="unlock_basic_pay">
-          Pay ₹99 & Unlock Basic
-        </a>
-
-        <p class="small section-note">
-          After successful payment, send your payment reference and email ID
-          to us on WhatsApp (<strong>+91 9676142165</strong>). We will verify
-          and activate your Basic plan access as soon as possible.
-        </p>
-
-        <a href="https://wa.me/919676142165"
-           class="btn-outline"
-           target="_blank"
-           rel="noopener"
-           data-ga-event="unlock_basic_whatsapp">
-          Send Payment Details on WhatsApp
-        </a>
       </div>
     </div>
-  </section>
-</div>
+  </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>© 2025 AI Market – World’s Smart AI Platform.</div>
-    <div class="footer-links">
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refund</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="cookies.html">Cookies</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 AI Market · World’s Smart AI Platform</p>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="chatbotWidget" class="chatbot-widget">
+    <div class="chatbot-header">
+      <span>AI Market Assistant</span>
+      <button id="chatbotClose" type="button">✕</button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages">
+      <div class="bot-msg">
+        Not sure if Basic is enough? Tell me how often you create content and I’ll advise.
+      </div>
+    </div>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbotInput" placeholder="Describe your usage..." />
+      <button id="chatbotSend" type="button">➤</button>
     </div>
   </div>
-</footer>
 
-<div class="chatbot-panel" id="chatbotPanel">
-  <div class="chatbot-header">
-    <div>
-      <span class="chatbot-title">AI Market Help</span>
-      <small>Basic plan questions</small>
-    </div>
-    <button class="chatbot-close" type="button">✕</button>
-  </div>
-  <div class="chatbot-messages"></div>
-  <div class="chatbot-quick">
-    <button type="button"
-      data-bot-question="What is included in Basic plan?"
-      data-bot-answer="Basic includes core AI tools for simple video, image and audio work – ideal for personal or light usage.">
-      What's in Basic?
-    </button>
-    <button type="button"
-      data-bot-question="Can I upgrade from Basic later?"
-      data-bot-answer="Yes, you can upgrade to Pro or Premium later by using the respective unlock pages and contacting support.">
-      Upgrade later?
-    </button>
-  </div>
-</div>
+  <button id="chatbotFAB" class="chatbot-fab" type="button">💬</button>
 
-<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
-  💬
-</button>
+  <a
+    href="https://wa.me/919676142165"
+    class="whatsapp-fab"
+    target="_blank"
+    rel="noopener"
+    title="Chat on WhatsApp"
+  >
+    ⟟
+  </a>
 
-<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
-  ⟟
-</a>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
