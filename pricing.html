@@ -51,28 +51,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="section">
     <h1 class="section-title">Plans & Offers</h1>
     <p class="section-subtitle">
-      Choose a plan, apply coupon if available, and pay securely via Razorpay.
-      No login required.
+      Pay online with Razorpay or place order on WhatsApp. Use coupons to get extra benefits.
     </p>
 
-    <!-- Trending / offer badges -->
     <div class="offers-strip">
-      <span class="offer-badge">🔥 Trending: Pro Plan for creators</span>
-      <span class="offer-badge">⭐ Use coupon <strong>AIFIRST</strong> to get 1 extra video free</span>
-      <span class="offer-badge">🎁 Festive offer coupons updated on this page</span>
+      <span class="offer-badge">🔥 Trending: Pro plan for regular creators</span>
+      <span class="offer-badge">⭐ Coupon <strong>AIFIRST</strong> = 1 extra video free</span>
+      <span class="offer-badge">🎁 Festive coupons shown on this page only</span>
     </div>
 
-    <!-- Coupon box -->
     <div class="coupon-box">
       <label for="couponCode">Have a coupon code?</label>
       <div class="coupon-row">
-        <input id="couponCode" type="text" placeholder="Enter coupon (e.g. AIFIRST)" />
+        <input id="couponCode" type="text" placeholder="Example: AIFIRST" />
         <button type="button" id="applyCouponBtn" class="btn-outline">Apply</button>
       </div>
       <p id="couponMessage" class="small"></p>
     </div>
 
-    <!-- Plans grid -->
     <div class="pricing-grid">
       <div class="pricing-card">
         <h2>Basic</h2>
@@ -83,12 +79,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Standard quality exports</li>
         </ul>
         <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-primary full-btn">Pay ₹99</a>
-        <a
-          id="wa-basic"
-          class="btn-outline full-btn small"
-          href="https://wa.me/919676142165?text=I%20want%20Basic%20plan%20on%20AI%20Market."
-          target="_blank"
-        >
+        <a id="wa-basic" class="btn-outline full-btn small"
+           href="https://wa.me/919676142165?text=I%20want%20Basic%20plan%20on%20AI%20Market."
+           target="_blank">
           Order on WhatsApp
         </a>
       </div>
@@ -99,15 +92,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul>
           <li>Everything in Basic</li>
           <li>AI Cartoon Maker</li>
-          <li>Better quality exports</li>
+          <li>Higher quality exports</li>
         </ul>
         <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary full-btn">Pay ₹299</a>
-        <a
-          id="wa-pro"
-          class="btn-outline full-btn small"
-          href="https://wa.me/919676142165?text=I%20want%20Pro%20plan%20on%20AI%20Market."
-          target="_blank"
-        >
+        <a id="wa-pro" class="btn-outline full-btn small"
+           href="https://wa.me/919676142165?text=I%20want%20Pro%20plan%20on%20AI%20Market."
+           target="_blank">
           Order on WhatsApp
         </a>
       </div>
@@ -116,17 +106,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>Premium</h2>
         <p class="price">₹999</p>
         <ul>
-          <li>All current AI tools</li>
+          <li>All current AI tools unlocked</li>
           <li>AI Music & BGM Studio</li>
           <li>Priority support</li>
         </ul>
         <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary full-btn">Pay ₹999</a>
-        <a
-          id="wa-premium"
-          class="btn-outline full-btn small"
-          href="https://wa.me/919676142165?text=I%20want%20Premium%20plan%20on%20AI%20Market."
-          target="_blank"
-        >
+        <a id="wa-premium" class="btn-outline full-btn small"
+           href="https://wa.me/919676142165?text=I%20want%20Premium%20plan%20on%20AI%20Market."
+           target="_blank">
           Order on WhatsApp
         </a>
       </div>
@@ -149,38 +136,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  const body=document.body,
-        themeBtn=document.getElementById("themeToggle"),
-        menuBtn=document.getElementById("menuToggle"),
-        nav=document.getElementById("mainNav");
+  const body=document.body;
+  const themeBtn=document.getElementById("themeToggle");
+  const menuBtn=document.getElementById("menuToggle");
+  const nav=document.getElementById("mainNav");
 
-  // active nav
-  const current="pricing.html";
   nav.querySelectorAll("a").forEach(a=>{
-    if(a.getAttribute("href")===current)a.classList.add("active");
+    if(a.getAttribute("href")==="pricing.html") a.classList.add("active");
   });
 
-  // theme
   const saved=localStorage.getItem("aimarket-theme");
   if(saved==="light"){body.classList.add("light-theme");themeBtn.textContent="☀";}
   themeBtn.addEventListener("click",()=>{
     body.classList.toggle("light-theme");
-    const l=body.classList.contains("light-theme");
-    themeBtn.textContent=l?"☀":"🌙";
-    localStorage.setItem("aimarket-theme",l?"light":"dark");
+    const light=body.classList.contains("light-theme");
+    themeBtn.textContent=light?"☀":"🌙";
+    localStorage.setItem("aimarket-theme",light?"light":"dark");
   });
-
-  // mobile nav
   menuBtn.addEventListener("click",()=>nav.classList.toggle("nav-open"));
 
-  // coupon logic
+  // Coupon logic
   const coupons={
     "AIFIRST":{
       text:"Coupon applied! You get 1 extra video free on any plan.",
       waSuffix:"%20Coupon%3A%20AIFIRST%20(1%20extra%20video)"
     },
     "FEST10":{
-      text:"Festive coupon applied! Bonus creative support included.",
+      text:"Festive coupon applied! Extra creative support will be added.",
       waSuffix:"%20Coupon%3A%20FEST10%20(festive%20bonus)"
     }
   };
@@ -193,8 +175,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const waPro=document.getElementById("wa-pro");
   const waPremium=document.getElementById("wa-premium");
 
-  const baseBasic = "https://wa.me/919676142165?text=I%20want%20Basic%20plan%20on%20AI%20Market";
-  const basePro   = "https://wa.me/919676142165?text=I%20want%20Pro%20plan%20on%20AI%20Market";
+  const baseBasic="https://wa.me/919676142165?text=I%20want%20Basic%20plan%20on%20AI%20Market";
+  const basePro="https://wa.me/919676142165?text=I%20want%20Pro%20plan%20on%20AI%20Market";
   const basePremium="https://wa.me/919676142165?text=I%20want%20Premium%20plan%20on%20AI%20Market";
 
   applyBtn.addEventListener("click",()=>{
@@ -216,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       waPremium.href=basePremium;
       return;
     }
-    msgEl.textContent=c.text + " It will be visible in your WhatsApp order message.";
+    msgEl.textContent=c.text + " It will be added inside your WhatsApp message.";
     msgEl.className="small success-text";
 
     waBasic.href=baseBasic + c.waSuffix;
