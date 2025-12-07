@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ – AI Market</title>
   <link rel="stylesheet" href="style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPPBPXHVH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MPPBPXHVH7');
+  </script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo-link">
@@ -46,22 +52,19 @@
 
   <section class="section">
     <div class="container">
-
       <div class="faq-item">
         <div class="faq-q"><strong>1. What is AI Market?</strong></div>
         <div class="faq-a small">
           AI Market is a collection of AI-powered tools for video, audio, images, thumbnails,
-          music and automation. Instead of using 10 different sites, you can work from a single platform.
+          music and automation. Instead of using many different sites, you can work from a single platform.
         </div>
       </div>
-
       <div class="faq-item">
         <div class="faq-q"><strong>2. Do I need to install any software?</strong></div>
         <div class="faq-a small">
           No. AI Market works completely online. You only need a browser and internet connection.
         </div>
       </div>
-
       <div class="faq-item">
         <div class="faq-q"><strong>3. How does the pricing work?</strong></div>
         <div class="faq-a small">
@@ -69,7 +72,6 @@
           access to tools. You can see the full comparison on the <a href="pricing.html">Pricing page</a>.
         </div>
       </div>
-
       <div class="faq-item">
         <div class="faq-q"><strong>4. Can I upgrade or downgrade my plan?</strong></div>
         <div class="faq-a small">
@@ -77,7 +79,6 @@
           For downgrades, please contact us via WhatsApp.
         </div>
       </div>
-
       <div class="faq-item">
         <div class="faq-q"><strong>5. Do you support Indian languages?</strong></div>
         <div class="faq-a small">
@@ -85,16 +86,13 @@
           and more. We keep adding new languages based on requests.
         </div>
       </div>
-
       <div class="faq-item">
-        <div class="faq-q"><strong>6. Can I use AI Market content for my YouTube channel or clients?</strong></div>
+        <div class="faq-q"><strong>6. Can I use AI Market content for YouTube or clients?</strong></div>
         <div class="faq-a small">
           In general yes – you can use the generated content for your own channels and projects.
-          However, make sure to follow YouTube and platform rules and avoid using copyrighted
-          materials as inputs (music, movies, etc.) that you don’t own.
+          However, follow platform rules and avoid using copyrighted inputs (music, movies, etc.) you don’t own.
         </div>
       </div>
-
       <div class="faq-item">
         <div class="faq-q"><strong>7. What payment methods are supported?</strong></div>
         <div class="faq-a small">
@@ -102,7 +100,6 @@
           and supported wallets. We do not store card details on AI Market.
         </div>
       </div>
-
       <div class="faq-item">
         <div class="faq-q"><strong>8. Where can I get help if I am stuck?</strong></div>
         <div class="faq-a small">
@@ -110,15 +107,6 @@
           Visit the <a href="contact.html">Contact page</a> for details.
         </div>
       </div>
-
-      <div class="faq-item">
-        <div class="faq-q"><strong>9. Do you offer custom AI tools?</strong></div>
-        <div class="faq-a small">
-          For Premium and enterprise customers, we can help build custom workflows or add
-          specific tools. Please contact us with your requirements.
-        </div>
-      </div>
-
       <p class="section-note small">
         Still have questions? Send your doubts on WhatsApp or email from the
         <a href="contact.html">Contact page</a>, and we will reply as soon as possible.
@@ -139,6 +127,33 @@
     </div>
   </div>
 </footer>
+
+<div class="chatbot-panel" id="chatbotPanel">
+  <div class="chatbot-header">
+    <div>
+      <span class="chatbot-title">AI Market Help</span>
+      <small>FAQ helper</small>
+    </div>
+    <button class="chatbot-close" type="button">✕</button>
+  </div>
+  <div class="chatbot-messages"></div>
+  <div class="chatbot-quick">
+    <button type="button" data-bot-question="What is AI Market?" data-bot-answer="AI Market is an all-in-one AI tools platform for video, audio, images, music and more, with local language support.">
+      What is AI Market?
+    </button>
+    <button type="button" data-bot-question="Which plan should I choose?" data-bot-answer="Basic is good for personal use, Pro for regular creators and agencies, and Premium for studios or resellers.">
+      Which plan?
+    </button>
+  </div>
+</div>
+
+<button id="chatbotToggle" class="chatbot-toggle" type="button" title="Chat with helper bot" data-ga-event="chatbot_click">
+  💬
+</button>
+
+<a href="https://wa.me/919676142165" class="whatsapp-fab" target="_blank" rel="noopener" title="Chat on WhatsApp" data-ga-event="whatsapp_click">
+  ⟟
+</a>
 
 <script src="script.js"></script>
 </body>
